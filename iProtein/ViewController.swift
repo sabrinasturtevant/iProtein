@@ -9,6 +9,39 @@
 import UIKit
 
 class ViewController: UIViewController {
+    
+    
+    
+    
+    ///////initial segues from home screen
+    @IBAction func makeLigandTapped(_ sender: Any) {
+        performSegue(withIdentifier: "makeLigandSegue", sender: nil)
+    }
+    
+    @IBAction func makeAminoAcidTapped(_ sender: Any) {
+        performSegue(withIdentifier: "makeAminoAcidSegue", sender: nil)
+    }
+    
+    @IBAction func combineTapped(_ sender: Any) {
+        performSegue(withIdentifier: "combineSegue", sender: nil)
+    }
+    
+    @IBAction func helpButtonTapped(_ sender: Any) {
+        performSegue(withIdentifier: "helpSegue", sender: nil)
+    }
+    
+    
+    ////////segues to go back to home screen
+    @IBAction func homeTapped(_ sender: Any) {
+        performSegue(withIdentifier: "homeSegue", sender: nil)
+    }
+    
+    @IBAction func homeTappedTwo(_ sender: Any) {
+        performSegue(withIdentifier: "homeSegue", sender: nil)
+    }
+    
+    
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()
