@@ -8,10 +8,16 @@
 
 import UIKit
 
+
 class ViewController: UIViewController {
     
+    //attempting scroll view plus stack view
     
+    @IBOutlet weak var stackViewLigandSymbols: UIStackView!
     
+    @IBOutlet weak var scrollViewLigandSymbols: UIScrollView!
+    
+
     
     ///////initial segues from home screen
     @IBAction func makeLigandTapped(_ sender: Any) {
@@ -42,8 +48,9 @@ class ViewController: UIViewController {
     
     
     
-
+    
     override func viewDidLoad() {
+        self.scrollViewLigandSymbols?.contentSize = CGSize(width: 320, height: 1000)
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
     }

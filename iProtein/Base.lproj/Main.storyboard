@@ -101,8 +101,8 @@
         <scene sceneID="9PM-Og-KVK">
             <objects>
                 <viewController id="Oai-ek-gI6" customClass="ViewController" customModule="iProtein" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="yEK-bn-QMv">
-                        <rect key="frame" x="0.0" y="0.0" width="667" height="375"/>
+                    <view key="view" contentMode="scaleToFill" ambiguous="YES" id="yEK-bn-QMv">
+                        <rect key="frame" x="0.0" y="0.0" width="667" height="1000"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="backgroundAll" translatesAutoresizingMaskIntoConstraints="NO" id="Cfh-H4-UZA">
@@ -121,40 +121,6 @@
                                 <rect key="frame" x="155" y="0.0" width="363" height="83"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Bnf-FD-63a">
-                                <rect key="frame" x="0.0" y="0.0" width="113" height="375"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <subviews>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="singleBond" translatesAutoresizingMaskIntoConstraints="NO" id="bko-5Y-hGc">
-                                        <rect key="frame" x="29" y="21" width="55" height="48"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                    </imageView>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="doubleBond" translatesAutoresizingMaskIntoConstraints="NO" id="niE-ZH-1tM">
-                                        <rect key="frame" x="29" y="69" width="55" height="30"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                    </imageView>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="tripleBond" translatesAutoresizingMaskIntoConstraints="NO" id="MPi-Jf-3Ug">
-                                        <rect key="frame" x="29" y="107" width="55" height="44"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                    </imageView>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="fiveSided" translatesAutoresizingMaskIntoConstraints="NO" id="opv-o1-imG">
-                                        <rect key="frame" x="29" y="159" width="55" height="44"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                    </imageView>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="sixSided" translatesAutoresizingMaskIntoConstraints="NO" id="fEb-RE-d0Y">
-                                        <rect key="frame" x="29" y="220" width="55" height="59"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                    </imageView>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="sixSidedDouble" translatesAutoresizingMaskIntoConstraints="NO" id="ZX3-1b-mWY">
-                                        <rect key="frame" x="29" y="287" width="59" height="65"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                    </imageView>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="sevenSided" translatesAutoresizingMaskIntoConstraints="NO" id="0FI-Nc-Mbd">
-                                        <rect key="frame" x="37" y="360" width="47" height="52"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                    </imageView>
-                                </subviews>
-                            </scrollView>
                             <label opaque="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="home" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YaV-Ei-kmX">
                                 <rect key="frame" x="435" y="31" width="43" height="22"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -166,11 +132,79 @@
                                     <outletCollection property="gestureRecognizers" destination="G6x-9A-6Nv" appends="YES" id="nRt-dV-WqR"/>
                                 </connections>
                             </label>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" preservesSuperviewLayoutMargins="YES" layoutMarginsFollowReadableWidth="YES" contentInsetAdjustmentBehavior="scrollableAxes" translatesAutoresizingMaskIntoConstraints="NO" id="QeW-pk-0sS">
+                                <rect key="frame" x="0.0" y="0.0" width="160" height="1000"/>
+                                <subviews>
+                                    <stackView opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="wqi-pt-UIL">
+                                        <rect key="frame" x="8" y="0.0" width="132" height="1000"/>
+                                        <subviews>
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="singleBond" translatesAutoresizingMaskIntoConstraints="NO" id="wIQ-7c-0ce">
+                                                <rect key="frame" x="0.0" y="0.0" width="132" height="77"/>
+                                            </imageView>
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="doubleBond" translatesAutoresizingMaskIntoConstraints="NO" id="3sv-8M-Lrc">
+                                                <rect key="frame" x="0.0" y="77" width="132" height="77"/>
+                                            </imageView>
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="tripleBond" translatesAutoresizingMaskIntoConstraints="NO" id="gM2-8c-Kip">
+                                                <rect key="frame" x="0.0" y="154" width="132" height="77"/>
+                                            </imageView>
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="fiveSided" translatesAutoresizingMaskIntoConstraints="NO" id="nci-m8-C10">
+                                                <rect key="frame" x="0.0" y="231" width="132" height="76.5"/>
+                                            </imageView>
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="sixSided" translatesAutoresizingMaskIntoConstraints="NO" id="JjL-ie-1RP">
+                                                <rect key="frame" x="0.0" y="307.5" width="132" height="77"/>
+                                            </imageView>
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="sixSidedDouble" translatesAutoresizingMaskIntoConstraints="NO" id="Cy5-xE-cBX">
+                                                <rect key="frame" x="0.0" y="384.5" width="132" height="77"/>
+                                            </imageView>
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="sevenSided" translatesAutoresizingMaskIntoConstraints="NO" id="eG2-vH-Dty">
+                                                <rect key="frame" x="0.0" y="461.5" width="132" height="77"/>
+                                            </imageView>
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="eightSided" translatesAutoresizingMaskIntoConstraints="NO" id="C5u-1X-8og">
+                                                <rect key="frame" x="0.0" y="538.5" width="132" height="77"/>
+                                            </imageView>
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="twoLongBond" translatesAutoresizingMaskIntoConstraints="NO" id="88G-ka-mTo">
+                                                <rect key="frame" x="0.0" y="615.5" width="132" height="77"/>
+                                            </imageView>
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="threeLongBond" translatesAutoresizingMaskIntoConstraints="NO" id="9tZ-Oc-Hfz">
+                                                <rect key="frame" x="0.0" y="692.5" width="132" height="76.5"/>
+                                            </imageView>
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="fourLongBond" translatesAutoresizingMaskIntoConstraints="NO" id="6cC-E7-818">
+                                                <rect key="frame" x="0.0" y="769" width="132" height="77"/>
+                                            </imageView>
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="towardBond" translatesAutoresizingMaskIntoConstraints="NO" id="HHB-wO-LM3">
+                                                <rect key="frame" x="0.0" y="846" width="132" height="77"/>
+                                            </imageView>
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="awayBond" translatesAutoresizingMaskIntoConstraints="NO" id="iaC-Db-ohz">
+                                                <rect key="frame" x="0.0" y="923" width="132" height="77"/>
+                                            </imageView>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="132" id="5ap-QI-bvR"/>
+                                            <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="1000" id="WCW-oC-a8l"/>
+                                            <constraint firstAttribute="height" constant="1000" id="eZk-hx-eaK"/>
+                                        </constraints>
+                                    </stackView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="113" id="2VE-V2-766"/>
+                                    <constraint firstAttribute="height" constant="767" id="Hrw-r7-icC"/>
+                                </constraints>
+                                <directionalEdgeInsets key="directionalLayoutMargins" top="8" leading="8" bottom="8" trailing="8"/>
+                            </scrollView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="QeW-pk-0sS" firstAttribute="width" secondItem="yEK-bn-QMv" secondAttribute="width" id="D10-9F-BLf"/>
+                            <constraint firstItem="QeW-pk-0sS" firstAttribute="height" secondItem="yEK-bn-QMv" secondAttribute="height" id="d76-rI-kjS"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="r6N-XV-7A4"/>
                     </view>
+                    <value key="contentSizeForViewInPopover" type="size" width="667" height="1000"/>
+                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                    <size key="freeformSize" width="667" height="1000"/>
                     <connections>
+                        <outlet property="scrollViewLigandSymbols" destination="QeW-pk-0sS" id="b4Z-i2-hkR"/>
+                        <outlet property="stackViewLigandSymbols" destination="wqi-pt-UIL" id="s0i-8T-iKy"/>
                         <segue destination="BYZ-38-t0r" kind="show" identifier="homeSegue" id="uVx-If-Ud1"/>
                     </connections>
                 </viewController>
@@ -181,7 +215,7 @@
                     </connections>
                 </tapGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="826.23688155922048" y="-663.20000000000005"/>
+            <point key="canvasLocation" x="824.43778110944538" y="-1206.4000000000001"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="OQ2-qc-fx3">
@@ -193,10 +227,6 @@
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="backgroundAll" translatesAutoresizingMaskIntoConstraints="NO" id="hb8-7Z-tYm">
                                 <rect key="frame" x="0.0" y="0.0" width="667" height="375"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="whiteRectangleSide" translatesAutoresizingMaskIntoConstraints="NO" id="MrJ-jt-GQR">
-                                <rect key="frame" x="0.0" y="0.0" width="113" height="375"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="whiteRectangleSide" translatesAutoresizingMaskIntoConstraints="NO" id="Ym0-nw-b8w">
@@ -218,6 +248,10 @@
                                     <outletCollection property="gestureRecognizers" destination="b2z-Nr-pBK" appends="YES" id="Z8e-Ve-GSH"/>
                                 </connections>
                             </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="whiteRectangleSide" translatesAutoresizingMaskIntoConstraints="NO" id="MrJ-jt-GQR">
+                                <rect key="frame" x="0.0" y="0.0" width="113" height="375"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="YV3-BP-W17"/>
@@ -233,7 +267,7 @@
                     </connections>
                 </tapGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="825.33733133433293" y="277.60000000000002"/>
+            <point key="canvasLocation" x="1057" y="1353"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="ixS-RQ-AtI">
@@ -254,7 +288,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="QE5-Vm-bV4" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="815.44227886056979" y="1181.5999999999999"/>
+            <point key="canvasLocation" x="471" y="2436"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="Gdn-zJ-wxg">
@@ -275,25 +309,31 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="698-Tg-Mam" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="825.33733133433293" y="2160.8000000000002"/>
+            <point key="canvasLocation" x="-304" y="2100"/>
         </scene>
     </scenes>
     <resources>
+        <image name="awayBond" width="35.5" height="25"/>
         <image name="backgroundAll" width="812" height="375"/>
         <image name="backgroundHome" width="812" height="375"/>
         <image name="doubleBond" width="39" height="5"/>
+        <image name="eightSided" width="54.5" height="54.5"/>
         <image name="fiveSided" width="48" height="45.5"/>
+        <image name="fourLongBond" width="132" height="20"/>
         <image name="helpButton" width="84" height="27"/>
         <image name="initialPurpleButton" width="130" height="134"/>
         <image name="sevenSided" width="48" height="48"/>
         <image name="singleBond" width="38" height="1"/>
         <image name="sixSided" width="58" height="59"/>
         <image name="sixSidedDouble" width="58" height="59"/>
+        <image name="threeLongBond" width="99" height="20"/>
+        <image name="towardBond" width="43.5" height="25.5"/>
         <image name="tripleBond" width="39.5" height="8.5"/>
+        <image name="twoLongBond" width="66.5" height="19.5"/>
         <image name="whiteRectangleSide" width="118" height="375"/>
         <image name="whiteRectangleTop" width="533" height="60"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="zvg-nm-pur"/>
+        <segue reference="uVx-If-Ud1"/>
     </inferredMetricsTieBreakers>
 </document>
