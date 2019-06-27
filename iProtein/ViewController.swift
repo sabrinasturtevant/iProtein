@@ -300,6 +300,9 @@ class ViewController: UIViewController {
     }
     
     
+    
+    
+    
     //-----actions for away bond
     
     @IBAction func awayBondTapped(_ sender: Any) {
@@ -340,6 +343,9 @@ class ViewController: UIViewController {
         phosphorusOutlet.alpha = 0.2
         heliumOutlet.alpha = 0.2
     }
+    
+    
+    
     
     
     //-----actions for five sided
@@ -553,6 +559,8 @@ class ViewController: UIViewController {
     
     
     
+    
+    
     //-----actions for carbon
     
     @IBAction func carbonTapped(_ sender: Any) {
@@ -593,6 +601,9 @@ class ViewController: UIViewController {
         phosphorusOutlet.alpha = 0.2
         heliumOutlet.alpha = 0.2
     }
+    
+    
+    
     
     
     
@@ -639,6 +650,9 @@ class ViewController: UIViewController {
     
     
     
+    
+    
+    
     //-----actions for hydrogen
     
     @IBAction func hydrogenTapped(_ sender: Any) {
@@ -679,6 +693,8 @@ class ViewController: UIViewController {
         phosphorusOutlet.alpha = 0.2
         heliumOutlet.alpha = 0.2
     }
+    
+    
     
     
     
@@ -725,6 +741,8 @@ class ViewController: UIViewController {
     
     
     
+    
+    
     //-----actions for phosphorus
     
     @IBAction func phosphorusTapped(_ sender: Any) {
@@ -765,6 +783,8 @@ class ViewController: UIViewController {
         phosphorusOutlet.alpha = 1.0
         heliumOutlet.alpha = 0.2
     }
+    
+    
     
     
     
