@@ -101,7 +101,7 @@
         <scene sceneID="9PM-Og-KVK">
             <objects>
                 <viewController id="Oai-ek-gI6" customClass="ViewController" customModule="iProtein" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" ambiguous="YES" id="yEK-bn-QMv">
+                    <view key="view" contentMode="scaleToFill" id="yEK-bn-QMv">
                         <rect key="frame" x="0.0" y="0.0" width="667" height="1200"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
@@ -135,84 +135,134 @@
                                         <rect key="frame" x="0.0" y="0.0" width="113" height="1000"/>
                                         <subviews>
                                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="NLc-Pm-YmJ">
-                                                <rect key="frame" x="0.0" y="0.0" width="113" height="47"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="113" height="50.5"/>
                                                 <color key="backgroundColor" cocoaTouchSystemColor="scrollViewTexturedBackgroundColor"/>
                                             </imageView>
                                             <imageView contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="singleBond" translatesAutoresizingMaskIntoConstraints="NO" id="wIQ-7c-0ce">
-                                                <rect key="frame" x="37.5" y="56" width="38" height="47"/>
+                                                <rect key="frame" x="37.5" y="59.5" width="38" height="50"/>
                                             </imageView>
                                             <imageView contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="doubleBond" translatesAutoresizingMaskIntoConstraints="NO" id="3sv-8M-Lrc">
-                                                <rect key="frame" x="37" y="112" width="39" height="47"/>
+                                                <rect key="frame" x="37" y="118.5" width="39" height="50.5"/>
                                                 <gestureRecognizers/>
                                                 <connections>
                                                     <outletCollection property="gestureRecognizers" destination="QMJ-w1-x6J" appends="YES" id="XkT-wa-Gtc"/>
                                                 </connections>
                                             </imageView>
-                                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="tripleBond" translatesAutoresizingMaskIntoConstraints="NO" id="gM2-8c-Kip">
-                                                <rect key="frame" x="37" y="168" width="39" height="47"/>
+                                            <imageView contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="tripleBond" translatesAutoresizingMaskIntoConstraints="NO" id="gM2-8c-Kip">
+                                                <rect key="frame" x="37" y="178" width="39" height="50.5"/>
+                                                <gestureRecognizers/>
+                                                <connections>
+                                                    <outletCollection property="gestureRecognizers" destination="mnL-h9-i7B" appends="YES" id="aaf-90-tmk"/>
+                                                </connections>
                                             </imageView>
-                                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="towardBond" translatesAutoresizingMaskIntoConstraints="NO" id="HHB-wO-LM3">
-                                                <rect key="frame" x="35" y="224" width="43" height="47.5"/>
+                                            <imageView contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="towardBond" translatesAutoresizingMaskIntoConstraints="NO" id="HHB-wO-LM3">
+                                                <rect key="frame" x="35" y="237.5" width="43" height="50.5"/>
+                                                <gestureRecognizers/>
+                                                <connections>
+                                                    <outletCollection property="gestureRecognizers" destination="frd-z7-2yU" appends="YES" id="yVe-Ty-NLS"/>
+                                                </connections>
                                             </imageView>
-                                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="awayBond" translatesAutoresizingMaskIntoConstraints="NO" id="iaC-Db-ohz">
-                                                <rect key="frame" x="39" y="280.5" width="35" height="47"/>
+                                            <imageView contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="awayBond" translatesAutoresizingMaskIntoConstraints="NO" id="iaC-Db-ohz">
+                                                <rect key="frame" x="39" y="297" width="35" height="50"/>
+                                                <gestureRecognizers/>
+                                                <connections>
+                                                    <outletCollection property="gestureRecognizers" destination="sdi-3w-Vm1" appends="YES" id="Y4X-KZ-zPD"/>
+                                                </connections>
                                             </imageView>
-                                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="fiveSided" translatesAutoresizingMaskIntoConstraints="NO" id="nci-m8-C10">
-                                                <rect key="frame" x="32.5" y="336.5" width="48" height="47"/>
+                                            <imageView contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="fiveSided" translatesAutoresizingMaskIntoConstraints="NO" id="nci-m8-C10">
+                                                <rect key="frame" x="32.5" y="356" width="48" height="50.5"/>
+                                                <gestureRecognizers/>
+                                                <connections>
+                                                    <outletCollection property="gestureRecognizers" destination="eGQ-9D-EmB" appends="YES" id="kLT-G3-5PV"/>
+                                                </connections>
                                             </imageView>
-                                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="sixSided" translatesAutoresizingMaskIntoConstraints="NO" id="JjL-ie-1RP">
-                                                <rect key="frame" x="27.5" y="392.5" width="58" height="47"/>
+                                            <imageView contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="sixSided" translatesAutoresizingMaskIntoConstraints="NO" id="JjL-ie-1RP">
+                                                <rect key="frame" x="27.5" y="415.5" width="58" height="50.5"/>
+                                                <gestureRecognizers/>
+                                                <connections>
+                                                    <outletCollection property="gestureRecognizers" destination="hD9-nw-S8G" appends="YES" id="VQu-AS-d7w"/>
+                                                </connections>
                                             </imageView>
-                                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="sixSidedDouble" translatesAutoresizingMaskIntoConstraints="NO" id="Cy5-xE-cBX">
-                                                <rect key="frame" x="27.5" y="448.5" width="58" height="47"/>
+                                            <imageView contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="sixSidedDouble" translatesAutoresizingMaskIntoConstraints="NO" id="Cy5-xE-cBX">
+                                                <rect key="frame" x="27.5" y="475" width="58" height="50"/>
+                                                <gestureRecognizers/>
+                                                <connections>
+                                                    <outletCollection property="gestureRecognizers" destination="RfO-xM-LcY" appends="YES" id="0zF-Jp-nBT"/>
+                                                </connections>
                                             </imageView>
-                                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="sevenSided" translatesAutoresizingMaskIntoConstraints="NO" id="eG2-vH-Dty">
-                                                <rect key="frame" x="32.5" y="504.5" width="48" height="47"/>
+                                            <imageView contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="sevenSided" translatesAutoresizingMaskIntoConstraints="NO" id="eG2-vH-Dty">
+                                                <rect key="frame" x="32.5" y="534" width="48" height="50.5"/>
+                                                <gestureRecognizers/>
+                                                <connections>
+                                                    <outletCollection property="gestureRecognizers" destination="HK1-jE-0vV" appends="YES" id="Sve-Vg-1pc"/>
+                                                </connections>
                                             </imageView>
-                                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="eightSided" translatesAutoresizingMaskIntoConstraints="NO" id="C5u-1X-8og">
-                                                <rect key="frame" x="29.5" y="560.5" width="54" height="47"/>
+                                            <imageView contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="eightSided" translatesAutoresizingMaskIntoConstraints="NO" id="C5u-1X-8og">
+                                                <rect key="frame" x="29.5" y="593.5" width="54" height="50.5"/>
+                                                <gestureRecognizers/>
+                                                <connections>
+                                                    <outletCollection property="gestureRecognizers" destination="OrS-hS-srV" appends="YES" id="4O2-qO-02C"/>
+                                                </connections>
                                             </imageView>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="C" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wYH-ac-9Lo">
-                                                <rect key="frame" x="47" y="616.5" width="19" height="47"/>
+                                            <label opaque="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="C" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wYH-ac-9Lo">
+                                                <rect key="frame" x="47" y="653" width="19" height="50"/>
+                                                <gestureRecognizers/>
                                                 <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="26"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
+                                                <connections>
+                                                    <outletCollection property="gestureRecognizers" destination="LSc-V7-qfw" appends="YES" id="fBD-0Z-iZP"/>
+                                                </connections>
                                             </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="O" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Xrr-Ph-znj">
-                                                <rect key="frame" x="45.5" y="672.5" width="22.5" height="47"/>
+                                            <label opaque="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="O" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Xrr-Ph-znj">
+                                                <rect key="frame" x="45.5" y="712" width="22.5" height="50.5"/>
+                                                <gestureRecognizers/>
                                                 <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="26"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
+                                                <connections>
+                                                    <outletCollection property="gestureRecognizers" destination="Ovx-RH-x6B" appends="YES" id="KOM-R3-fxT"/>
+                                                </connections>
                                             </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="H" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="l2v-UP-eIj">
-                                                <rect key="frame" x="47" y="728.5" width="19" height="47.5"/>
+                                            <label opaque="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="H" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="l2v-UP-eIj">
+                                                <rect key="frame" x="47" y="771.5" width="19" height="50.5"/>
+                                                <gestureRecognizers/>
                                                 <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="26"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
+                                                <connections>
+                                                    <outletCollection property="gestureRecognizers" destination="pC3-th-XyJ" appends="YES" id="seq-h7-3Xd"/>
+                                                </connections>
                                             </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="N" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eTl-AV-9iG">
-                                                <rect key="frame" x="46.5" y="785" width="20" height="47"/>
+                                            <label opaque="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="N" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eTl-AV-9iG">
+                                                <rect key="frame" x="46.5" y="831" width="20" height="50.5"/>
+                                                <gestureRecognizers/>
                                                 <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="26"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
+                                                <connections>
+                                                    <outletCollection property="gestureRecognizers" destination="ZnC-ex-Fnx" appends="YES" id="euv-UI-JKI"/>
+                                                </connections>
                                             </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="P" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="w5f-bW-19f">
-                                                <rect key="frame" x="49" y="841" width="15.5" height="47"/>
+                                            <label opaque="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="P" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="w5f-bW-19f">
+                                                <rect key="frame" x="49" y="890.5" width="15.5" height="50"/>
+                                                <gestureRecognizers/>
                                                 <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="26"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
+                                                <connections>
+                                                    <outletCollection property="gestureRecognizers" destination="ZXr-v1-e2G" appends="YES" id="5kO-cM-Vfd"/>
+                                                </connections>
                                             </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="F" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Yej-ko-c5S">
-                                                <rect key="frame" x="49" y="897" width="15" height="47"/>
+                                            <label opaque="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="He" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jCA-81-pWy">
+                                                <rect key="frame" x="39.5" y="949.5" width="34" height="50.5"/>
+                                                <gestureRecognizers/>
                                                 <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="26"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
-                                            </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="He" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jCA-81-pWy">
-                                                <rect key="frame" x="39.5" y="953" width="34" height="47"/>
-                                                <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="26"/>
-                                                <nil key="textColor"/>
-                                                <nil key="highlightedColor"/>
+                                                <connections>
+                                                    <outletCollection property="gestureRecognizers" destination="mdx-OM-t0Y" appends="YES" id="Cb6-Mt-SB9"/>
+                                                </connections>
                                             </label>
                                         </subviews>
                                         <gestureRecognizers/>
@@ -245,10 +295,24 @@
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
                     <size key="freeformSize" width="667" height="1200"/>
                     <connections>
+                        <outlet property="awayBondOutlet" destination="iaC-Db-ohz" id="AT0-7j-3pl"/>
+                        <outlet property="carbonOutlet" destination="wYH-ac-9Lo" id="18D-hX-AKv"/>
                         <outlet property="doubleBondOutlet" destination="3sv-8M-Lrc" id="7rq-SR-11g"/>
+                        <outlet property="eightSidedOutlet" destination="C5u-1X-8og" id="h6h-uc-hKu"/>
+                        <outlet property="fiveSidedOutlet" destination="nci-m8-C10" id="jc3-5h-PuE"/>
+                        <outlet property="heliumOutlet" destination="jCA-81-pWy" id="YKQ-sR-JCu"/>
+                        <outlet property="hydrogenOutlet" destination="l2v-UP-eIj" id="Qbw-0Q-e3W"/>
+                        <outlet property="nitrogenOutlet" destination="eTl-AV-9iG" id="oE0-HS-F2f"/>
+                        <outlet property="oxygenOutlet" destination="Xrr-Ph-znj" id="msw-GB-ThA"/>
+                        <outlet property="phosphorusOutlet" destination="w5f-bW-19f" id="wfR-XX-aVJ"/>
                         <outlet property="scrollViewLigandSymbols" destination="QeW-pk-0sS" id="b4Z-i2-hkR"/>
+                        <outlet property="sevenSidedOutlet" destination="eG2-vH-Dty" id="3iv-eb-1Dk"/>
                         <outlet property="singleBondOutlet" destination="wIQ-7c-0ce" id="hDK-Ax-YPv"/>
+                        <outlet property="sixSidedDoubleOutlet" destination="Cy5-xE-cBX" id="2MI-Rj-cRb"/>
+                        <outlet property="sixSidedOutlet" destination="JjL-ie-1RP" id="kP6-rJ-Vs5"/>
                         <outlet property="stackViewLigandSymbols" destination="wqi-pt-UIL" id="s0i-8T-iKy"/>
+                        <outlet property="towardBondOutlet" destination="HHB-wO-LM3" id="LUM-rP-RS5"/>
+                        <outlet property="tripleBondOutlet" destination="gM2-8c-Kip" id="AMK-Hu-bGV"/>
                         <segue destination="BYZ-38-t0r" kind="show" identifier="homeSegue" id="uVx-If-Ud1"/>
                     </connections>
                 </viewController>
@@ -266,6 +330,76 @@
                 <tapGestureRecognizer id="QMJ-w1-x6J" userLabel="doubleBondTap">
                     <connections>
                         <action selector="doubleBondTapped:" destination="Oai-ek-gI6" id="44T-8e-f6Q"/>
+                    </connections>
+                </tapGestureRecognizer>
+                <tapGestureRecognizer id="mnL-h9-i7B" userLabel="tripleBondTap">
+                    <connections>
+                        <action selector="tripleBondTapped:" destination="Oai-ek-gI6" id="8On-dK-R0q"/>
+                    </connections>
+                </tapGestureRecognizer>
+                <tapGestureRecognizer id="frd-z7-2yU" userLabel="towardBondTap">
+                    <connections>
+                        <action selector="towardBondTapped:" destination="Oai-ek-gI6" id="8Ke-u1-ILX"/>
+                    </connections>
+                </tapGestureRecognizer>
+                <tapGestureRecognizer id="sdi-3w-Vm1" userLabel="awayBondTap">
+                    <connections>
+                        <action selector="awayBondTapped:" destination="Oai-ek-gI6" id="Plh-si-Okh"/>
+                    </connections>
+                </tapGestureRecognizer>
+                <tapGestureRecognizer id="eGQ-9D-EmB" userLabel="fiveSidedTap">
+                    <connections>
+                        <action selector="fiveSidedTapped:" destination="Oai-ek-gI6" id="erH-46-Qmp"/>
+                    </connections>
+                </tapGestureRecognizer>
+                <tapGestureRecognizer id="hD9-nw-S8G" userLabel="sixSidedTap">
+                    <connections>
+                        <action selector="sixSidedTapped:" destination="Oai-ek-gI6" id="2LC-ur-64R"/>
+                    </connections>
+                </tapGestureRecognizer>
+                <tapGestureRecognizer id="RfO-xM-LcY" userLabel="sixSidedDoubleTap">
+                    <connections>
+                        <action selector="sixSidedDoubleTapped:" destination="Oai-ek-gI6" id="MCj-hh-UHS"/>
+                    </connections>
+                </tapGestureRecognizer>
+                <tapGestureRecognizer id="HK1-jE-0vV" userLabel="sevenSidedTap">
+                    <connections>
+                        <action selector="sevenSidedTapped:" destination="Oai-ek-gI6" id="N4e-Pl-7lF"/>
+                    </connections>
+                </tapGestureRecognizer>
+                <tapGestureRecognizer id="OrS-hS-srV" userLabel="eightSidedTap">
+                    <connections>
+                        <action selector="eightSidedTapped:" destination="Oai-ek-gI6" id="xX9-cQ-vzP"/>
+                    </connections>
+                </tapGestureRecognizer>
+                <tapGestureRecognizer id="LSc-V7-qfw" userLabel="carbonTap">
+                    <connections>
+                        <action selector="carbonTapped:" destination="Oai-ek-gI6" id="gZt-1S-Loj"/>
+                    </connections>
+                </tapGestureRecognizer>
+                <tapGestureRecognizer id="Ovx-RH-x6B" userLabel="oxygenTap">
+                    <connections>
+                        <action selector="oxygenTapped:" destination="Oai-ek-gI6" id="vVf-MW-Dsu"/>
+                    </connections>
+                </tapGestureRecognizer>
+                <tapGestureRecognizer id="pC3-th-XyJ" userLabel="hydrogenTap">
+                    <connections>
+                        <action selector="hydrogenTapped:" destination="Oai-ek-gI6" id="BhD-6h-QMz"/>
+                    </connections>
+                </tapGestureRecognizer>
+                <tapGestureRecognizer id="ZnC-ex-Fnx" userLabel="nitrogenTap">
+                    <connections>
+                        <action selector="nitrogenTapped:" destination="Oai-ek-gI6" id="nVn-PO-4Gp"/>
+                    </connections>
+                </tapGestureRecognizer>
+                <tapGestureRecognizer id="ZXr-v1-e2G" userLabel="phosphorusTap">
+                    <connections>
+                        <action selector="phosphorusTapped:" destination="Oai-ek-gI6" id="KKF-Au-Uog"/>
+                    </connections>
+                </tapGestureRecognizer>
+                <tapGestureRecognizer id="mdx-OM-t0Y" userLabel="heliumTap">
+                    <connections>
+                        <action selector="heliumTapped:" destination="Oai-ek-gI6" id="hHa-Ui-2bo"/>
                     </connections>
                 </tapGestureRecognizer>
             </objects>
