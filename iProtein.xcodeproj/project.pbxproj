@@ -12,6 +12,7 @@
 		D9179A4E22C3F9E200CFFF16 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D9179A4C22C3F9E200CFFF16 /* Main.storyboard */; };
 		D9179A5022C3F9E400CFFF16 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D9179A4F22C3F9E400CFFF16 /* Assets.xcassets */; };
 		D9179A5322C3F9E500CFFF16 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D9179A5122C3F9E500CFFF16 /* LaunchScreen.storyboard */; };
+		D97F808E22C676D3009D5886 /* DrawView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D97F808D22C676D3009D5886 /* DrawView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +23,7 @@
 		D9179A4F22C3F9E400CFFF16 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D9179A5222C3F9E500CFFF16 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D9179A5422C3F9E500CFFF16 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D97F808D22C676D3009D5886 /* DrawView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrawView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,6 +59,7 @@
 				D9179A4822C3F9E200CFFF16 /* AppDelegate.swift */,
 				D9179A4A22C3F9E200CFFF16 /* ViewController.swift */,
 				D9179A4C22C3F9E200CFFF16 /* Main.storyboard */,
+				D97F808D22C676D3009D5886 /* DrawView.swift */,
 				D9179A4F22C3F9E400CFFF16 /* Assets.xcassets */,
 				D9179A5122C3F9E500CFFF16 /* LaunchScreen.storyboard */,
 				D9179A5422C3F9E500CFFF16 /* Info.plist */,
@@ -137,6 +140,7 @@
 			files = (
 				D9179A4B22C3F9E200CFFF16 /* ViewController.swift in Sources */,
 				D9179A4922C3F9E200CFFF16 /* AppDelegate.swift in Sources */,
+				D97F808E22C676D3009D5886 /* DrawView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

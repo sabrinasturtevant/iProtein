@@ -34,7 +34,6 @@ class ViewController: UIViewController {
     
     
     
-    
     //-----outlets for scroll view and stack view
     
     @IBOutlet weak var stackViewLigandSymbols: UIStackView!
@@ -121,12 +120,19 @@ class ViewController: UIViewController {
     @IBOutlet weak var phosphorusOutlet: UILabel!
     
     @IBOutlet weak var heliumOutlet: UILabel!
+
+    
+    
     
     
     
     //------actions for single bond
     @IBAction func singleBondTapped(_ sender: Any) {
         singleBond += 1
+        
+      
+        
+        
         if singleBond == 2 {
             singleBond = 1
         }
@@ -161,7 +167,8 @@ class ViewController: UIViewController {
         nitrogenOutlet.alpha = 0.2
         phosphorusOutlet.alpha = 0.2
         heliumOutlet.alpha = 0.2
-
+        
+        
         }
 
     
@@ -830,12 +837,15 @@ class ViewController: UIViewController {
     }
     
 
+    
+
 
 
     
     
     override func viewDidLoad() {
         self.scrollViewLigandSymbols?.contentSize = CGSize(width: 320, height: 1000)
+        
         
     self.scrollViewLigandSymbols?.isDirectionalLockEnabled == true
 
