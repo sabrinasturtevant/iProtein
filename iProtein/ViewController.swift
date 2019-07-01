@@ -287,80 +287,208 @@ class ViewController: UIViewController {
     
     
     
+    
     @IBAction func lysineTapped(_ sender: Any) {
         performSegue(withIdentifier: "lysineSegue", sender: nil)
     }
-    
     @IBAction func lysineBackTapped(_ sender: Any) {
         performSegue(withIdentifier: "lysineBackSegue", sender: nil)
     }
     
+    
+    
     @IBAction func histidineTapped(_ sender: Any) {
         performSegue(withIdentifier: "histidineSegue", sender: nil)
     }
-    
     @IBAction func histidineBackTapped(_ sender: Any) {
         performSegue(withIdentifier: "histidineBackSegue", sender: nil)
     }
     
+    
+    
     @IBAction func arginineTapped(_ sender: Any) {
+        performSegue(withIdentifier: "arginineSegue", sender: nil)
     }
+    @IBAction func arginineBackTapped(_ sender: Any) {
+        performSegue(withIdentifier: "arginineBackSegue", sender: nil)
+    }
+    
+    
     
     @IBAction func asparticAcidTapped(_ sender: Any) {
+        performSegue(withIdentifier: "asparticAcidSegue", sender: nil)
     }
+    @IBAction func asparticAcidBackTapped(_ sender: Any) {
+        performSegue(withIdentifier: "asparticAcidBackSegue", sender: nil)
+    }
+    
+    
     
     @IBAction func glutamicAcidTapped(_ sender: Any) {
+        performSegue(withIdentifier: "glutamicAcidSegue", sender: nil)
     }
+    @IBAction func glutamicAcidBackTapped(_ sender: Any) {
+        performSegue(withIdentifier: "glutamicAcidBackSegue", sender: nil)
+    }
+    
+    
     
     @IBAction func asparagineTapped(_ sender: Any) {
+        performSegue(withIdentifier: "asparagineSegue", sender: nil)
     }
+    @IBAction func asparagineBackTapped(_ sender: Any) {
+        performSegue(withIdentifier: "asparagineBackSegue", sender: nil)
+    }
+    
+    
     
     @IBAction func theronineTapped(_ sender: Any) {
+        performSegue(withIdentifier: "threonineSegue", sender: nil)
     }
+    @IBAction func threonineBackTapped(_ sender: Any) {
+        performSegue(withIdentifier: "threonineBackSegue", sender: nil)
+    }
+    
+    
     
     @IBAction func serineTapped(_ sender: Any) {
+        performSegue(withIdentifier: "serineSegue", sender: nil)
     }
+    @IBAction func serineBackTapped(_ sender: Any) {
+        performSegue(withIdentifier: "serineBackSegue", sender: nil)
+    }
+    
+    
     
     @IBAction func glutamineTapped(_ sender: Any) {
+        performSegue(withIdentifier: "glutamineSegue", sender: nil)
     }
+    @IBAction func glutamineBackTapped(_ sender: Any) {
+        performSegue(withIdentifier: "glutamineBackSegue", sender: nil)
+    }
+    
+    
     
     @IBAction func tyrosineTapped(_ sender: Any) {
+        performSegue(withIdentifier: "tyrosineSegue", sender: nil)
     }
+    @IBAction func tyrosineBackTapped(_ sender: Any) {
+        performSegue(withIdentifier: "tyrosineBackSegue", sender: nil)
+    }
+    
+    
     
     @IBAction func glycineTapped(_ sender: Any) {
+        performSegue(withIdentifier: "glycineSegue", sender: nil)
     }
+    @IBAction func glycineBackTapped(_ sender: Any) {
+        performSegue(withIdentifier: "glycineBackTapped", sender: nil)
+    }
+    
+    
     
     @IBAction func prolineTapped(_ sender: Any) {
+        performSegue(withIdentifier: "prolineSegue", sender: nil)
     }
+    @IBAction func prolineBackTapped(_ sender: Any) {
+        performSegue(withIdentifier: "prolineBackSegue", sender: nil)
+    }
+    
+    
     
     @IBAction func methionineTapped(_ sender: Any) {
+        performSegue(withIdentifier: "methionineSegue", sender: nil)
     }
+    @IBAction func methionineBackTapped(_ sender: Any) {
+        performSegue(withIdentifier: "methionineBackSegue", sender: nil)
+    }
+    
+    
     
     @IBAction func valineTapped(_ sender: Any) {
+        performSegue(withIdentifier: "valineSegue", sender: nil)
     }
+    @IBAction func valineBackTapped(_ sender: Any) {
+        performSegue(withIdentifier: "valineBackSegue", sender: nil)
+    }
+    
+    
     
     @IBAction func phenylalanineTapped(_ sender: Any) {
+        performSegue(withIdentifier: "phenylalanineSegue", sender: nil)
     }
+    @IBAction func phenylalanineBackTapped(_ sender: Any) {
+        performSegue(withIdentifier: "phenylalanineBackSegue", sender: nil)
+    }
+    
+    
     
     @IBAction func leucineTapped(_ sender: Any) {
+        performSegue(withIdentifier: "leucineSegue", sender: nil)
     }
+    @IBAction func leucineBackTapped(_ sender: Any) {
+        performSegue(withIdentifier: "leucineBackSegue", sender: nil)
+    }
+    
+    
     
     @IBAction func tryptophanTapped(_ sender: Any) {
+        performSegue(withIdentifier: "tryptophanSegue", sender: nil)
     }
+    @IBAction func tryptophanBackTapped(_ sender: Any) {
+        performSegue(withIdentifier: "tryptophanBackSegue", sender: nil)
+    }
+    
+    
     
     @IBAction func cystineTapped(_ sender: Any) {
+        performSegue(withIdentifier: "cystineSegue", sender: nil)
     }
+    @IBAction func cystineBackTapped(_ sender: Any) {
+        performSegue(withIdentifier: "cystineBackSegue", sender: nil)
+    }
+    
     
     @IBAction func isoleucineTapped(_ sender: Any) {
+        performSegue(withIdentifier: "isoleucineSegue", sender: nil)
+    }
+    @IBAction func isoleucineBackTapped(_ sender: Any) {
+        performSegue(withIdentifier: "isoleucineBackSegue", sender: nil)
     }
     
+    
+    
     @IBAction func alanineTapped(_ sender: Any) {
+        performSegue(withIdentifier: "alanineSegue", sender: nil)
     }
+    @IBAction func alanineBackTapped(_ sender: Any) {
+        performSegue(withIdentifier: "alanineBackSegue", sender: nil)
+    }
+    
+    
     
     
     //outlets for help screen text boxes
     @IBOutlet weak var lysinehelpOutlet: UILabel!
     @IBOutlet weak var histidineHelpOutlet: UILabel!
+    @IBOutlet weak var argininehelpOutlet: UILabel!
+    @IBOutlet weak var glutamicAcidHelpOutlet: UILabel!
+    @IBOutlet weak var asparticAcidHelpOutlet: UILabel!
+    @IBOutlet weak var serineHelpOutlet: UILabel!
+    @IBOutlet weak var threonineHelpOutlet: UILabel!
+    @IBOutlet weak var tyrosineHelpOutlet: UILabel!
+    @IBOutlet weak var glutamineHelpOutlet: UILabel!
+    @IBOutlet weak var asparagineHelpOutlet: UILabel!
+    @IBOutlet weak var valineHelpOutlet: UILabel!
+    @IBOutlet weak var phenylalanineHelpOutlet: UILabel!
+    @IBOutlet weak var prolineHelpOutlet: UILabel!
+    @IBOutlet weak var leucineHelpOutlet: UILabel!
+    @IBOutlet weak var methionineHelpOutlet: UILabel!
+    @IBOutlet weak var isoleucineHelpOutlet: UILabel!
+    @IBOutlet weak var alanineHelpOutlet: UILabel!
+    @IBOutlet weak var tryptophanHelpOutlet: UILabel!
+    @IBOutlet weak var cystineHelpOutlet: UILabel!
+    @IBOutlet weak var glycineHelpOutlet: UILabel!
     
     
     
@@ -1193,10 +1321,29 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         self.scrollViewLigandSymbols?.contentSize = CGSize(width: 320, height: 1000)
+self.scrollViewLigandSymbols?.isDirectionalLockEnabled == true
         
-         lysinehelpOutlet?.text = lysineString
+        lysinehelpOutlet?.text = lysineString
         histidineHelpOutlet?.text = histidineString
-    self.scrollViewLigandSymbols?.isDirectionalLockEnabled == true
+        argininehelpOutlet?.text = arginineString
+        glutamineHelpOutlet?.text = glutamineString
+        glutamicAcidHelpOutlet?.text = glutamicAcidString
+        asparticAcidHelpOutlet?.text = asparticAcidString
+        serineHelpOutlet?.text = serineString
+        threonineHelpOutlet?.text = theonineString
+        tyrosineHelpOutlet?.text = tyrosineString
+        asparagineHelpOutlet?.text = asparagineString
+        valineHelpOutlet?.text = valineString
+        phenylalanineHelpOutlet?.text = phenylalanineString
+        prolineHelpOutlet?.text = prolineString
+        leucineHelpOutlet?.text = leucineString
+        methionineHelpOutlet?.text = methionineString
+        isoleucineHelpOutlet?.text = isoleucineString
+        alanineHelpOutlet?.text = alanineString
+        tryptophanHelpOutlet?.text = tryptophanString
+        cystineHelpOutlet?.text = cystineString
+        glycineHelpOutlet?.text = glycineString
+
 
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.

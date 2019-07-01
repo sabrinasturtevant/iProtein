@@ -22,17 +22,10 @@
                                 <rect key="frame" x="0.0" y="0.0" width="667" height="375"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Lysine" translatesAutoresizingMaskIntoConstraints="NO" id="K9U-El-JRk">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Glycine" translatesAutoresizingMaskIntoConstraints="NO" id="K9U-El-JRk">
                                 <rect key="frame" x="88" y="112" width="164" height="192"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Lysine - Lys - K" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lVs-bK-hWy">
-                                <rect key="frame" x="234" y="40" width="195" height="41"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="30"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="H2w-S7-8nx">
                                 <rect key="frame" x="285" y="112" width="294" height="192"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -40,16 +33,36 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="backButton" translatesAutoresizingMaskIntoConstraints="NO" id="aeR-OX-0Xp">
+                            <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="backButton" translatesAutoresizingMaskIntoConstraints="NO" id="aeR-OX-0Xp">
                                 <rect key="frame" x="549" y="312" width="84" height="27"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <gestureRecognizers/>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="Opq-5W-MUH" appends="YES" id="iu8-cN-TH1"/>
+                                </connections>
                             </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Glycine - Gly - G" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lVs-bK-hWy">
+                                <rect key="frame" x="223" y="41" width="221" height="41"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="30"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="olT-lL-86g"/>
                     </view>
+                    <connections>
+                        <outlet property="glycineHelpOutlet" destination="H2w-S7-8nx" id="1eo-ro-Q6u"/>
+                        <segue destination="20V-an-myq" kind="show" identifier="glycineBackTapped" id="I4s-1p-Q1K"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xnC-C1-1vH" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="Opq-5W-MUH" userLabel="backButtonTap">
+                    <connections>
+                        <action selector="glycineBackTapped:" destination="29k-iH-DXa" id="xlD-H4-ZZB"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="-2073" y="-2718"/>
         </scene>
@@ -65,12 +78,12 @@
                                 <rect key="frame" x="0.0" y="0.0" width="667" height="375"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Lysine" translatesAutoresizingMaskIntoConstraints="NO" id="1d8-or-Wth">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Cystine" translatesAutoresizingMaskIntoConstraints="NO" id="1d8-or-Wth">
                                 <rect key="frame" x="88" y="112" width="164" height="192"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Lysine - Lys - K" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2Ct-Hk-4lz">
-                                <rect key="frame" x="234" y="40" width="195" height="41"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Cystine - Cys - C" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2Ct-Hk-4lz">
+                                <rect key="frame" x="234" y="40" width="221" height="41"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="30"/>
                                 <nil key="textColor"/>
@@ -83,16 +96,29 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="backButton" translatesAutoresizingMaskIntoConstraints="NO" id="0YW-uA-DLO">
+                            <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="backButton" translatesAutoresizingMaskIntoConstraints="NO" id="0YW-uA-DLO">
                                 <rect key="frame" x="549" y="312" width="84" height="27"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <gestureRecognizers/>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="xnI-Ee-1hg" appends="YES" id="HKh-3g-1mS"/>
+                                </connections>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="jJG-ZV-kCc"/>
                     </view>
+                    <connections>
+                        <outlet property="cystineHelpOutlet" destination="SyL-dR-Ep1" id="4Dw-QR-GPV"/>
+                        <segue destination="20V-an-myq" kind="show" identifier="cystineBackSegue" id="6gw-5Z-sRv"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="IKZ-Xq-fne" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="xnI-Ee-1hg" userLabel="backButtonTap">
+                    <connections>
+                        <action selector="cystineBackTapped:" destination="29a-Jz-l1h" id="LcC-T5-nQz"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="-2073" y="-1851"/>
         </scene>
@@ -108,17 +134,10 @@
                                 <rect key="frame" x="0.0" y="0.0" width="667" height="375"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Lysine" translatesAutoresizingMaskIntoConstraints="NO" id="Cun-xZ-7fm">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Tryptophan" translatesAutoresizingMaskIntoConstraints="NO" id="Cun-xZ-7fm">
                                 <rect key="frame" x="88" y="112" width="164" height="192"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Lysine - Lys - K" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4sc-Y1-eAZ">
-                                <rect key="frame" x="234" y="40" width="195" height="41"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="30"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CWA-ao-UlQ">
                                 <rect key="frame" x="285" y="112" width="294" height="192"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -126,16 +145,36 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="backButton" translatesAutoresizingMaskIntoConstraints="NO" id="MZm-hY-9Qj">
+                            <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="backButton" translatesAutoresizingMaskIntoConstraints="NO" id="MZm-hY-9Qj">
                                 <rect key="frame" x="549" y="312" width="84" height="27"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <gestureRecognizers/>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="7T9-87-XEt" appends="YES" id="xJU-Ek-UPq"/>
+                                </connections>
                             </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Tryptophan - Trp - W " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4sc-Y1-eAZ">
+                                <rect key="frame" x="190" y="41" width="286" height="41"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="30"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="6Yj-VP-3fH"/>
                     </view>
+                    <connections>
+                        <outlet property="tryptophanHelpOutlet" destination="CWA-ao-UlQ" id="beW-xm-olq"/>
+                        <segue destination="20V-an-myq" kind="show" identifier="tryptophanBackSegue" id="ig3-bc-cf4"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Vc1-QF-W5n" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="7T9-87-XEt" userLabel="backButtonTap">
+                    <connections>
+                        <action selector="tryptophanBackTapped:" destination="N2A-jf-5hj" id="CId-8v-Mdf"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="-2045" y="-1108"/>
         </scene>
@@ -151,17 +190,10 @@
                                 <rect key="frame" x="0.0" y="0.0" width="667" height="375"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Lysine" translatesAutoresizingMaskIntoConstraints="NO" id="5Vl-MJ-w9d">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Alanine" translatesAutoresizingMaskIntoConstraints="NO" id="5Vl-MJ-w9d">
                                 <rect key="frame" x="88" y="112" width="164" height="192"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Lysine - Lys - K" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3TW-tR-UB8">
-                                <rect key="frame" x="234" y="40" width="195" height="41"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="30"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5ea-4g-RD4">
                                 <rect key="frame" x="285" y="112" width="294" height="192"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -169,16 +201,36 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="backButton" translatesAutoresizingMaskIntoConstraints="NO" id="FY3-sV-sse">
+                            <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="backButton" translatesAutoresizingMaskIntoConstraints="NO" id="FY3-sV-sse">
                                 <rect key="frame" x="549" y="312" width="84" height="27"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <gestureRecognizers/>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="9N4-nA-DOO" appends="YES" id="GmO-Tm-KL7"/>
+                                </connections>
                             </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Alanine - Ala - A" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3TW-tR-UB8">
+                                <rect key="frame" x="224" y="41" width="218" height="41"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="30"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="MFo-B1-JV7"/>
                     </view>
+                    <connections>
+                        <outlet property="alanineHelpOutlet" destination="5ea-4g-RD4" id="Mem-ft-BpX"/>
+                        <segue destination="20V-an-myq" kind="show" identifier="alanineBackSegue" id="UPm-fy-zFX"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bj0-yw-f2c" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="9N4-nA-DOO" userLabel="backButtonTap">
+                    <connections>
+                        <action selector="alanineBackTapped:" destination="kX0-GO-256" id="ZcT-Ow-QGX"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="-2031" y="-365"/>
         </scene>
@@ -194,17 +246,10 @@
                                 <rect key="frame" x="0.0" y="0.0" width="667" height="375"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Lysine" translatesAutoresizingMaskIntoConstraints="NO" id="rW3-gX-qQI">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Isoleucine" translatesAutoresizingMaskIntoConstraints="NO" id="rW3-gX-qQI">
                                 <rect key="frame" x="88" y="112" width="164" height="192"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Lysine - Lys - K" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="grc-ZV-8ij">
-                                <rect key="frame" x="234" y="40" width="195" height="41"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="30"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="J9n-VQ-Naz">
                                 <rect key="frame" x="285" y="112" width="294" height="192"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -212,16 +257,36 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="backButton" translatesAutoresizingMaskIntoConstraints="NO" id="1Xe-KV-LfB">
+                            <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="backButton" translatesAutoresizingMaskIntoConstraints="NO" id="1Xe-KV-LfB">
                                 <rect key="frame" x="549" y="312" width="84" height="27"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <gestureRecognizers/>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="NWS-Ns-qpS" appends="YES" id="svz-C7-olz"/>
+                                </connections>
                             </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Isoleucine - IIe - I" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="grc-ZV-8ij">
+                                <rect key="frame" x="219" y="43" width="229" height="41"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="30"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="fPJ-GU-sF4"/>
                     </view>
+                    <connections>
+                        <outlet property="isoleucineHelpOutlet" destination="J9n-VQ-Naz" id="OKc-eQ-5nM"/>
+                        <segue destination="20V-an-myq" kind="show" identifier="isoleucineBackSegue" id="6lu-p2-GJx"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="pFu-kb-7wi" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="NWS-Ns-qpS" userLabel="backButtonTap">
+                    <connections>
+                        <action selector="isoleucineBackTapped:" destination="dEP-DS-0VX" id="mbF-T1-x5u"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="-2017" y="403"/>
         </scene>
@@ -237,17 +302,10 @@
                                 <rect key="frame" x="0.0" y="0.0" width="667" height="375"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Lysine" translatesAutoresizingMaskIntoConstraints="NO" id="07Y-Op-Rbb">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Methionine" translatesAutoresizingMaskIntoConstraints="NO" id="07Y-Op-Rbb">
                                 <rect key="frame" x="88" y="112" width="164" height="192"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Lysine - Lys - K" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iuh-M7-Fuv">
-                                <rect key="frame" x="234" y="40" width="195" height="41"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="30"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Y5Y-xb-DGF">
                                 <rect key="frame" x="285" y="112" width="294" height="192"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -255,16 +313,36 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="backButton" translatesAutoresizingMaskIntoConstraints="NO" id="gpR-1k-3bN">
+                            <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="backButton" translatesAutoresizingMaskIntoConstraints="NO" id="gpR-1k-3bN">
                                 <rect key="frame" x="549" y="312" width="84" height="27"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <gestureRecognizers/>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="Zgi-Wf-2Nu" appends="YES" id="5PL-Sj-vXR"/>
+                                </connections>
                             </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Methionine - Met - M" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iuh-M7-Fuv">
+                                <rect key="frame" x="190" y="40" width="286" height="41"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="30"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="9R8-6P-j0H"/>
                     </view>
+                    <connections>
+                        <outlet property="methionineHelpOutlet" destination="Y5Y-xb-DGF" id="CRA-yY-0og"/>
+                        <segue destination="20V-an-myq" kind="show" identifier="methionineBackSegue" id="GNA-IZ-zQe"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Lg8-jR-Hmg" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="Zgi-Wf-2Nu" userLabel="backButtonTap">
+                    <connections>
+                        <action selector="methionineBackTapped:" destination="K7m-uu-ork" id="lqH-du-hJP"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="-1989" y="1171"/>
         </scene>
@@ -280,17 +358,10 @@
                                 <rect key="frame" x="0.0" y="0.0" width="667" height="375"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Lysine" translatesAutoresizingMaskIntoConstraints="NO" id="cTq-Ju-4yC">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Leucine" translatesAutoresizingMaskIntoConstraints="NO" id="cTq-Ju-4yC">
                                 <rect key="frame" x="88" y="112" width="164" height="192"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Lysine - Lys - K" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7ub-Yo-Uyc">
-                                <rect key="frame" x="234" y="40" width="195" height="41"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="30"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6ZM-qb-6VL">
                                 <rect key="frame" x="285" y="112" width="294" height="192"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -298,16 +369,36 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="backButton" translatesAutoresizingMaskIntoConstraints="NO" id="5XY-rR-8xL">
+                            <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="backButton" translatesAutoresizingMaskIntoConstraints="NO" id="5XY-rR-8xL">
                                 <rect key="frame" x="549" y="312" width="84" height="27"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <gestureRecognizers/>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="4Lr-6U-fpN" appends="YES" id="2lL-9M-DEo"/>
+                                </connections>
                             </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Leucine - Leu - L" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7ub-Yo-Uyc">
+                                <rect key="frame" x="223" y="40" width="221" height="41"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="30"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="goB-G6-4aD"/>
                     </view>
+                    <connections>
+                        <outlet property="leucineHelpOutlet" destination="6ZM-qb-6VL" id="M3r-Ni-neU"/>
+                        <segue destination="20V-an-myq" kind="show" identifier="leucineBackSegue" id="wZE-rt-s5x"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ua5-51-50e" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="4Lr-6U-fpN" userLabel="backButtonTap">
+                    <connections>
+                        <action selector="leucineBackTapped:" destination="twR-xS-fgq" id="RF4-KK-RG6"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="-2031" y="1914"/>
         </scene>
@@ -323,12 +414,12 @@
                                 <rect key="frame" x="0.0" y="0.0" width="667" height="375"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Lysine" translatesAutoresizingMaskIntoConstraints="NO" id="Apz-ud-RkC">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Proline" translatesAutoresizingMaskIntoConstraints="NO" id="Apz-ud-RkC">
                                 <rect key="frame" x="88" y="112" width="164" height="192"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Lysine - Lys - K" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1Bq-TM-icy">
-                                <rect key="frame" x="234" y="40" width="195" height="41"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Proline - Pro - P" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1Bq-TM-icy">
+                                <rect key="frame" x="234" y="40" width="206" height="41"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="30"/>
                                 <nil key="textColor"/>
@@ -341,16 +432,29 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="backButton" translatesAutoresizingMaskIntoConstraints="NO" id="nw3-Pb-6HI">
+                            <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="backButton" translatesAutoresizingMaskIntoConstraints="NO" id="nw3-Pb-6HI">
                                 <rect key="frame" x="549" y="312" width="84" height="27"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <gestureRecognizers/>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="Qcz-3c-ZJl" appends="YES" id="Mgj-Dm-atd"/>
+                                </connections>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="3N4-gb-wUC"/>
                     </view>
+                    <connections>
+                        <outlet property="prolineHelpOutlet" destination="Mkz-g6-43N" id="Fq0-eg-Mm9"/>
+                        <segue destination="20V-an-myq" kind="show" identifier="prolineBackSegue" id="6oB-S0-n56"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="eUq-sU-iAS" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="Qcz-3c-ZJl" userLabel="backButtonTap">
+                    <connections>
+                        <action selector="prolineBackTapped:" destination="YiL-lq-oOs" id="UI0-Pt-anP"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="-2003" y="2732"/>
         </scene>
@@ -366,17 +470,10 @@
                                 <rect key="frame" x="0.0" y="0.0" width="667" height="375"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Lysine" translatesAutoresizingMaskIntoConstraints="NO" id="tVW-ko-TyE">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Phenylalanine" translatesAutoresizingMaskIntoConstraints="NO" id="tVW-ko-TyE">
                                 <rect key="frame" x="88" y="112" width="164" height="192"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Lysine - Lys - K" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uAR-hm-tLs">
-                                <rect key="frame" x="234" y="40" width="195" height="41"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="30"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RL1-FZ-jdj">
                                 <rect key="frame" x="285" y="112" width="294" height="192"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -384,16 +481,36 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="backButton" translatesAutoresizingMaskIntoConstraints="NO" id="cIc-za-D7J">
+                            <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="backButton" translatesAutoresizingMaskIntoConstraints="NO" id="cIc-za-D7J">
                                 <rect key="frame" x="549" y="312" width="84" height="27"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <gestureRecognizers/>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="FJI-dA-6YS" appends="YES" id="1QG-4m-F6t"/>
+                                </connections>
                             </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Phenylalanine - Phe - F" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uAR-hm-tLs">
+                                <rect key="frame" x="179" y="43" width="309" height="41"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="30"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="wog-5G-Edz"/>
                     </view>
+                    <connections>
+                        <outlet property="phenylalanineHelpOutlet" destination="RL1-FZ-jdj" id="h0S-NG-WSb"/>
+                        <segue destination="20V-an-myq" kind="show" identifier="phenylalanineBackSegue" id="vIB-m8-4DU"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3Xo-hu-yUi" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="FJI-dA-6YS" userLabel="backButtonTap">
+                    <connections>
+                        <action selector="phenylalanineBackTapped:" destination="9JO-OA-JzE" id="eZl-Ye-OeS"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="-1989" y="3500"/>
         </scene>
@@ -409,12 +526,12 @@
                                 <rect key="frame" x="0.0" y="0.0" width="667" height="375"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Lysine" translatesAutoresizingMaskIntoConstraints="NO" id="YFH-aq-hF5">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Valine" translatesAutoresizingMaskIntoConstraints="NO" id="YFH-aq-hF5">
                                 <rect key="frame" x="88" y="112" width="164" height="192"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Lysine - Lys - K" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xWf-sK-hlA">
-                                <rect key="frame" x="234" y="40" width="195" height="41"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Valine - Val - V" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xWf-sK-hlA">
+                                <rect key="frame" x="234" y="40" width="191" height="41"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="30"/>
                                 <nil key="textColor"/>
@@ -427,16 +544,29 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="backButton" translatesAutoresizingMaskIntoConstraints="NO" id="9Ub-WK-TCj">
+                            <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="backButton" translatesAutoresizingMaskIntoConstraints="NO" id="9Ub-WK-TCj">
                                 <rect key="frame" x="549" y="312" width="84" height="27"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <gestureRecognizers/>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="lDm-sk-gh1" appends="YES" id="ex7-UE-Ie9"/>
+                                </connections>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="wiP-U9-9uJ"/>
                     </view>
+                    <connections>
+                        <outlet property="valineHelpOutlet" destination="3Fb-ro-k2P" id="PzH-bk-NNW"/>
+                        <segue destination="20V-an-myq" kind="show" identifier="valineBackSegue" id="HQ5-ex-DVF"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Z7E-kn-d71" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="lDm-sk-gh1" userLabel="backButtonTap">
+                    <connections>
+                        <action selector="valineBackTapped:" destination="i9O-IK-dim" id="zHd-Zq-x0j"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="-1989" y="4292"/>
         </scene>
@@ -582,16 +712,29 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="backButton" translatesAutoresizingMaskIntoConstraints="NO" id="xhZ-Ec-hZG">
+                            <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="backButton" translatesAutoresizingMaskIntoConstraints="NO" id="xhZ-Ec-hZG">
                                 <rect key="frame" x="549" y="312" width="84" height="27"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <gestureRecognizers/>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="HGf-FD-xHB" appends="YES" id="vGG-bx-4uU"/>
+                                </connections>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="wZv-s3-FHv"/>
                     </view>
+                    <connections>
+                        <outlet property="argininehelpOutlet" destination="5aZ-Yb-7ip" id="ssg-0S-Acj"/>
+                        <segue destination="20V-an-myq" kind="show" identifier="arginineBackSegue" id="dS2-Lj-CAh"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="CeV-Am-hyQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="HGf-FD-xHB" userLabel="backButtonTap">
+                    <connections>
+                        <action selector="arginineBackTapped:" destination="vSp-BZ-yjK" id="zd7-1o-aUz"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="-1339" y="-1140"/>
         </scene>
@@ -618,9 +761,13 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="backButton" translatesAutoresizingMaskIntoConstraints="NO" id="gCz-7Q-hxE">
+                            <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="backButton" translatesAutoresizingMaskIntoConstraints="NO" id="gCz-7Q-hxE">
                                 <rect key="frame" x="549" y="312" width="84" height="27"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <gestureRecognizers/>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="RgS-qZ-Yco" appends="YES" id="ejQ-yx-3Bu"/>
+                                </connections>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Glutamic Acid - Glu - E" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="O2T-dV-vW5">
                                 <rect key="frame" x="179" y="43" width="308" height="41"/>
@@ -633,8 +780,17 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="ATg-es-Qgf"/>
                     </view>
+                    <connections>
+                        <outlet property="glutamicAcidHelpOutlet" destination="oCE-7c-k8D" id="PDp-Po-Ar1"/>
+                        <segue destination="20V-an-myq" kind="show" identifier="glutamicAcidBackSegue" id="UOy-aT-JG7"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jTn-hd-R8G" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="RgS-qZ-Yco" userLabel="backButtonTap">
+                    <connections>
+                        <action selector="glutamicAcidBackTapped:" destination="Q7N-s5-heI" id="ngW-2o-WFv"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="-1323" y="-372"/>
         </scene>
@@ -661,9 +817,13 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="backButton" translatesAutoresizingMaskIntoConstraints="NO" id="guT-2E-j6y">
+                            <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="backButton" translatesAutoresizingMaskIntoConstraints="NO" id="guT-2E-j6y">
                                 <rect key="frame" x="549" y="312" width="84" height="27"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <gestureRecognizers/>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="Oh7-3B-xvC" appends="YES" id="XDW-SW-3fq"/>
+                                </connections>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Aspartic Acid - Asp - D" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WOU-ck-NpU">
                                 <rect key="frame" x="180" y="43" width="307" height="41"/>
@@ -676,8 +836,17 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="Fdp-o4-201"/>
                     </view>
+                    <connections>
+                        <outlet property="asparticAcidHelpOutlet" destination="WQj-3B-3Ad" id="wH1-rg-izG"/>
+                        <segue destination="20V-an-myq" kind="show" identifier="asparticAcidBackSegue" id="8ld-0w-Waj"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="uqU-Iu-9Nh" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="Oh7-3B-xvC" userLabel="backButtonTap">
+                    <connections>
+                        <action selector="asparticAcidBackTapped:" destination="GOd-g8-s5y" id="wcy-B3-EX4"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="-1316" y="382"/>
         </scene>
@@ -711,16 +880,29 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="backButton" translatesAutoresizingMaskIntoConstraints="NO" id="iAe-ws-LWv">
+                            <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="backButton" translatesAutoresizingMaskIntoConstraints="NO" id="iAe-ws-LWv">
                                 <rect key="frame" x="549" y="312" width="84" height="27"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <gestureRecognizers/>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="meu-HY-jOr" appends="YES" id="jMe-Xc-LuN"/>
+                                </connections>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="dhG-UZ-rFc"/>
                     </view>
+                    <connections>
+                        <outlet property="serineHelpOutlet" destination="Bhl-St-s8f" id="bsx-P6-dUt"/>
+                        <segue destination="20V-an-myq" kind="show" identifier="serineBackSegue" id="JSH-9B-QqY"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="OK7-9n-tc3" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="meu-HY-jOr" userLabel="backButtonTap">
+                    <connections>
+                        <action selector="serineBackTapped:" destination="b9u-oF-TVY" id="YZa-IR-cI8"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="-1316" y="1150"/>
         </scene>
@@ -747,9 +929,13 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="backButton" translatesAutoresizingMaskIntoConstraints="NO" id="6Su-7L-cBw">
+                            <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="backButton" translatesAutoresizingMaskIntoConstraints="NO" id="6Su-7L-cBw">
                                 <rect key="frame" x="549" y="312" width="84" height="27"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <gestureRecognizers/>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="da4-le-Dj2" appends="YES" id="7dV-w8-rWG"/>
+                                </connections>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Threonine - Thr - T" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GTo-Qh-xBH">
                                 <rect key="frame" x="208" y="42" width="250" height="41"/>
@@ -762,8 +948,17 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="LjK-yc-Goi"/>
                     </view>
+                    <connections>
+                        <outlet property="threonineHelpOutlet" destination="emT-rm-sgp" id="MTP-Ox-Nq8"/>
+                        <segue destination="20V-an-myq" kind="show" identifier="threonineBackSegue" id="FpV-so-I2s"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="b2U-gX-Ww0" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="da4-le-Dj2" userLabel="backButtonTap">
+                    <connections>
+                        <action selector="threonineBackTapped:" destination="PrA-uf-bK1" id="lJS-j5-DWk"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="-1323" y="1932"/>
         </scene>
@@ -797,16 +992,29 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="backButton" translatesAutoresizingMaskIntoConstraints="NO" id="6dV-kZ-wvz">
+                            <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="backButton" translatesAutoresizingMaskIntoConstraints="NO" id="6dV-kZ-wvz">
                                 <rect key="frame" x="549" y="312" width="84" height="27"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <gestureRecognizers/>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="VvC-j9-QhM" appends="YES" id="QMF-1N-5Hm"/>
+                                </connections>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="65j-cc-GW7"/>
                     </view>
+                    <connections>
+                        <outlet property="tyrosineHelpOutlet" destination="M3L-ol-oVz" id="axi-uh-f6D"/>
+                        <segue destination="20V-an-myq" kind="show" identifier="tyrosineBackSegue" id="X4F-cf-HWh"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="YiR-Yz-yUV" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="VvC-j9-QhM" userLabel="backButtonTap">
+                    <connections>
+                        <action selector="tyrosineBackTapped:" destination="Jbz-gy-s4i" id="Qm0-fb-FaA"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="-1316" y="2699"/>
         </scene>
@@ -833,9 +1041,13 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="backButton" translatesAutoresizingMaskIntoConstraints="NO" id="eKF-vg-NAj">
+                            <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="backButton" translatesAutoresizingMaskIntoConstraints="NO" id="eKF-vg-NAj">
                                 <rect key="frame" x="549" y="312" width="84" height="27"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <gestureRecognizers/>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="z7r-ye-mza" appends="YES" id="xIS-0a-GIg"/>
+                                </connections>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Glutamine - Glu - Q" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4oZ-4w-k6C">
                                 <rect key="frame" x="200" y="43" width="266" height="41"/>
@@ -848,8 +1060,17 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="vSv-5Z-DbY"/>
                     </view>
+                    <connections>
+                        <outlet property="glutamineHelpOutlet" destination="ShP-Aq-sP7" id="C2i-1b-I91"/>
+                        <segue destination="20V-an-myq" kind="show" identifier="glutamineBackSegue" id="ZIL-NS-x6d"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="FFA-BR-hzw" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="z7r-ye-mza" userLabel="backButtonTap">
+                    <connections>
+                        <action selector="glutamineBackTapped:" destination="IRW-KL-IJO" id="atb-uB-O0c"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="-1316" y="3467"/>
         </scene>
@@ -876,9 +1097,13 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="backButton" translatesAutoresizingMaskIntoConstraints="NO" id="Vxe-UC-Bq4">
+                            <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="backButton" translatesAutoresizingMaskIntoConstraints="NO" id="Vxe-UC-Bq4">
                                 <rect key="frame" x="549" y="312" width="84" height="27"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <gestureRecognizers/>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="wJn-oR-3H8" appends="YES" id="YVG-Cl-ao3"/>
+                                </connections>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Asparagine - Asn - N" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="caO-MJ-lfi">
                                 <rect key="frame" x="193" y="45" width="281" height="41"/>
@@ -891,8 +1116,17 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="pnz-5F-3zN"/>
                     </view>
+                    <connections>
+                        <outlet property="asparagineHelpOutlet" destination="AQH-0h-Bcc" id="rfC-Mh-aON"/>
+                        <segue destination="20V-an-myq" kind="show" identifier="asparagineBackSegue" id="KgD-CY-2IX"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="FhZ-ch-WNA" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="wJn-oR-3H8" userLabel="backButtonTap">
+                    <connections>
+                        <action selector="asparagineBackTapped:" destination="H2Y-VS-708" id="V9o-Ti-vpf"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="-1307" y="4292"/>
         </scene>
@@ -987,7 +1221,7 @@
         <scene sceneID="9PM-Og-KVK">
             <objects>
                 <viewController id="Oai-ek-gI6" customClass="DrawView" customModule="iProtein" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" ambiguous="YES" id="yEK-bn-QMv">
+                    <view key="view" contentMode="scaleToFill" id="yEK-bn-QMv">
                         <rect key="frame" x="0.0" y="0.0" width="667" height="1200"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
@@ -1170,7 +1404,7 @@
                                 </constraints>
                                 <directionalEdgeInsets key="directionalLayoutMargins" top="8" leading="8" bottom="8" trailing="8"/>
                             </scrollView>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="fRf-G2-3P5">
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="fRf-G2-3P5" userLabel="ligandDrawView">
                                 <rect key="frame" x="161" y="97" width="492" height="265"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -1561,6 +1795,24 @@
                         <segue destination="7pd-R7-IlN" kind="show" identifier="lysineSegue" id="Cx8-GU-dZs"/>
                         <segue destination="BYZ-38-t0r" kind="show" identifier="backButtonMainScreenSegue" id="nNt-aP-qHc"/>
                         <segue destination="gGK-CF-mih" kind="show" identifier="histidineSegue" id="k1R-TQ-vKl"/>
+                        <segue destination="vSp-BZ-yjK" kind="show" identifier="arginineSegue" id="MfC-K0-Pgf"/>
+                        <segue destination="Q7N-s5-heI" kind="show" identifier="glutamicAcidSegue" id="clN-xX-HvS"/>
+                        <segue destination="GOd-g8-s5y" kind="show" identifier="asparticAcidSegue" id="oVH-wD-aPo"/>
+                        <segue destination="b9u-oF-TVY" kind="show" identifier="serineSegue" id="c7H-hQ-mil"/>
+                        <segue destination="PrA-uf-bK1" kind="show" identifier="threonineSegue" id="2Ei-iY-lhx"/>
+                        <segue destination="Jbz-gy-s4i" kind="show" identifier="tyrosineSegue" id="hBj-kE-V4N"/>
+                        <segue destination="IRW-KL-IJO" kind="show" identifier="glutamineSegue" id="crt-RB-vfB"/>
+                        <segue destination="H2Y-VS-708" kind="show" identifier="asparagineSegue" id="cMc-oj-ds3"/>
+                        <segue destination="i9O-IK-dim" kind="show" identifier="valineSegue" id="yak-eo-zBR"/>
+                        <segue destination="9JO-OA-JzE" kind="show" identifier="phenylalanineSegue" id="dHd-Fs-4tD"/>
+                        <segue destination="YiL-lq-oOs" kind="show" identifier="prolineSegue" id="yuX-iM-cDo"/>
+                        <segue destination="twR-xS-fgq" kind="show" identifier="leucineSegue" id="xdE-lO-7QY"/>
+                        <segue destination="K7m-uu-ork" kind="show" identifier="methionineSegue" id="7dz-Z3-gIK"/>
+                        <segue destination="dEP-DS-0VX" kind="show" identifier="isoleucineSegue" id="ov8-qB-rQg"/>
+                        <segue destination="kX0-GO-256" kind="show" identifier="alanineSegue" id="cH6-CL-7te"/>
+                        <segue destination="N2A-jf-5hj" kind="show" identifier="tryptophanSegue" id="lt5-52-q7j"/>
+                        <segue destination="29a-Jz-l1h" kind="show" identifier="cystineSegue" id="tgt-lE-l2v"/>
+                        <segue destination="29k-iH-DXa" kind="show" identifier="glycineSegue" id="buq-rE-rdx"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="698-Tg-Mam" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -1670,7 +1922,7 @@
                     </connections>
                 </tapGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="-304.4977511244378" y="2100"/>
+            <point key="canvasLocation" x="-630" y="1170"/>
         </scene>
     </scenes>
     <resources>
@@ -1713,8 +1965,8 @@
         <image name="whiteRectangleTop" width="533" height="60"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="k1R-TQ-vKl"/>
-        <segue reference="lNK-7K-N7W"/>
-        <segue reference="nNt-aP-qHc"/>
+        <segue reference="buq-rE-rdx"/>
+        <segue reference="I4s-1p-Q1K"/>
+        <segue reference="uVx-If-Ud1"/>
     </inferredMetricsTieBreakers>
 </document>
