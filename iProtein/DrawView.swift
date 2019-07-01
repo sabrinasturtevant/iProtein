@@ -8,8 +8,57 @@
 
 import UIKit
 
+var currentPosition: CGPoint?
+
+
 class DrawView: ViewController {
+    
+    
+    override func drawRect(rect: CGRect) {
+        context?.setLineWidth(2.0)
+        context?.setStrokeColor(UIColor.black.cgColor)
         
+        
+        context?.move(to: currentPosition!)
+        context?.addLine(to: CGPoint(x: 400, y: 300))
+        context?.strokePath()
+        print("c")
+    }
+    
+}
+    
+    
+    /*
+    func drawRect(rect: CGRect) {
+        //context is the object used for drawing
+        let context = UIGraphicsGetCurrentContext()
+        context?.setLineWidth(2.0)
+        context?.setStrokeColor(UIColor.black.cgColor)
+        
+        
+        //straightline
+        context?.move(to: currentPosition!)
+        context?.addLine(to: CGPoint(x: 10, y:10))
+        
+        
+        //actually draws path
+        context?.strokePath()
+        
+    }
+        
+        
+        //finds and stores where user tapped
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+            if let touch = touches.first {
+                currentPosition = touch.location(in: view)
+                print(currentPosition)
+            }
+        }
+        
+        
+        
+    
+    
     var isDrawing = false
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         guard !isDrawing else { return }
@@ -30,5 +79,6 @@ class DrawView: ViewController {
         guard let touch = touches.first else { return }
 
     }
-    
-}
+
+    */
+

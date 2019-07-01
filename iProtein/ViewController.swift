@@ -26,13 +26,205 @@ var nitrogen = 0
 var phosphorus = 0
 var helium = 0
 
+let context = UIGraphicsGetCurrentContext()
+
+
 
 class ViewController: UIViewController {
     
     
+    let lysineString =
+            """
+            polar
+            positive
+            hydrophilic
+            chemical formula - C6H14N202
+
+
+            """
+    let histidineString =
+            """
+            polar
+            positive
+            hydrophilic
+            chemical formula - C6H9N3O2
+
+
+            """
+    let arginineString =
+            """
+            polar
+            positive
+            hydrophilic
+            chemical formula - C6H14N4O2
+
+
+            """
     
+    let glutamicAcidString =
+            """
+            polar
+            negative
+            hydrophilic
+            chemical formula - C5H9NO4
+
+
+            """
+    let asparticAcidString =
+            """
+            polar
+            negative
+            hydrophilic
+            chemical formula - C4H7NO4
+
+
+            """
     
+    let serineString =
+            """
+            polar
+            equal
+            hydrophilic
+            chemical formula - C3H7NO3
+
+
+            """
     
+    let theonineString =
+            """
+            polar
+            equal
+            hydrophilic
+            chemical formula - C4H9NO3
+
+
+            """
+    
+    let tyrosineString =
+            """
+            polar
+            equal
+            hydrophilic
+            chemical formula - C9H11NO3
+
+
+            """
+    let glutamineString =
+            """
+            polar
+            equal
+            hydrophilic
+            chemical formula - C5H10N203
+
+
+            """
+    
+    let asparagineString =
+            """
+            polar
+            equal
+            hydrophilic
+            chemical formula - C4H8N203
+
+
+            """
+    
+    let valineString =
+            """
+            non-polar
+            no charge
+            hydrophobic
+            chemical formula - C5H11NO2
+
+
+            """
+    
+    let phenylalanineString =
+            """
+            non-polar
+            no charge
+            hydrophobic
+            chemical formula - C9H11N02
+
+
+            """
+    
+    let prolineString =
+            """
+            non-polar
+            no charge
+            hydrophobic
+            chemical formula - C5H9N02
+
+
+            """
+    
+    let leucineString =
+            """
+            non-polar
+            no charge
+            hydrophobic
+            chemical formula - C6H13NO2
+
+
+            """
+    
+    let methionineString =
+            """
+            non-polar
+            no charge
+            hydrophobic
+            chemical formula - C5H11NO2S
+
+
+            """
+    
+    let isoleucineString =
+            """
+            non-polar
+            no charge
+            hydrophobic
+            chemical formula - C6H12NO2
+
+
+            """
+    let alanineString =
+            """
+            non-polar
+            no charge
+            hydrophobic
+            chemical formula - C3H7NO2
+
+
+            """
+    let cystineString =
+            """
+            non-polar
+            no charge
+            hydrophobic
+            chemical formula - C6H12N2O4S2
+
+
+            """
+    let tryptophanString =
+            """
+            non-polar
+            no charge
+            hydrophobic
+            chemical formula - C11H12N202
+
+
+            """
+    
+    let glycineString =
+            """
+            non-polar
+            no charge
+            hydrophobic and hydrophilic
+            chemical formula - C2H5NO2
+
+
+            """
     
     //-----outlets for scroll view and stack view
     
@@ -62,6 +254,8 @@ class ViewController: UIViewController {
     
     @IBAction func helpButtonTapped(_ sender: Any) {
         performSegue(withIdentifier: "helpSegue", sender: nil)
+        
+
     }
     
     
@@ -83,6 +277,94 @@ class ViewController: UIViewController {
     
     
     
+    
+    
+    //segues on help screen
+
+    @IBAction func backButtonMainScreenTapped(_ sender: Any) {
+        performSegue(withIdentifier: "backButtonMainScreenSegue", sender: nil)
+    }
+    
+    
+    
+    @IBAction func lysineTapped(_ sender: Any) {
+        performSegue(withIdentifier: "lysineSegue", sender: nil)
+    }
+    
+    @IBAction func lysineBackTapped(_ sender: Any) {
+        performSegue(withIdentifier: "lysineBackSegue", sender: nil)
+    }
+    
+    @IBAction func histidineTapped(_ sender: Any) {
+        performSegue(withIdentifier: "histidineSegue", sender: nil)
+    }
+    
+    @IBAction func histidineBackTapped(_ sender: Any) {
+        performSegue(withIdentifier: "histidineBackSegue", sender: nil)
+    }
+    
+    @IBAction func arginineTapped(_ sender: Any) {
+    }
+    
+    @IBAction func asparticAcidTapped(_ sender: Any) {
+    }
+    
+    @IBAction func glutamicAcidTapped(_ sender: Any) {
+    }
+    
+    @IBAction func asparagineTapped(_ sender: Any) {
+    }
+    
+    @IBAction func theronineTapped(_ sender: Any) {
+    }
+    
+    @IBAction func serineTapped(_ sender: Any) {
+    }
+    
+    @IBAction func glutamineTapped(_ sender: Any) {
+    }
+    
+    @IBAction func tyrosineTapped(_ sender: Any) {
+    }
+    
+    @IBAction func glycineTapped(_ sender: Any) {
+    }
+    
+    @IBAction func prolineTapped(_ sender: Any) {
+    }
+    
+    @IBAction func methionineTapped(_ sender: Any) {
+    }
+    
+    @IBAction func valineTapped(_ sender: Any) {
+    }
+    
+    @IBAction func phenylalanineTapped(_ sender: Any) {
+    }
+    
+    @IBAction func leucineTapped(_ sender: Any) {
+    }
+    
+    @IBAction func tryptophanTapped(_ sender: Any) {
+    }
+    
+    @IBAction func cystineTapped(_ sender: Any) {
+    }
+    
+    @IBAction func isoleucineTapped(_ sender: Any) {
+    }
+    
+    @IBAction func alanineTapped(_ sender: Any) {
+    }
+    
+    
+    //outlets for help screen text boxes
+    @IBOutlet weak var lysinehelpOutlet: UILabel!
+    @IBOutlet weak var histidineHelpOutlet: UILabel!
+    
+    
+    
+
     
     
     
@@ -122,17 +404,65 @@ class ViewController: UIViewController {
     @IBOutlet weak var heliumOutlet: UILabel!
 
     
+ /*   func drawRect(rect: CGRect) {
+        //context is the object used for drawing
+        let context = UIGraphicsGetCurrentContext()
+        context?.setLineWidth(2.0)
+        context?.setStrokeColor(UIColor.black.cgColor)
+        
+        
+        //straightline
+        context?.move(to: currentPosition!)
+        context?.addLine(to: CGPoint(x: 10, y:10))
+        
+        
+        //actually draws path
+        context?.strokePath()
+        
+    }
     
+    
+    //finds and stores where user tapped
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        if let touch = touches.first {
+            currentPosition = touch.location(in: view)
+            print(currentPosition)
+        }
+    }
+    */
     
     
     
     //------actions for single bond
     @IBAction func singleBondTapped(_ sender: Any) {
+        
+        /*
+        func drawRect(rect: CGRect) {
+        let context = UIGraphicsGetCurrentContext()
+        context?.setLineWidth(2.0)
+        context?.setStrokeColor(UIColor.black.cgColor)
+        
+            context?.move(to: CGPoint(x: 50, y: 50))
+            context?.move(to: CGPoint(x: 90, y: 130))
+            context?.move(to: CGPoint(x: 180, y: 100))
+            context?.move(to: CGPoint(x: 90, y: 60))
+            context?.move(to: CGPoint(x: 50, y: 50))
+            
+            context?.strokePath()
+
+            print("b")
+        
+        
+        context?.beginPath()
+        context?.addLine(to: currentPosition!)
+        context?.addLine(to: CGPoint(x: 0, y:0))
+        context?.strokePath()
+        self.view.setNeedsDisplay()
+ 
+        }
+        */
+        
         singleBond += 1
-        
-      
-        
-        
         if singleBond == 2 {
             singleBond = 1
         }
@@ -837,6 +1167,24 @@ class ViewController: UIViewController {
     }
     
 
+
+    func drawRect(rect: CGRect) {
+        if singleBond == 1 {
+            context?.setLineWidth(2.0)
+            context?.setStrokeColor(UIColor.black.cgColor)
+            
+            
+            context?.move(to: currentPosition!)
+            context?.addLine(to: CGPoint(x: 400, y: 300))
+            context?.strokePath()
+            
+            self.view.setNeedsDisplay()
+
+            print("c")
+
+        }
+
+    }
     
 
 
@@ -846,13 +1194,21 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         self.scrollViewLigandSymbols?.contentSize = CGSize(width: 320, height: 1000)
         
-        
+         lysinehelpOutlet?.text = lysineString
+        histidineHelpOutlet?.text = histidineString
     self.scrollViewLigandSymbols?.isDirectionalLockEnabled == true
 
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
     }
+    
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        if let touch = touches.first {
+            currentPosition = touch.location(in: view)
+            print(currentPosition!)
+        }
 
 
 }
 
+}
