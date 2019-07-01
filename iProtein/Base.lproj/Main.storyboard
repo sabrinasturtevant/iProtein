@@ -1221,7 +1221,7 @@
         <scene sceneID="9PM-Og-KVK">
             <objects>
                 <viewController id="Oai-ek-gI6" customClass="DrawView" customModule="iProtein" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="yEK-bn-QMv">
+                    <view key="view" contentMode="scaleToFill" ambiguous="YES" id="yEK-bn-QMv">
                         <rect key="frame" x="0.0" y="0.0" width="667" height="1200"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
@@ -1967,6 +1967,6 @@
     <inferredMetricsTieBreakers>
         <segue reference="buq-rE-rdx"/>
         <segue reference="I4s-1p-Q1K"/>
-        <segue reference="uVx-If-Ud1"/>
+        <segue reference="nNt-aP-qHc"/>
     </inferredMetricsTieBreakers>
 </document>
