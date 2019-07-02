@@ -9,8 +9,24 @@
 import UIKit
 
 let context = UIGraphicsGetCurrentContext()
+var currentPosition: CGPoint?
+
 
 class ViewController: UIViewController {
+    
+    /* if singleBond == 1 {
+     context?.setLineWidth(2.0)
+     context?.setStrokeColor(UIColor.black.cgColor)
+     
+     
+     context?.move(to: currentPosition!)
+     context?.addLine(to: CGPoint(x: 400, y: 300))
+     context?.strokePath()
+     
+     self.view.setNeedsDisplay()
+     
+     print("c")
+     */
     
     
     let lysineString =
@@ -950,6 +966,8 @@ self.scrollViewLigandSymbols?.isDirectionalLockEnabled == true
         cystineHelpOutlet?.text = cystineString
         glycineHelpOutlet?.text = glycineString
 
+            let shapeView = Shape(origin: view.center)
+            self.view.addSubview(shapeView)
 
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
@@ -963,5 +981,55 @@ self.scrollViewLigandSymbols?.isDirectionalLockEnabled == true
 
 
 }
+    
 
+}
+
+
+class Shape : UIView {
+    
+    let size : CGFloat = 150
+    let lineWidth: CGFloat = 3
+    
+    init(origin: CGPoint) {
+        super.init(frame: CGRect(x: 0, y: 0, width: size, height: size))
+        self.center = origin
+        addGestures()
+        }
+    
+    required init?(coder aDecoder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+    
+    override func draw(_ rect: CGRect) {
+        let path = UIBezierPath(roundedRect: rect, cornerRadius: 10)
+        UIColor.red.setFill()
+        path.fill()
+        
+        path.lineWidth = self.lineWidth
+        UIColor.black.setStroke()
+        path.stroke()
+    }
+    
+    func addGestures(){
+        let panGR = UIPanGestureRecognizer(target: self, action: #selector(handlePan))
+        self.addGestureRecognizer(panGR)
+        
+      //  let rotateGR = UIPanGestureRecognizer(target: self, action: #selector(handleRotate))
+      //  self.addGestureRecognizer(panGR)
+    }
+    
+    @objc func handlePan(panGR: UIPanGestureRecognizer){
+        self.superview?.bringSubviewToFront(self)
+        let translation = panGR.translation(in: self)
+        self.center.x += translation.x
+        self.center.y += translation.y
+        panGR.setTranslation(.zero, in: self)
+    }
+    
+   /* @objc func handleRotate() {
+        self.superview?.bringSubviewToFront(self)
+        let rotation = rotation
+        self.transform = self.transform.rotated(by: rotation)
+    } */
 }
