@@ -1049,7 +1049,7 @@
                                     <outletCollection property="gestureRecognizers" destination="z7r-ye-mza" appends="YES" id="xIS-0a-GIg"/>
                                 </connections>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Glutamine - Glu - Q" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4oZ-4w-k6C">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Glutamine - Gln - Q" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4oZ-4w-k6C">
                                 <rect key="frame" x="200" y="43" width="266" height="41"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="30"/>
@@ -1142,10 +1142,18 @@
                                 <rect key="frame" x="0.0" y="0.0" width="667" height="375"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="w0m-c6-cJ7">
-                                <rect key="frame" x="75" y="157" width="130" height="134"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="initialPurpleButton" translatesAutoresizingMaskIntoConstraints="NO" id="z0Y-le-p8F">
+                                <rect key="frame" x="53" y="156" width="174" height="136"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" image="initialPurpleButton"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="initialPurpleButton" translatesAutoresizingMaskIntoConstraints="NO" id="WZ5-7d-5vI">
+                                <rect key="frame" x="246" y="155" width="174" height="136"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="w0m-c6-cJ7">
+                                <rect key="frame" x="91" y="176" width="99" height="96"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="ligandButton"/>
                                 <connections>
                                     <action selector="makeLigandTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="EYf-3I-oMV"/>
                                 </connections>
@@ -1153,7 +1161,7 @@
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FCx-sV-SMQ">
                                 <rect key="frame" x="266" y="157" width="134" height="134"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" image="initialPurpleButton"/>
+                                <state key="normal" image="aminoAcidButtonFR"/>
                                 <connections>
                                     <action selector="makeAminoAcidTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="UgP-6G-4en"/>
                                 </connections>
@@ -1161,7 +1169,7 @@
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="21O-07-xUW">
                                 <rect key="frame" x="456" y="157" width="132" height="134"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" image="initialPurpleButton"/>
+                                <state key="normal" image="combineButoon"/>
                                 <connections>
                                     <action selector="combineTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="huN-6c-7jQ"/>
                                 </connections>
@@ -1174,13 +1182,6 @@
                                     <action selector="helpButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Mgn-Dp-yLs"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="iProtein" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Lr5-7U-5z2">
-                                <rect key="frame" x="0.0" y="36" width="667" height="79"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="35"/>
-                                <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="make ligand" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="swS-7r-ZPR">
                                 <rect key="frame" x="94" y="306" width="90" height="22"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -1202,6 +1203,14 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="iProteinTitle" translatesAutoresizingMaskIntoConstraints="NO" id="1aN-sw-xFF">
+                                <rect key="frame" x="198" y="0.0" width="300" height="160"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="initialPurpleButton" translatesAutoresizingMaskIntoConstraints="NO" id="eks-2y-4bN">
+                                <rect key="frame" x="434" y="156" width="174" height="136"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
@@ -1221,7 +1230,7 @@
         <scene sceneID="9PM-Og-KVK">
             <objects>
                 <viewController id="Oai-ek-gI6" customClass="ViewController" customModule="iProtein" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="yEK-bn-QMv">
+                    <view key="view" contentMode="scaleToFill" ambiguous="YES" id="yEK-bn-QMv">
                         <rect key="frame" x="0.0" y="0.0" width="667" height="1200"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
@@ -1258,73 +1267,73 @@
                                                 <rect key="frame" x="0.0" y="0.0" width="113" height="50.5"/>
                                                 <color key="backgroundColor" cocoaTouchSystemColor="scrollViewTexturedBackgroundColor"/>
                                             </imageView>
-                                            <imageView contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="singleBond" translatesAutoresizingMaskIntoConstraints="NO" id="wIQ-7c-0ce">
+                                            <imageView tag="2" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="singleBond" translatesAutoresizingMaskIntoConstraints="NO" id="wIQ-7c-0ce">
                                                 <rect key="frame" x="37.5" y="59.5" width="38" height="50"/>
                                             </imageView>
-                                            <imageView contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="doubleBond" translatesAutoresizingMaskIntoConstraints="NO" id="3sv-8M-Lrc">
+                                            <imageView tag="2" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="doubleBond" translatesAutoresizingMaskIntoConstraints="NO" id="3sv-8M-Lrc">
                                                 <rect key="frame" x="37" y="118.5" width="39" height="50.5"/>
                                                 <gestureRecognizers/>
                                                 <connections>
                                                     <outletCollection property="gestureRecognizers" destination="QMJ-w1-x6J" appends="YES" id="XkT-wa-Gtc"/>
                                                 </connections>
                                             </imageView>
-                                            <imageView contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="tripleBond" translatesAutoresizingMaskIntoConstraints="NO" id="gM2-8c-Kip">
+                                            <imageView tag="3" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="tripleBond" translatesAutoresizingMaskIntoConstraints="NO" id="gM2-8c-Kip">
                                                 <rect key="frame" x="37" y="178" width="39" height="50.5"/>
                                                 <gestureRecognizers/>
                                                 <connections>
                                                     <outletCollection property="gestureRecognizers" destination="mnL-h9-i7B" appends="YES" id="aaf-90-tmk"/>
                                                 </connections>
                                             </imageView>
-                                            <imageView contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="towardBond" translatesAutoresizingMaskIntoConstraints="NO" id="HHB-wO-LM3">
+                                            <imageView tag="4" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="towardBond" translatesAutoresizingMaskIntoConstraints="NO" id="HHB-wO-LM3">
                                                 <rect key="frame" x="35" y="237.5" width="43" height="50.5"/>
                                                 <gestureRecognizers/>
                                                 <connections>
                                                     <outletCollection property="gestureRecognizers" destination="frd-z7-2yU" appends="YES" id="yVe-Ty-NLS"/>
                                                 </connections>
                                             </imageView>
-                                            <imageView contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="awayBond" translatesAutoresizingMaskIntoConstraints="NO" id="iaC-Db-ohz">
+                                            <imageView tag="5" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="awayBond" translatesAutoresizingMaskIntoConstraints="NO" id="iaC-Db-ohz">
                                                 <rect key="frame" x="39" y="297" width="35" height="50"/>
                                                 <gestureRecognizers/>
                                                 <connections>
                                                     <outletCollection property="gestureRecognizers" destination="sdi-3w-Vm1" appends="YES" id="Y4X-KZ-zPD"/>
                                                 </connections>
                                             </imageView>
-                                            <imageView contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="fiveSided" translatesAutoresizingMaskIntoConstraints="NO" id="nci-m8-C10">
+                                            <imageView tag="6" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="fiveSided" translatesAutoresizingMaskIntoConstraints="NO" id="nci-m8-C10">
                                                 <rect key="frame" x="32.5" y="356" width="48" height="50.5"/>
                                                 <gestureRecognizers/>
                                                 <connections>
                                                     <outletCollection property="gestureRecognizers" destination="eGQ-9D-EmB" appends="YES" id="kLT-G3-5PV"/>
                                                 </connections>
                                             </imageView>
-                                            <imageView contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="sixSided" translatesAutoresizingMaskIntoConstraints="NO" id="JjL-ie-1RP">
+                                            <imageView tag="7" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="sixSided" translatesAutoresizingMaskIntoConstraints="NO" id="JjL-ie-1RP">
                                                 <rect key="frame" x="27.5" y="415.5" width="58" height="50.5"/>
                                                 <gestureRecognizers/>
                                                 <connections>
                                                     <outletCollection property="gestureRecognizers" destination="hD9-nw-S8G" appends="YES" id="VQu-AS-d7w"/>
                                                 </connections>
                                             </imageView>
-                                            <imageView contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="sixSidedDouble" translatesAutoresizingMaskIntoConstraints="NO" id="Cy5-xE-cBX">
+                                            <imageView tag="8" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="sixSidedDouble" translatesAutoresizingMaskIntoConstraints="NO" id="Cy5-xE-cBX">
                                                 <rect key="frame" x="27.5" y="475" width="58" height="50"/>
                                                 <gestureRecognizers/>
                                                 <connections>
                                                     <outletCollection property="gestureRecognizers" destination="RfO-xM-LcY" appends="YES" id="0zF-Jp-nBT"/>
                                                 </connections>
                                             </imageView>
-                                            <imageView contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="sevenSided" translatesAutoresizingMaskIntoConstraints="NO" id="eG2-vH-Dty">
+                                            <imageView tag="9" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="sevenSided" translatesAutoresizingMaskIntoConstraints="NO" id="eG2-vH-Dty">
                                                 <rect key="frame" x="32.5" y="534" width="48" height="50.5"/>
                                                 <gestureRecognizers/>
                                                 <connections>
                                                     <outletCollection property="gestureRecognizers" destination="HK1-jE-0vV" appends="YES" id="Sve-Vg-1pc"/>
                                                 </connections>
                                             </imageView>
-                                            <imageView contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="eightSided" translatesAutoresizingMaskIntoConstraints="NO" id="C5u-1X-8og">
+                                            <imageView tag="10" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="eightSided" translatesAutoresizingMaskIntoConstraints="NO" id="C5u-1X-8og">
                                                 <rect key="frame" x="29.5" y="593.5" width="54" height="50.5"/>
                                                 <gestureRecognizers/>
                                                 <connections>
                                                     <outletCollection property="gestureRecognizers" destination="OrS-hS-srV" appends="YES" id="4O2-qO-02C"/>
                                                 </connections>
                                             </imageView>
-                                            <label opaque="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="C" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wYH-ac-9Lo">
+                                            <label opaque="NO" tag="11" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="C" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wYH-ac-9Lo">
                                                 <rect key="frame" x="47" y="653" width="19" height="50"/>
                                                 <gestureRecognizers/>
                                                 <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="26"/>
@@ -1334,7 +1343,7 @@
                                                     <outletCollection property="gestureRecognizers" destination="LSc-V7-qfw" appends="YES" id="fBD-0Z-iZP"/>
                                                 </connections>
                                             </label>
-                                            <label opaque="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="O" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Xrr-Ph-znj">
+                                            <label opaque="NO" tag="12" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="O" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Xrr-Ph-znj">
                                                 <rect key="frame" x="45.5" y="712" width="22.5" height="50.5"/>
                                                 <gestureRecognizers/>
                                                 <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="26"/>
@@ -1344,7 +1353,7 @@
                                                     <outletCollection property="gestureRecognizers" destination="Ovx-RH-x6B" appends="YES" id="KOM-R3-fxT"/>
                                                 </connections>
                                             </label>
-                                            <label opaque="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="H" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="l2v-UP-eIj">
+                                            <label opaque="NO" tag="13" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="H" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="l2v-UP-eIj">
                                                 <rect key="frame" x="47" y="771.5" width="19" height="50.5"/>
                                                 <gestureRecognizers/>
                                                 <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="26"/>
@@ -1354,7 +1363,7 @@
                                                     <outletCollection property="gestureRecognizers" destination="pC3-th-XyJ" appends="YES" id="seq-h7-3Xd"/>
                                                 </connections>
                                             </label>
-                                            <label opaque="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="N" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eTl-AV-9iG">
+                                            <label opaque="NO" tag="14" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="N" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eTl-AV-9iG">
                                                 <rect key="frame" x="46.5" y="831" width="20" height="50.5"/>
                                                 <gestureRecognizers/>
                                                 <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="26"/>
@@ -1364,7 +1373,7 @@
                                                     <outletCollection property="gestureRecognizers" destination="ZnC-ex-Fnx" appends="YES" id="euv-UI-JKI"/>
                                                 </connections>
                                             </label>
-                                            <label opaque="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="P" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="w5f-bW-19f">
+                                            <label opaque="NO" tag="15" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="P" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="w5f-bW-19f">
                                                 <rect key="frame" x="49" y="890.5" width="15.5" height="50"/>
                                                 <gestureRecognizers/>
                                                 <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="26"/>
@@ -1374,7 +1383,7 @@
                                                     <outletCollection property="gestureRecognizers" destination="ZXr-v1-e2G" appends="YES" id="5kO-cM-Vfd"/>
                                                 </connections>
                                             </label>
-                                            <label opaque="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="He" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jCA-81-pWy">
+                                            <label opaque="NO" tag="16" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="He" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jCA-81-pWy">
                                                 <rect key="frame" x="39.5" y="949.5" width="34" height="50.5"/>
                                                 <gestureRecognizers/>
                                                 <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="26"/>
@@ -1946,15 +1955,19 @@
         <image name="Tryptophan" width="55" height="66"/>
         <image name="Tyrosine" width="55" height="66"/>
         <image name="Valine" width="55" height="66"/>
+        <image name="aminoAcidButtonFR" width="96" height="97.5"/>
         <image name="awayBond" width="35.5" height="25"/>
         <image name="backButton" width="84" height="27"/>
         <image name="backgroundAll" width="812" height="375"/>
         <image name="backgroundHome" width="812" height="375"/>
+        <image name="combineButoon" width="99.5" height="70.5"/>
         <image name="doubleBond" width="39" height="5"/>
         <image name="eightSided" width="54.5" height="54.5"/>
         <image name="fiveSided" width="48" height="45.5"/>
         <image name="helpButton" width="84" height="27"/>
+        <image name="iProteinTitle" width="290" height="84"/>
         <image name="initialPurpleButton" width="130" height="134"/>
+        <image name="ligandButton" width="99" height="96"/>
         <image name="sevenSided" width="48" height="48"/>
         <image name="singleBond" width="38" height="1"/>
         <image name="sixSided" width="58" height="59"/>
@@ -1965,8 +1978,7 @@
         <image name="whiteRectangleTop" width="533" height="60"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="buq-rE-rdx"/>
-        <segue reference="I4s-1p-Q1K"/>
+        <segue reference="B6o-0M-ZuJ"/>
         <segue reference="uVx-If-Ud1"/>
     </inferredMetricsTieBreakers>
 </document>

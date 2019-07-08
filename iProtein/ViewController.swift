@@ -14,6 +14,7 @@ var currentPosition: CGPoint?
 
 class ViewController: UIViewController {
     
+    
     /* if singleBond == 1 {
      context?.setLineWidth(2.0)
      context?.setStrokeColor(UIColor.black.cgColor)
@@ -935,7 +936,7 @@ class ViewController: UIViewController {
         heliumOutlet.alpha = 1.0
     }
     
-    
+
 
 
 
@@ -966,14 +967,17 @@ self.scrollViewLigandSymbols?.isDirectionalLockEnabled == true
         cystineHelpOutlet?.text = cystineString
         glycineHelpOutlet?.text = glycineString
 
-            let shapeView = Shape(origin: view.center)
-            self.view.addSubview(shapeView)
+        //    let shapeView = Shape(origin: view.center)
+        //    self.view.addSubview(shapeView)
 
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+
     }
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        if currentPosition == nil {
+            currentPosition = CGPoint(x: 0, y: 0)
+        }
         if let touch = touches.first {
             currentPosition = touch.location(in: view)
             print(currentPosition!)
@@ -984,6 +988,25 @@ self.scrollViewLigandSymbols?.isDirectionalLockEnabled == true
     
 
 }
+
+/*class Shape : UIView {
+    
+    func straightLine() {
+    
+    let size : CGFloat = 100
+    let lineWidth : CGFloat = 2
+    
+    var line = UIBezierPath()
+    line.move(to: currentPosition!)
+        line.addLine(to: CGPoint(x: 40, y: 30))
+        line.stroke(with: <#T##CGBlendMode#>, alpha: <#T##CGFloat#>)
+
+    }
+
+}
+
+
+
 
 
 class Shape : UIView {
@@ -1027,9 +1050,11 @@ class Shape : UIView {
         panGR.setTranslation(.zero, in: self)
     }
     
-   /* @objc func handleRotate() {
-        self.superview?.bringSubviewToFront(self)
-        let rotation = rotation
-        self.transform = self.transform.rotated(by: rotation)
-    } */
-}
+  // @objc func handleRotate() {
+  //      self.superview?.bringSubviewToFront(self)
+  //      let rotation = rotation
+   //     self.transform = self.transform.rotated(by: rotation)
+    }
+*/
+ 
+ 
