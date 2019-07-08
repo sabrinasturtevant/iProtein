@@ -1142,12 +1142,16 @@
                                 <rect key="frame" x="0.0" y="0.0" width="667" height="375"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="initialPurpleButton" translatesAutoresizingMaskIntoConstraints="NO" id="z0Y-le-p8F">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="gradientButton" translatesAutoresizingMaskIntoConstraints="NO" id="z0Y-le-p8F">
                                 <rect key="frame" x="53" y="156" width="174" height="136"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="initialPurpleButton" translatesAutoresizingMaskIntoConstraints="NO" id="WZ5-7d-5vI">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="gradientButton" translatesAutoresizingMaskIntoConstraints="NO" id="WZ5-7d-5vI">
                                 <rect key="frame" x="246" y="155" width="174" height="136"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="gradientButton" translatesAutoresizingMaskIntoConstraints="NO" id="eks-2y-4bN">
+                                <rect key="frame" x="435" y="155" width="174" height="136"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="w0m-c6-cJ7">
@@ -1166,31 +1170,24 @@
                                     <action selector="makeAminoAcidTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="UgP-6G-4en"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="21O-07-xUW">
+                            <button opaque="NO" contentMode="redraw" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="21O-07-xUW">
                                 <rect key="frame" x="456" y="157" width="132" height="134"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" image="combineButoon"/>
+                                <state key="normal" image="combineButton"/>
                                 <connections>
                                     <action selector="combineTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="huN-6c-7jQ"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kWs-tb-Mkj">
-                                <rect key="frame" x="39" y="36" width="84" height="27"/>
+                            <button opaque="NO" contentMode="scaleAspectFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kWs-tb-Mkj">
+                                <rect key="frame" x="20" y="25" width="54" height="60"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button" image="helpButton"/>
+                                <state key="normal" image="helpButtonV2"/>
                                 <connections>
                                     <action selector="helpButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Mgn-Dp-yLs"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="make ligand" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="swS-7r-ZPR">
-                                <rect key="frame" x="94" y="306" width="90" height="22"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="16"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="make amino acid" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="m5y-dU-06U">
-                                <rect key="frame" x="271" y="306" width="125" height="22"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="create ligand" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="swS-7r-ZPR">
+                                <rect key="frame" x="91" y="306" width="96" height="22"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="16"/>
                                 <nil key="textColor"/>
@@ -1207,10 +1204,13 @@
                                 <rect key="frame" x="198" y="0.0" width="300" height="160"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="initialPurpleButton" translatesAutoresizingMaskIntoConstraints="NO" id="eks-2y-4bN">
-                                <rect key="frame" x="434" y="156" width="174" height="136"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="create protein" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="m5y-dU-06U">
+                                <rect key="frame" x="282" y="306" width="103" height="22"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
+                                <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="16"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
@@ -1224,7 +1224,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="29.23538230884558" y="48.799999999999997"/>
+            <point key="canvasLocation" x="-314" y="-546"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="9PM-Og-KVK">
@@ -1960,13 +1960,13 @@
         <image name="backButton" width="84" height="27"/>
         <image name="backgroundAll" width="812" height="375"/>
         <image name="backgroundHome" width="812" height="375"/>
-        <image name="combineButoon" width="99.5" height="70.5"/>
+        <image name="combineButton" width="72" height="72"/>
         <image name="doubleBond" width="39" height="5"/>
         <image name="eightSided" width="54.5" height="54.5"/>
         <image name="fiveSided" width="48" height="45.5"/>
-        <image name="helpButton" width="84" height="27"/>
+        <image name="gradientButton" width="207.5" height="207.5"/>
+        <image name="helpButtonV2" width="32" height="36.5"/>
         <image name="iProteinTitle" width="290" height="84"/>
-        <image name="initialPurpleButton" width="130" height="134"/>
         <image name="ligandButton" width="99" height="96"/>
         <image name="sevenSided" width="48" height="48"/>
         <image name="singleBond" width="38" height="1"/>
