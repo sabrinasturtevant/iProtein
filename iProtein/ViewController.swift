@@ -223,13 +223,28 @@ class ViewController: UIViewController {
 
             """
     
-    //-----outlets for scroll view and stack view
+    
+    
+    
+    
+    
+    
+    //-----outlets for scroll view and stack view on make ligand screen
     
     @IBOutlet weak var stackViewLigandSymbols: UIStackView!
     
     @IBOutlet weak var scrollViewLigandSymbols: UIScrollView!
     
     
+    
+    
+    
+    
+    //-----outlets for scroll,stack view on help ligand screen
+    
+    @IBOutlet weak var scrollViewLigandSymbolsHelp: UIScrollView!
+    
+    @IBOutlet weak var stackViewLigandSymbolsHelp: UIStackView!
     
     
     
@@ -251,8 +266,6 @@ class ViewController: UIViewController {
     
     @IBAction func helpButtonTapped(_ sender: Any) {
         performSegue(withIdentifier: "helpSegue", sender: nil)
-        
-
     }
     
     
@@ -283,7 +296,39 @@ class ViewController: UIViewController {
     }
     
     
+    @IBAction func backButtonHelpScreenTapped(_ sender: Any) {
+        performSegue(withIdentifier: "backHelpScreenSegue", sender: nil)
+    }
     
+    @IBAction func ligandQuestionTapped(_ sender: Any) {
+        performSegue(withIdentifier: "ligandQuestionSegue", sender: nil)
+    }
+    
+    @IBAction func aminoAcidQuestionTapped(_ sender: Any) {
+        performSegue(withIdentifier: "aminoAcidQuestionSegue", sender: nil)
+    }
+    
+    
+    @IBAction func backButtonLigandHelpTapped(_ sender: Any) {
+        performSegue(withIdentifier: "backButtonSegue", sender: nil)
+    }
+    
+    @IBAction func ligandSymbolHelpTapped(_ sender: Any) {
+        performSegue(withIdentifier: "symbolHelpLigandSegue", sender: nil)
+    }
+    
+    @IBAction func backButtonLigandSymbolHelpTapped(_ sender: Any) {
+        performSegue(withIdentifier: "backButtonLigandSymbolHelpSegue", sender: nil)
+    }
+    
+    
+    @IBAction func aminoAcidSymbolHelpTapped(_ sender: Any) {
+        performSegue(withIdentifier: "symbolHelpAminoAcidSegue", sender: nil)
+    }
+    
+    @IBAction func backButtonAminoAcidHelpTapped(_ sender: Any) {
+        performSegue(withIdentifier: "backButtonAminoAcidHelpSegue", sender: nil)
+    }
     
     @IBAction func lysineTapped(_ sender: Any) {
         performSegue(withIdentifier: "lysineSegue", sender: nil)
@@ -465,7 +510,18 @@ class ViewController: UIViewController {
     
     
     
-    //outlets for help screen text boxes
+    
+    
+    //-----outlets for ligand symbols help
+    @IBOutlet weak var dynamicLigandHelpImageView: UIImageView!
+    @IBOutlet weak var dynamicLigandHelpLabel: UILabel!
+    @IBOutlet weak var tapASymbolToLearnMoreLabel: UILabel!
+    @IBOutlet weak var dynamicHeaderLigandHelpLabel: UILabel!
+    
+    
+    
+    
+    //-----outlets for help screen amino acids text boxes
     @IBOutlet weak var lysinehelpOutlet: UILabel!
     @IBOutlet weak var histidineHelpOutlet: UILabel!
     @IBOutlet weak var argininehelpOutlet: UILabel!
@@ -489,45 +545,116 @@ class ViewController: UIViewController {
     
     
     
-
-    
-    
+    //-----outlets for ligand symbol help screen
+    @IBOutlet weak var singleBondHelpOutlet: UIImageView!
+    @IBOutlet weak var doubleBondHelpOutlet: UIImageView!
+    @IBOutlet weak var tripleBondHelpOutlet: UIImageView!
+    @IBOutlet weak var towardBondHelpOutlet: UIImageView!
+    @IBOutlet weak var awayBondHelpOutlet: UIImageView!
+    @IBOutlet weak var fiveSidedHelpOutlet: UIImageView!
+    @IBOutlet weak var sixSidedHelpOutlet: UIImageView!
+    @IBOutlet weak var sixeSidedDoubleHelpOutlet: UIImageView!
+    @IBOutlet weak var sevenSidedHelpOutlet: UIImageView!
+    @IBOutlet weak var eightSidedHelpOutlet: UIImageView!
+    @IBOutlet weak var carbonHelpOutlet: UILabel!
+    @IBOutlet weak var oxygenHelpOutlet: UILabel!
+    @IBOutlet weak var hydrogenHelpOutlet: UILabel!
+    @IBOutlet weak var nitrogenHelpOutlet: UILabel!
+    @IBOutlet weak var phosphorusHelpOutlet: UILabel!
+    @IBOutlet weak var heliumHelpOutlet: UILabel!
     
     
     
     //-----outlets for ligand symbols
     @IBOutlet weak var singleBondOutlet: UIImageView!
-    
     @IBOutlet weak var doubleBondOutlet: UIImageView!
-    
     @IBOutlet weak var tripleBondOutlet: UIImageView!
-    
     @IBOutlet weak var towardBondOutlet: UIImageView!
-    
     @IBOutlet weak var awayBondOutlet: UIImageView!
-    
     @IBOutlet weak var fiveSidedOutlet: UIImageView!
-    
     @IBOutlet weak var sixSidedOutlet: UIImageView!
-    
     @IBOutlet weak var sixSidedDoubleOutlet: UIImageView!
-    
     @IBOutlet weak var sevenSidedOutlet: UIImageView!
-    
     @IBOutlet weak var eightSidedOutlet: UIImageView!
-    
     @IBOutlet weak var carbonOutlet: UILabel!
-    
     @IBOutlet weak var oxygenOutlet: UILabel!
-    
     @IBOutlet weak var hydrogenOutlet: UILabel!
-    
     @IBOutlet weak var nitrogenOutlet: UILabel!
-    
     @IBOutlet weak var phosphorusOutlet: UILabel!
-    
     @IBOutlet weak var heliumOutlet: UILabel!
 
+    
+    
+    
+    //-----actions for ligand symbol help screen
+
+    @IBAction func singleBondHelpTapped(_ sender: Any) {
+        tapASymbolToLearnMoreLabel.alpha = 0.0
+        singleBondHelpOutlet.alpha = 1.0
+        doubleBondHelpOutlet.alpha = 0.2
+        tripleBondHelpOutlet.alpha = 0.2
+        awayBondHelpOutlet.alpha = 0.2
+        towardBondHelpOutlet.alpha = 0.2
+        fiveSidedHelpOutlet.alpha = 0.2
+        sixSidedHelpOutlet.alpha = 0.2
+        sixeSidedDoubleHelpOutlet.alpha = 0.2
+        sevenSidedHelpOutlet.alpha = 0.2
+        eightSidedHelpOutlet.alpha = 0.2
+        carbonHelpOutlet.alpha = 0.2
+        hydrogenHelpOutlet.alpha = 0.2
+        nitrogenHelpOutlet.alpha = 0.2
+        phosphorusHelpOutlet.alpha = 0.2
+        heliumHelpOutlet.alpha = 0.2
+        
+        dynamicLigandHelpImageView.image = UIImage(named: "singleBond")
+        
+        dynamicHeaderLigandHelpLabel.text =
+        """
+        single bond
+        """
+        
+        dynamicLigandHelpLabel.text =
+        """
+        a type of covalent bond where two
+        atoms share one pair of electrons
+        """
+    }
+    
+    
+    @IBAction func doubleBondHelpTapped(_ sender: Any) {
+        tapASymbolToLearnMoreLabel.alpha = 0.0
+        singleBondHelpOutlet.alpha = 0.2
+        doubleBondHelpOutlet.alpha = 1.0
+        tripleBondHelpOutlet.alpha = 0.2
+        awayBondHelpOutlet.alpha = 0.2
+        towardBondHelpOutlet.alpha = 0.2
+        fiveSidedHelpOutlet.alpha = 0.2
+        sixSidedHelpOutlet.alpha = 0.2
+        sixeSidedDoubleHelpOutlet.alpha = 0.2
+        sevenSidedHelpOutlet.alpha = 0.2
+        eightSidedHelpOutlet.alpha = 0.2
+        carbonHelpOutlet.alpha = 0.2
+        hydrogenHelpOutlet.alpha = 0.2
+        nitrogenHelpOutlet.alpha = 0.2
+        phosphorusHelpOutlet.alpha = 0.2
+        heliumHelpOutlet.alpha = 0.2
+        
+        dynamicLigandHelpImageView.image = UIImage(named: "doubleBond")
+        
+        dynamicHeaderLigandHelpLabel.text =
+        """
+        double bond
+        """
+        
+        dynamicLigandHelpLabel.text =
+        """
+        similar to a single bond, a double bond
+        forms when two atoms share two pairs
+        of electrons
+
+        """
+    }
+    
     
     
     
@@ -945,6 +1072,10 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         self.scrollViewLigandSymbols?.contentSize = CGSize(width: 320, height: 1000)
 self.scrollViewLigandSymbols?.isDirectionalLockEnabled == true
+        
+        self.scrollViewLigandSymbolsHelp?.contentSize = CGSize(width: 320, height: 1000)
+    self.scrollViewLigandSymbolsHelp?.isDirectionalLockEnabled == true
+        
         
         lysinehelpOutlet?.text = lysineString
         histidineHelpOutlet?.text = histidineString
