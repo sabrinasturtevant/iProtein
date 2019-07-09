@@ -601,6 +601,7 @@ class ViewController: UIViewController {
         sevenSidedHelpOutlet.alpha = 0.2
         eightSidedHelpOutlet.alpha = 0.2
         carbonHelpOutlet.alpha = 0.2
+        oxygenHelpOutlet.alpha = 0.2
         hydrogenHelpOutlet.alpha = 0.2
         nitrogenHelpOutlet.alpha = 0.2
         phosphorusHelpOutlet.alpha = 0.2
@@ -634,6 +635,7 @@ class ViewController: UIViewController {
         sevenSidedHelpOutlet.alpha = 0.2
         eightSidedHelpOutlet.alpha = 0.2
         carbonHelpOutlet.alpha = 0.2
+        oxygenHelpOutlet.alpha = 0.2
         hydrogenHelpOutlet.alpha = 0.2
         nitrogenHelpOutlet.alpha = 0.2
         phosphorusHelpOutlet.alpha = 0.2
@@ -655,6 +657,477 @@ class ViewController: UIViewController {
         """
     }
     
+    @IBAction func tripleBondHelpTapped(_ sender: Any) {
+        tapASymbolToLearnMoreLabel.alpha = 0.0
+        singleBondHelpOutlet.alpha = 0.2
+        doubleBondHelpOutlet.alpha = 0.2
+        tripleBondHelpOutlet.alpha = 1.0
+        awayBondHelpOutlet.alpha = 0.2
+        towardBondHelpOutlet.alpha = 0.2
+        fiveSidedHelpOutlet.alpha = 0.2
+        sixSidedHelpOutlet.alpha = 0.2
+        sixeSidedDoubleHelpOutlet.alpha = 0.2
+        sevenSidedHelpOutlet.alpha = 0.2
+        eightSidedHelpOutlet.alpha = 0.2
+        carbonHelpOutlet.alpha = 0.2
+        oxygenHelpOutlet.alpha = 0.2
+        hydrogenHelpOutlet.alpha = 0.2
+        nitrogenHelpOutlet.alpha = 0.2
+        phosphorusHelpOutlet.alpha = 0.2
+        heliumHelpOutlet.alpha = 0.2
+        
+        dynamicLigandHelpImageView.image = UIImage(named: "tripleBond")
+        
+        dynamicHeaderLigandHelpLabel.text =
+        """
+        triple bond
+        """
+        
+        dynamicLigandHelpLabel.text =
+        """
+        a chemical bond where two atoms
+        share three pairs of electrons
+
+        """
+    }
+    
+    @IBAction func towardHondHelpTapped(_ sender: Any) {
+        tapASymbolToLearnMoreLabel.alpha = 0.0
+        singleBondHelpOutlet.alpha = 0.2
+        doubleBondHelpOutlet.alpha = 0.2
+        tripleBondHelpOutlet.alpha = 0.2
+        awayBondHelpOutlet.alpha = 0.2
+        towardBondHelpOutlet.alpha = 1.0
+        fiveSidedHelpOutlet.alpha = 0.2
+        sixSidedHelpOutlet.alpha = 0.2
+        sixeSidedDoubleHelpOutlet.alpha = 0.2
+        sevenSidedHelpOutlet.alpha = 0.2
+        eightSidedHelpOutlet.alpha = 0.2
+        carbonHelpOutlet.alpha = 0.2
+        oxygenHelpOutlet.alpha = 0.2
+        hydrogenHelpOutlet.alpha = 0.2
+        nitrogenHelpOutlet.alpha = 0.2
+        phosphorusHelpOutlet.alpha = 0.2
+        heliumHelpOutlet.alpha = 0.2
+        
+        dynamicLigandHelpImageView.image = UIImage(named: "towardBond")
+        
+        dynamicHeaderLigandHelpLabel.text =
+        """
+        toward bond
+        """
+        
+        dynamicLigandHelpLabel.text =
+        """
+        used when viewing at atoms in a 2D space,
+        indicates when a bond is coming towards
+        the viewer in a 3D space
+        """
+    }
+    
+    
+    @IBAction func awayBondHelpTapped(_ sender: Any) {
+        tapASymbolToLearnMoreLabel.alpha = 0.0
+        singleBondHelpOutlet.alpha = 0.2
+        doubleBondHelpOutlet.alpha = 0.2
+        tripleBondHelpOutlet.alpha = 0.2
+        awayBondHelpOutlet.alpha = 1.0
+        towardBondHelpOutlet.alpha = 0.2
+        fiveSidedHelpOutlet.alpha = 0.2
+        sixSidedHelpOutlet.alpha = 0.2
+        sixeSidedDoubleHelpOutlet.alpha = 0.2
+        sevenSidedHelpOutlet.alpha = 0.2
+        eightSidedHelpOutlet.alpha = 0.2
+        carbonHelpOutlet.alpha = 0.2
+        oxygenHelpOutlet.alpha = 0.2
+        hydrogenHelpOutlet.alpha = 0.2
+        nitrogenHelpOutlet.alpha = 0.2
+        phosphorusHelpOutlet.alpha = 0.2
+        heliumHelpOutlet.alpha = 0.2
+        
+        dynamicLigandHelpImageView.image = UIImage(named: "awayBond")
+        
+        dynamicHeaderLigandHelpLabel.text =
+        """
+        away bond
+        """
+        
+        dynamicLigandHelpLabel.text =
+        """
+        used when viewing at atoms in a 2D space,
+        indicates when a bond is turned away
+        from the viewer in a 3D space
+        """
+    }
+    
+    @IBAction func fiveSidedHelpTapped(_ sender: Any) {
+        tapASymbolToLearnMoreLabel.alpha = 0.0
+        singleBondHelpOutlet.alpha = 0.2
+        doubleBondHelpOutlet.alpha = 0.2
+        tripleBondHelpOutlet.alpha = 0.2
+        awayBondHelpOutlet.alpha = 0.2
+        towardBondHelpOutlet.alpha = 0.2
+        fiveSidedHelpOutlet.alpha = 1.0
+        sixSidedHelpOutlet.alpha = 0.2
+        sixeSidedDoubleHelpOutlet.alpha = 0.2
+        sevenSidedHelpOutlet.alpha = 0.2
+        eightSidedHelpOutlet.alpha = 0.2
+        carbonHelpOutlet.alpha = 0.2
+        oxygenHelpOutlet.alpha = 0.2
+        hydrogenHelpOutlet.alpha = 0.2
+        nitrogenHelpOutlet.alpha = 0.2
+        phosphorusHelpOutlet.alpha = 0.2
+        heliumHelpOutlet.alpha = 0.2
+        
+        dynamicLigandHelpImageView.image = UIImage(named: "fiveSided")
+        
+        dynamicHeaderLigandHelpLabel.text =
+        """
+        cyclopentane
+        """
+        
+        dynamicLigandHelpLabel.text =
+        """
+        this pentagram structure consists of
+        five implied carbon atoms at the corners,
+        each attached to two hydrogen atoms
+        """
+    }
+    
+    
+    @IBAction func sixSidedHelpTapped(_ sender: Any) {
+        tapASymbolToLearnMoreLabel.alpha = 0.0
+        singleBondHelpOutlet.alpha = 0.2
+        doubleBondHelpOutlet.alpha = 0.2
+        tripleBondHelpOutlet.alpha = 0.2
+        awayBondHelpOutlet.alpha = 0.2
+        towardBondHelpOutlet.alpha = 0.2
+        fiveSidedHelpOutlet.alpha = 0.2
+        sixSidedHelpOutlet.alpha = 1.0
+        sixeSidedDoubleHelpOutlet.alpha = 0.2
+        sevenSidedHelpOutlet.alpha = 0.2
+        eightSidedHelpOutlet.alpha = 0.2
+        carbonHelpOutlet.alpha = 0.2
+        oxygenHelpOutlet.alpha = 0.2
+        hydrogenHelpOutlet.alpha = 0.2
+        nitrogenHelpOutlet.alpha = 0.2
+        phosphorusHelpOutlet.alpha = 0.2
+        heliumHelpOutlet.alpha = 0.2
+        
+        dynamicLigandHelpImageView.image = UIImage(named: "sixSided")
+        
+        dynamicHeaderLigandHelpLabel.text =
+        """
+        cyclohexane
+        """
+        
+        dynamicLigandHelpLabel.text =
+        """
+        one of the most common structures found
+        in chemistry, there are six implied carbons
+        at every corner
+        """
+    }
+    
+    @IBAction func sixSidedDoubleHelpTapped(_ sender: Any) {
+        tapASymbolToLearnMoreLabel.alpha = 0.0
+        singleBondHelpOutlet.alpha = 0.2
+        doubleBondHelpOutlet.alpha = 0.2
+        tripleBondHelpOutlet.alpha = 0.2
+        awayBondHelpOutlet.alpha = 0.2
+        towardBondHelpOutlet.alpha = 0.2
+        fiveSidedHelpOutlet.alpha = 0.2
+        sixSidedHelpOutlet.alpha = 0.2
+        sixeSidedDoubleHelpOutlet.alpha = 1.0
+        sevenSidedHelpOutlet.alpha = 0.2
+        eightSidedHelpOutlet.alpha = 0.2
+        carbonHelpOutlet.alpha = 0.2
+        oxygenHelpOutlet.alpha = 0.2
+        hydrogenHelpOutlet.alpha = 0.2
+        nitrogenHelpOutlet.alpha = 0.2
+        phosphorusHelpOutlet.alpha = 0.2
+        heliumHelpOutlet.alpha = 0.2
+        
+        dynamicLigandHelpImageView.image = UIImage(named: "sixSidedDouble")
+        
+        dynamicHeaderLigandHelpLabel.text =
+        """
+        benzene
+        """
+        
+        dynamicLigandHelpLabel.text =
+        """
+        a colorless carcinogen, similar to a
+        cyclohexane but containing double bonds
+        rather than single bonds
+        """
+    }
+    
+    @IBAction func sevenSidedHelpTapped(_ sender: Any) {
+        tapASymbolToLearnMoreLabel.alpha = 0.0
+        singleBondHelpOutlet.alpha = 0.2
+        doubleBondHelpOutlet.alpha = 0.2
+        tripleBondHelpOutlet.alpha = 0.2
+        awayBondHelpOutlet.alpha = 0.2
+        towardBondHelpOutlet.alpha = 0.2
+        fiveSidedHelpOutlet.alpha = 0.2
+        sixSidedHelpOutlet.alpha = 0.2
+        sixeSidedDoubleHelpOutlet.alpha = 0.2
+        sevenSidedHelpOutlet.alpha = 1.0
+        eightSidedHelpOutlet.alpha = 0.2
+        carbonHelpOutlet.alpha = 0.2
+        oxygenHelpOutlet.alpha = 0.2
+        hydrogenHelpOutlet.alpha = 0.2
+        nitrogenHelpOutlet.alpha = 0.2
+        phosphorusHelpOutlet.alpha = 0.2
+        heliumHelpOutlet.alpha = 0.2
+        
+        dynamicLigandHelpImageView.image = UIImage(named: "sevenSided")
+        
+        dynamicHeaderLigandHelpLabel.text =
+        """
+        cycloheptane
+        """
+        
+        dynamicLigandHelpLabel.text =
+        """
+        a seven sided structure with implied
+        carbon atoms at every corner
+        """
+    }
+    
+    @IBAction func eightSidedHelpTapped(_ sender: Any) {
+        tapASymbolToLearnMoreLabel.alpha = 0.0
+        singleBondHelpOutlet.alpha = 0.2
+        doubleBondHelpOutlet.alpha = 0.2
+        tripleBondHelpOutlet.alpha = 0.2
+        awayBondHelpOutlet.alpha = 0.2
+        towardBondHelpOutlet.alpha = 0.2
+        fiveSidedHelpOutlet.alpha = 0.2
+        sixSidedHelpOutlet.alpha = 0.2
+        sixeSidedDoubleHelpOutlet.alpha = 0.2
+        sevenSidedHelpOutlet.alpha = 0.2
+        eightSidedHelpOutlet.alpha = 1.0
+        carbonHelpOutlet.alpha = 0.2
+        oxygenHelpOutlet.alpha = 0.2
+        hydrogenHelpOutlet.alpha = 0.2
+        nitrogenHelpOutlet.alpha = 0.2
+        phosphorusHelpOutlet.alpha = 0.2
+        heliumHelpOutlet.alpha = 0.2
+        
+        dynamicLigandHelpImageView.image = UIImage(named: "eightSided")
+        
+        dynamicHeaderLigandHelpLabel.text =
+        """
+        cyclooctane
+        """
+        
+        dynamicLigandHelpLabel.text =
+        """
+        a ring of eight carbon atoms each
+        attached to two hydrogen atoms
+        """
+    }
+    
+    @IBAction func carbonHelpTapped(_ sender: Any) {
+        tapASymbolToLearnMoreLabel.alpha = 0.0
+        singleBondHelpOutlet.alpha = 0.2
+        doubleBondHelpOutlet.alpha = 0.2
+        tripleBondHelpOutlet.alpha = 0.2
+        awayBondHelpOutlet.alpha = 0.2
+        towardBondHelpOutlet.alpha = 0.2
+        fiveSidedHelpOutlet.alpha = 0.2
+        sixSidedHelpOutlet.alpha = 0.2
+        sixeSidedDoubleHelpOutlet.alpha = 0.2
+        sevenSidedHelpOutlet.alpha = 0.2
+        eightSidedHelpOutlet.alpha = 0.2
+        carbonHelpOutlet.alpha = 1.0
+        oxygenHelpOutlet.alpha = 0.2
+        hydrogenHelpOutlet.alpha = 0.2
+        nitrogenHelpOutlet.alpha = 0.2
+        phosphorusHelpOutlet.alpha = 0.2
+        heliumHelpOutlet.alpha = 0.2
+        
+        dynamicLigandHelpImageView.image = UIImage(named: "")
+        
+        dynamicHeaderLigandHelpLabel.text =
+        """
+        carbon
+        """
+        
+        dynamicLigandHelpLabel.text =
+        """
+        can form up to four bonds with other atoms,
+        in chemistry it is implied to be
+        at every corner or end
+        """
+    }
+    
+    @IBAction func oxygenHelpTapped(_ sender: Any) {
+        tapASymbolToLearnMoreLabel.alpha = 0.0
+        singleBondHelpOutlet.alpha = 0.2
+        doubleBondHelpOutlet.alpha = 0.2
+        tripleBondHelpOutlet.alpha = 0.2
+        awayBondHelpOutlet.alpha = 0.2
+        towardBondHelpOutlet.alpha = 0.2
+        fiveSidedHelpOutlet.alpha = 0.2
+        sixSidedHelpOutlet.alpha = 0.2
+        sixeSidedDoubleHelpOutlet.alpha = 0.2
+        sevenSidedHelpOutlet.alpha = 0.2
+        eightSidedHelpOutlet.alpha = 0.2
+        carbonHelpOutlet.alpha = 0.2
+        oxygenHelpOutlet.alpha = 1.0
+        hydrogenHelpOutlet.alpha = 0.2
+        nitrogenHelpOutlet.alpha = 0.2
+        phosphorusHelpOutlet.alpha = 0.2
+        heliumHelpOutlet.alpha = 0.2
+        
+        dynamicLigandHelpImageView.image = UIImage(named: "")
+        
+        dynamicHeaderLigandHelpLabel.text =
+        """
+        oxygen
+        """
+        
+        dynamicLigandHelpLabel.text =
+        """
+        can form up to two bonds with other atoms,
+        highly reactive
+        """
+    }
+    
+    @IBAction func hydrogenHelpTapped(_ sender: Any) {
+        tapASymbolToLearnMoreLabel.alpha = 0.0
+        singleBondHelpOutlet.alpha = 0.2
+        doubleBondHelpOutlet.alpha = 0.2
+        tripleBondHelpOutlet.alpha = 0.2
+        awayBondHelpOutlet.alpha = 0.2
+        towardBondHelpOutlet.alpha = 0.2
+        fiveSidedHelpOutlet.alpha = 0.2
+        sixSidedHelpOutlet.alpha = 0.2
+        sixeSidedDoubleHelpOutlet.alpha = 0.2
+        sevenSidedHelpOutlet.alpha = 0.2
+        eightSidedHelpOutlet.alpha = 0.2
+        carbonHelpOutlet.alpha = 0.2
+        oxygenHelpOutlet.alpha = 0.2
+        hydrogenHelpOutlet.alpha = 1.0
+        nitrogenHelpOutlet.alpha = 0.2
+        phosphorusHelpOutlet.alpha = 0.2
+        heliumHelpOutlet.alpha = 0.2
+        
+        dynamicLigandHelpImageView.image = UIImage(named: "")
+        
+        dynamicHeaderLigandHelpLabel.text =
+        """
+        hydrogen
+        """
+        
+        dynamicLigandHelpLabel.text =
+        """
+        it is implied that every atom that does
+        not have its maximum number of bonds is
+        attached to one or more hydrogens
+        """
+    }
+    
+    @IBAction func nitrogenHelpTapped(_ sender: Any) {
+        tapASymbolToLearnMoreLabel.alpha = 0.0
+        singleBondHelpOutlet.alpha = 0.2
+        doubleBondHelpOutlet.alpha = 0.2
+        tripleBondHelpOutlet.alpha = 0.2
+        awayBondHelpOutlet.alpha = 0.2
+        towardBondHelpOutlet.alpha = 0.2
+        fiveSidedHelpOutlet.alpha = 0.2
+        sixSidedHelpOutlet.alpha = 0.2
+        sixeSidedDoubleHelpOutlet.alpha = 0.2
+        sevenSidedHelpOutlet.alpha = 0.2
+        eightSidedHelpOutlet.alpha = 0.2
+        carbonHelpOutlet.alpha = 0.2
+        oxygenHelpOutlet.alpha = 0.2
+        hydrogenHelpOutlet.alpha = 0.2
+        nitrogenHelpOutlet.alpha = 1.0
+        phosphorusHelpOutlet.alpha = 0.2
+        heliumHelpOutlet.alpha = 0.2
+        
+        dynamicLigandHelpImageView.image = UIImage(named: "")
+        
+        dynamicHeaderLigandHelpLabel.text =
+        """
+        nitrogen
+        """
+        
+        dynamicLigandHelpLabel.text =
+        """
+        can form up to three bonds with other atoms
+        """
+    }
+    
+    @IBAction func phosphorusHelpTapped(_ sender: Any) {
+        tapASymbolToLearnMoreLabel.alpha = 0.0
+        singleBondHelpOutlet.alpha = 0.2
+        doubleBondHelpOutlet.alpha = 0.2
+        tripleBondHelpOutlet.alpha = 0.2
+        awayBondHelpOutlet.alpha = 0.2
+        towardBondHelpOutlet.alpha = 0.2
+        fiveSidedHelpOutlet.alpha = 0.2
+        sixSidedHelpOutlet.alpha = 0.2
+        sixeSidedDoubleHelpOutlet.alpha = 0.2
+        sevenSidedHelpOutlet.alpha = 0.2
+        eightSidedHelpOutlet.alpha = 0.2
+        carbonHelpOutlet.alpha = 0.2
+        oxygenHelpOutlet.alpha = 0.2
+        hydrogenHelpOutlet.alpha = 0.2
+        nitrogenHelpOutlet.alpha = 0.2
+        phosphorusHelpOutlet.alpha = 1.0
+        heliumHelpOutlet.alpha = 0.2
+        
+        dynamicLigandHelpImageView.image = UIImage(named: "")
+        
+        dynamicHeaderLigandHelpLabel.text =
+        """
+        phosphorus
+        """
+        
+        dynamicLigandHelpLabel.text =
+        """
+        can form up to five bonds with other atoms,
+        highly reactive
+        """
+    }
+    
+    @IBAction func heliumHelpTapped(_ sender: Any) {
+        tapASymbolToLearnMoreLabel.alpha = 0.0
+        singleBondHelpOutlet.alpha = 0.2
+        doubleBondHelpOutlet.alpha = 0.2
+        tripleBondHelpOutlet.alpha = 0.2
+        awayBondHelpOutlet.alpha = 0.2
+        towardBondHelpOutlet.alpha = 0.2
+        fiveSidedHelpOutlet.alpha = 0.2
+        sixSidedHelpOutlet.alpha = 0.2
+        sixeSidedDoubleHelpOutlet.alpha = 0.2
+        sevenSidedHelpOutlet.alpha = 0.2
+        eightSidedHelpOutlet.alpha = 0.2
+        carbonHelpOutlet.alpha = 0.2
+        oxygenHelpOutlet.alpha = 0.2
+        hydrogenHelpOutlet.alpha = 0.2
+        nitrogenHelpOutlet.alpha = 0.2
+        phosphorusHelpOutlet.alpha = 0.2
+        heliumHelpOutlet.alpha = 1.0
+        
+        dynamicLigandHelpImageView.image = UIImage(named: "")
+        
+        dynamicHeaderLigandHelpLabel.text =
+        """
+        helium
+        """
+        
+        dynamicLigandHelpLabel.text =
+        """
+        less common atom for typical ligand
+        structures, colorless, odorless,
+        tasteless, non-toxic
+        """
+    }
     
     
     
