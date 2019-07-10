@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import CoreData
 
 let context = UIGraphicsGetCurrentContext()
 var currentPosition: CGPoint?
@@ -28,6 +29,12 @@ class ViewController: UIViewController {
      
      print("c")
      */
+    
+    
+    
+    var ligands = [Ligands]()
+    
+    
     
     
     let lysineString =
@@ -227,6 +234,37 @@ class ViewController: UIViewController {
     
     
     
+    //outlets for table view on save ligand screen
+    @IBOutlet weak var saveLigandTableView: UITableView!
+    
+    
+    @IBAction func createNewLigandSaveScreenTapped(_ sender: Any) {
+        let alert = UIAlertController(title: "add ligand", message: nil, preferredStyle: .alert)
+        alert.addTextField { (textField) in
+            textField.placeholder = "name"
+        }
+        
+        let action = UIAlertAction(title: "Add", style: .default) { (_) in
+            let Ligandname = alert.textFields!.first!.text!
+            
+            let ligands = Ligands(context: PersistenceService.context)
+            ligands.name = Ligandname
+            
+            PersistenceService.saveContext()
+            self.ligands.append(ligands)
+            self.saveLigandTableView.reloadData()
+            
+
+            
+        //alert.addAction(UIAlertAction(title: "cancel", style: UIAlertAction.Style.default, handler: nil))
+        }
+        alert.addAction(action)
+        present(alert, animated: true, completion: nil)
+        
+                let entity = NSEntityDescription.entity(forEntityName: "Ligands", in: context)!
+        
+    }
+    
     
     
     //-----outlets for scroll view and stack view on make ligand screen
@@ -286,6 +324,18 @@ class ViewController: UIViewController {
     }
     
     
+    
+    
+    
+    
+    
+    
+    //-----segues on save screens
+    
+    @IBAction func backButtonLigandSaveScreenTapped(_ sender: Any) {
+        performSegue(withIdentifier: "backButtonLigandSaveScreenSegue", sender: nil)
+        print("any")
+    }
     
     
     
@@ -507,6 +557,8 @@ class ViewController: UIViewController {
         performSegue(withIdentifier: "alanineBackSegue", sender: nil)
     }
     
+    
+
     
     
     
@@ -1590,8 +1642,27 @@ self.scrollViewLigandSymbols?.isDirectionalLockEnabled == true
 
 }
     
+    
 
 }
+
+extension ViewController: UITableViewDataSource {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return ligands.count
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = UITableViewCell(style: .subtitle, reuseIdentifier: nil)
+        cell.textLabel?.text = ligands[indexPath.row].name
+        return cell
+    }
+    
+    func numberOfSections(in tableView: UITableView) -> Int {
+        return 1
+    }
+    
+}
+
 
 /*class Shape : UIView {
     
