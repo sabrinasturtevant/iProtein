@@ -14,13 +14,13 @@ class PersistenceService {
     
     private init() {}
     
-    static var context: NSManagedObjectContext {
+   @objc(Ligandsclass) static var context: NSManagedObjectContext {
         return persistentContainer.viewContext
     }
     
     static var persistentContainer: NSPersistentContainer = {
         
-        let container = NSPersistentContainer(name: "iProtein")
+        let container = NSPersistentContainer(name: "coreData")
         container.loadPersistentStores(completionHandler: { (NSPersistentStoreDescription, error) in
             if let error = error as NSError? {
                 fatalError("Unresolved error \(error), \(error.userInfo)")

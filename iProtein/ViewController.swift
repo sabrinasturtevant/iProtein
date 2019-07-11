@@ -251,7 +251,7 @@ class ViewController: UIViewController {
             ligands.name = Ligandname
             
             PersistenceService.saveContext()
-            self.ligands.append(ligands)
+            self.ligands.append(Ligands)
             self.saveLigandTableView.reloadData()
             
 
@@ -261,7 +261,10 @@ class ViewController: UIViewController {
         alert.addAction(action)
         present(alert, animated: true, completion: nil)
         
-                let entity = NSEntityDescription.entity(forEntityName: "Ligands", in: context)!
+        let description = NSEntityDescription()
+        
+        
+        
         
     }
     
