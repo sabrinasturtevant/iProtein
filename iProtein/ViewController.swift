@@ -251,7 +251,8 @@ class ViewController: UIViewController {
             ligands.name = Ligandname
             
             PersistenceService.saveContext()
-            self.ligands.append(Ligands)
+            self.ligands.append(ligands)
+            print(ligands)
             self.saveLigandTableView.reloadData()
             
 
@@ -1604,6 +1605,8 @@ self.scrollViewLigandSymbols?.isDirectionalLockEnabled == true
         self.scrollViewLigandSymbolsHelp?.contentSize = CGSize(width: 320, height: 1000)
     self.scrollViewLigandSymbolsHelp?.isDirectionalLockEnabled == true
         
+        //saveLigandTableView.dataSource! = self
+        //saveLigandTableView.delegate = self as! UITableViewDelegate
         
         lysinehelpOutlet?.text = lysineString
         histidineHelpOutlet?.text = histidineString
@@ -1655,9 +1658,11 @@ extension ViewController: UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = UITableViewCell(style: .subtitle, reuseIdentifier: nil)
-        cell.textLabel?.text = ligands[indexPath.row].name
-        return cell
+        let cell = saveLigandTableView.dequeueReusableCell(withIdentifier: "coreData")
+        //let cell = UITableViewCell(style: .default, reuseIdentifier: nil)
+        cell!.textLabel?.text = ligands[indexPath.row].name
+        return cell!
+
     }
     
     func numberOfSections(in tableView: UITableView) -> Int {
