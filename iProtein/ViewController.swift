@@ -13,9 +13,27 @@ let context = UIGraphicsGetCurrentContext()
 var currentPosition: CGPoint?
 
 
-class ViewController: UIViewController {
+class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
     
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return ligands.count
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        
+        let cell = saveLigandTableView.dequeueReusableCell(withIdentifier: "coreData", for: indexPath) as UITableViewCell
+        //let cell = saveLigandTableView.dequeueReusableCell(withIdentifier: "coreData")
+        //let cells = UITableViewCell(style: .default, reuseIdentifier: nil)
+        cell.textLabel?.text = ligands[indexPath.row].name
+        
+        return cell
+        
+    }
+    
+    func numberOfSections(in tableView: UITableView) -> Int {
+        return 1
+    }
     /* if singleBond == 1 {
      context?.setLineWidth(2.0)
      context?.setStrokeColor(UIColor.black.cgColor)
@@ -252,8 +270,8 @@ class ViewController: UIViewController {
             
             PersistenceService.saveContext()
             self.ligands.append(ligands)
-            print(ligands)
             self.saveLigandTableView.reloadData()
+            print(ligands)
             
 
             
@@ -1599,14 +1617,26 @@ class ViewController: UIViewController {
     
     
     override func viewDidLoad() {
+        
+        
+        let fetchRequest: NSFetchRequest<Ligands> = Ligands.fetchRequest()
+        
+        do {
+   let ligands = try PersistenceService.context.fetch(fetchRequest)
+            self.ligands = ligands
+            //self.saveLigandTableView.reloadData()
+        } catch {}
+        
+        
+        
+        
         self.scrollViewLigandSymbols?.contentSize = CGSize(width: 320, height: 1000)
 self.scrollViewLigandSymbols?.isDirectionalLockEnabled == true
         
         self.scrollViewLigandSymbolsHelp?.contentSize = CGSize(width: 320, height: 1000)
     self.scrollViewLigandSymbolsHelp?.isDirectionalLockEnabled == true
         
-        //saveLigandTableView.dataSource! = self
-        //saveLigandTableView.delegate = self as! UITableViewDelegate
+        
         
         lysinehelpOutlet?.text = lysineString
         histidineHelpOutlet?.text = histidineString
@@ -1633,6 +1663,7 @@ self.scrollViewLigandSymbols?.isDirectionalLockEnabled == true
         //    self.view.addSubview(shapeView)
 
         super.viewDidLoad()
+        print(ligands)
 
     }
     
@@ -1652,24 +1683,10 @@ self.scrollViewLigandSymbols?.isDirectionalLockEnabled == true
 
 }
 
-extension ViewController: UITableViewDataSource {
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return ligands.count
-    }
-    
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = saveLigandTableView.dequeueReusableCell(withIdentifier: "coreData")
-        //let cell = UITableViewCell(style: .default, reuseIdentifier: nil)
-        cell!.textLabel?.text = ligands[indexPath.row].name
-        return cell!
 
-    }
+
     
-    func numberOfSections(in tableView: UITableView) -> Int {
-        return 1
-    }
-    
-}
+
 
 
 /*class Shape : UIView {
