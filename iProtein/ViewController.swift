@@ -11,11 +11,17 @@ import CoreData
 
 let context = UIGraphicsGetCurrentContext()
 var currentPosition: CGPoint?
+var myIndex = 0
 
 
 class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
     
+    
+    
+    
+    
+    //-----table view on save ligand screen
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return ligands.count
     }
@@ -23,38 +29,89 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         let cell = saveLigandTableView.dequeueReusableCell(withIdentifier: "coreData", for: indexPath) as UITableViewCell
-        //let cell = saveLigandTableView.dequeueReusableCell(withIdentifier: "coreData")
-        //let cells = UITableViewCell(style: .default, reuseIdentifier: nil)
         cell.textLabel?.text = ligands[indexPath.row].name
-        
         return cell
-        
     }
     
     func numberOfSections(in tableView: UITableView) -> Int {
         return 1
     }
-    /* if singleBond == 1 {
-     context?.setLineWidth(2.0)
-     context?.setStrokeColor(UIColor.black.cgColor)
-     
-     
-     context?.move(to: currentPosition!)
-     context?.addLine(to: CGPoint(x: 400, y: 300))
-     context?.strokePath()
-     
-     self.view.setNeedsDisplay()
-     
-     print("c")
-     */
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        myIndex = indexPath.row
+        performSegue(withIdentifier: "segue", sender: self)
+    }
+
     
     
     
+    
+    
+    
+    
+    
+    //-----table view on save Protein screen
+    func tableViewTwo(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return proteins.count
+    }
+    
+    func tableViewTwo(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        
+        let cellTwo = saveProteinsTableView.dequeueReusableCell(withIdentifier: "proteinCell", for: indexPath) as UITableViewCell
+        cellTwo.textLabel?.text = proteins[indexPath.row].name
+        return cellTwo
+    }
+    
+    func numberOfSectionsTwo(in tableView: UITableView) -> Int {
+        return 1
+    }
+    
+    
+    
+    //----outlets and actions for table view on save proteins screen
+    @IBOutlet weak var saveProteinsTableView: UITableView!
+    
+    @IBAction func createNewProteinSaveScreenTapped(_ sender: Any) {
+        let alert = UIAlertController(title: "add protein", message: nil, preferredStyle: .alert)
+        alert.addTextField { (textField) in
+            textField.placeholder = "name"
+        }
+        
+        let action = UIAlertAction(title: "add", style: .default) { (_) in
+            let Proteinname = alert.textFields!.first!.text!
+            
+            let proteins = Proteins(context: PersistenceServiceTwo.contextTwo)
+            proteins.name = Proteinname
+            
+            PersistenceServiceTwo.saveContext()
+            self.proteins.append(proteins)
+            self.saveProteinsTableView.reloadData()
+            
+        }
+        
+        let actionTwo = UIAlertAction(title: "cancel", style: .default)
+        
+        alert.addAction(action)
+        alert.addAction(actionTwo)
+        present(alert, animated: true, completion: nil)
+        
+    }
+    
+    
+    
+    
+    
+    
+    //-----variable for core data of ligands and proteins
     var ligands = [Ligands]()
+    var proteins = [Proteins]()
     
     
     
     
+    
+    
+    //-----strings for ligands symbols help screen
     let lysineString =
             """
             polar
@@ -252,7 +309,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     
     
     
-    //outlets for table view on save ligand screen
+    //-----outlets and actions for table view on save ligand screen
     @IBOutlet weak var saveLigandTableView: UITableView!
     
     
@@ -262,7 +319,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
             textField.placeholder = "name"
         }
         
-        let action = UIAlertAction(title: "Add", style: .default) { (_) in
+        let action = UIAlertAction(title: "add", style: .default) { (_) in
             let Ligandname = alert.textFields!.first!.text!
             
             let ligands = Ligands(context: PersistenceService.context)
@@ -271,21 +328,21 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
             PersistenceService.saveContext()
             self.ligands.append(ligands)
             self.saveLigandTableView.reloadData()
-            print(ligands)
             
+}
+        
+        let actionTwo = UIAlertAction(title: "cancel", style: .default)
 
-            
-        //alert.addAction(UIAlertAction(title: "cancel", style: UIAlertAction.Style.default, handler: nil))
-        }
         alert.addAction(action)
+        alert.addAction(actionTwo)
         present(alert, animated: true, completion: nil)
-        
-        let description = NSEntityDescription()
-        
-        
-        
-        
+            
     }
+    
+    
+    
+    
+    
     
     
     
@@ -359,9 +416,19 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         print("any")
     }
     
+    @IBAction func backButtonProteinSaveScreenTapped(_ sender: Any) {
+        performSegue(withIdentifier: "backProteinSaveScreenSegue", sender: nil)
+    }
     
     
-    //segues on help screen
+    
+    
+    
+    
+    
+    
+    
+    //segues on amino acid symbol help screen
 
     @IBAction func backButtonMainScreenTapped(_ sender: Any) {
         performSegue(withIdentifier: "backButtonMainScreenSegue", sender: nil)
@@ -595,6 +662,10 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     
     
     
+    
+    
+    
+    
     //-----outlets for help screen amino acids text boxes
     @IBOutlet weak var lysinehelpOutlet: UILabel!
     @IBOutlet weak var histidineHelpOutlet: UILabel!
@@ -619,6 +690,11 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     
     
     
+    
+    
+    
+    
+    
     //-----outlets for ligand symbol help screen
     @IBOutlet weak var singleBondHelpOutlet: UIImageView!
     @IBOutlet weak var doubleBondHelpOutlet: UIImageView!
@@ -636,6 +712,12 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     @IBOutlet weak var nitrogenHelpOutlet: UILabel!
     @IBOutlet weak var phosphorusHelpOutlet: UILabel!
     @IBOutlet weak var heliumHelpOutlet: UILabel!
+    
+    
+    
+    
+    
+    
     
     
     
@@ -657,6 +739,11 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     @IBOutlet weak var phosphorusOutlet: UILabel!
     @IBOutlet weak var heliumOutlet: UILabel!
 
+    
+    
+    
+    
+    
     
     
     
@@ -1022,7 +1109,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         phosphorusHelpOutlet.alpha = 0.2
         heliumHelpOutlet.alpha = 0.2
         
-        dynamicLigandHelpImageView.image = UIImage(named: "")
+        dynamicLigandHelpImageView.image = UIImage(named: "C")
         
         dynamicHeaderLigandHelpLabel.text =
         """
@@ -1056,7 +1143,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         phosphorusHelpOutlet.alpha = 0.2
         heliumHelpOutlet.alpha = 0.2
         
-        dynamicLigandHelpImageView.image = UIImage(named: "")
+        dynamicLigandHelpImageView.image = UIImage(named: "O")
         
         dynamicHeaderLigandHelpLabel.text =
         """
@@ -1089,7 +1176,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         phosphorusHelpOutlet.alpha = 0.2
         heliumHelpOutlet.alpha = 0.2
         
-        dynamicLigandHelpImageView.image = UIImage(named: "")
+        dynamicLigandHelpImageView.image = UIImage(named: "H")
         
         dynamicHeaderLigandHelpLabel.text =
         """
@@ -1123,7 +1210,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         phosphorusHelpOutlet.alpha = 0.2
         heliumHelpOutlet.alpha = 0.2
         
-        dynamicLigandHelpImageView.image = UIImage(named: "")
+        dynamicLigandHelpImageView.image = UIImage(named: "N")
         
         dynamicHeaderLigandHelpLabel.text =
         """
@@ -1155,7 +1242,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         phosphorusHelpOutlet.alpha = 1.0
         heliumHelpOutlet.alpha = 0.2
         
-        dynamicLigandHelpImageView.image = UIImage(named: "")
+        dynamicLigandHelpImageView.image = UIImage(named: "P")
         
         dynamicHeaderLigandHelpLabel.text =
         """
@@ -1188,7 +1275,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         phosphorusHelpOutlet.alpha = 0.2
         heliumHelpOutlet.alpha = 1.0
         
-        dynamicLigandHelpImageView.image = UIImage(named: "")
+        dynamicLigandHelpImageView.image = UIImage(named: "He-1")
         
         dynamicHeaderLigandHelpLabel.text =
         """
@@ -1616,20 +1703,40 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
 
     
     
+    
+//-----view did load-----//
     override func viewDidLoad() {
         
         
-        let fetchRequest: NSFetchRequest<Ligands> = Ligands.fetchRequest()
         
+        
+        
+        
+        
+//-----displaying core data on ligands screen
+        let fetchRequest: NSFetchRequest<Ligands> = Ligands.fetchRequest()
         do {
    let ligands = try PersistenceService.context.fetch(fetchRequest)
             self.ligands = ligands
-            //self.saveLigandTableView.reloadData()
         } catch {}
         
         
         
         
+
+        
+//-----displaying core data on protein screen
+        let fetchRequestTwo: NSFetchRequest<Proteins> = Proteins.fetchRequest()
+        do {
+            let proteins = try
+    PersistenceServiceTwo.contextTwo.fetch(fetchRequestTwo)
+            self.proteins = proteins
+        } catch{}
+        
+        
+        
+        
+//-----adjusting scroll view sizes on help screens and actually make screens
         self.scrollViewLigandSymbols?.contentSize = CGSize(width: 320, height: 1000)
 self.scrollViewLigandSymbols?.isDirectionalLockEnabled == true
         
@@ -1638,6 +1745,9 @@ self.scrollViewLigandSymbols?.isDirectionalLockEnabled == true
         
         
         
+        
+        
+//-----outlets that had to be in the view did load for some reason
         lysinehelpOutlet?.text = lysineString
         histidineHelpOutlet?.text = histidineString
         argininehelpOutlet?.text = arginineString
@@ -1663,10 +1773,19 @@ self.scrollViewLigandSymbols?.isDirectionalLockEnabled == true
         //    self.view.addSubview(shapeView)
 
         super.viewDidLoad()
-        print(ligands)
 
     }
     
+    
+    
+    
+    
+    
+    
+    
+    
+    
+//-----prints the last place user tapped
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         if currentPosition == nil {
             currentPosition = CGPoint(x: 0, y: 0)
@@ -1675,8 +1794,6 @@ self.scrollViewLigandSymbols?.isDirectionalLockEnabled == true
             currentPosition = touch.location(in: view)
             print(currentPosition!)
         }
-
-
 }
     
     
@@ -1757,4 +1874,17 @@ class Shape : UIView {
     }
 */
  
+/* if singleBond == 1 {
+ context?.setLineWidth(2.0)
+ context?.setStrokeColor(UIColor.black.cgColor)
  
+ 
+ context?.move(to: currentPosition!)
+ context?.addLine(to: CGPoint(x: 400, y: 300))
+ context?.strokePath()
+ 
+ self.view.setNeedsDisplay()
+ 
+ print("c")
+ */
+

@@ -10,10 +10,14 @@ import Foundation
 import CoreData
 
 
+//all of this for core data on ligand save screen
+//will probably just make a whole new one for amino acids
 class PersistenceService {
     
     private init() {}
     
+    
+  
    @objc(Ligandsclass) static var context: NSManagedObjectContext {
         return persistentContainer.viewContext
     }
