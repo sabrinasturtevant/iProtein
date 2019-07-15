@@ -1317,7 +1317,7 @@
         <scene sceneID="9PM-Og-KVK">
             <objects>
                 <viewController id="Oai-ek-gI6" customClass="ViewController" customModule="iProtein" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" ambiguous="YES" id="yEK-bn-QMv">
+                    <view key="view" contentMode="scaleToFill" id="yEK-bn-QMv">
                         <rect key="frame" x="0.0" y="0.0" width="667" height="1200"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
@@ -1501,7 +1501,7 @@
                                 <directionalEdgeInsets key="directionalLayoutMargins" top="8" leading="8" bottom="8" trailing="8"/>
                             </scrollView>
                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="fRf-G2-3P5" userLabel="ligandDrawView">
-                                <rect key="frame" x="161" y="97" width="492" height="265"/>
+                                <rect key="frame" x="155" y="91" width="492" height="265"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </view>
@@ -1764,6 +1764,7 @@ amino acid - a simple compound containing a carboxyl and amino group</string>
                     <connections>
                         <outlet property="saveProteinsTableView" destination="Qiy-y9-y1x" id="ZxY-fq-ga8"/>
                         <segue destination="BYZ-38-t0r" kind="show" identifier="backProteinSaveScreenSegue" id="XlD-YK-iKr"/>
+                        <segue destination="FEK-DB-CAJ" kind="show" identifier="proteinSegue" id="dYV-s4-2CN"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="a6g-Qv-JD6" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -1780,28 +1781,22 @@ amino acid - a simple compound containing a carboxyl and amino group</string>
             </objects>
             <point key="canvasLocation" x="1497.3013493253375" y="733.60000000000002"/>
         </scene>
-        <!--View Controller-->
+        <!--View Controller Two-->
         <scene sceneID="OQ2-qc-fx3">
             <objects>
-                <viewController id="FEK-DB-CAJ" customClass="ViewController" customModule="iProtein" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="FEK-DB-CAJ" customClass="ViewControllerTwo" customModule="iProtein" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="MRF-S2-Xcz">
-                        <rect key="frame" x="0.0" y="0.0" width="667" height="375"/>
+                        <rect key="frame" x="0.0" y="0.0" width="667" height="1400"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="backgroundAll" translatesAutoresizingMaskIntoConstraints="NO" id="hb8-7Z-tYm">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="backgroundAll" translatesAutoresizingMaskIntoConstraints="NO" id="hb8-7Z-tYm">
                                 <rect key="frame" x="0.0" y="0.0" width="667" height="375"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="whiteRectangleSide" translatesAutoresizingMaskIntoConstraints="NO" id="Ym0-nw-b8w">
-                                <rect key="frame" x="554" y="0.0" width="113" height="375"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="whiteRectangleTop" translatesAutoresizingMaskIntoConstraints="NO" id="Hfq-sK-UCG">
-                                <rect key="frame" x="152" y="0.0" width="363" height="83"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="whiteRectangleTop" translatesAutoresizingMaskIntoConstraints="NO" id="Hfq-sK-UCG">
+                                <rect key="frame" x="135" y="0.0" width="363" height="83"/>
                             </imageView>
                             <label opaque="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="home" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ggc-Mc-cMQ">
-                                <rect key="frame" x="426" y="30" width="43" height="22"/>
+                                <rect key="frame" x="409" y="30" width="43" height="22"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <gestureRecognizers/>
                                 <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="16"/>
@@ -1811,15 +1806,209 @@ amino acid - a simple compound containing a carboxyl and amino group</string>
                                     <outletCollection property="gestureRecognizers" destination="b2z-Nr-pBK" appends="YES" id="Z8e-Ve-GSH"/>
                                 </connections>
                             </label>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="whiteRectangleSide" translatesAutoresizingMaskIntoConstraints="NO" id="MrJ-jt-GQR">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="whiteRectangleSide" translatesAutoresizingMaskIntoConstraints="NO" id="MrJ-jt-GQR">
                                 <rect key="frame" x="0.0" y="0.0" width="113" height="375"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Ya0-rg-sle" userLabel="ligandDrawView">
+                                <rect key="frame" x="135" y="91" width="512" height="265"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </view>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFit" directionalLockEnabled="YES" showsHorizontalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="d5O-y9-HLd">
+                                <rect key="frame" x="0.0" y="0.0" width="113" height="1380"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" alignment="center" spacing="11" translatesAutoresizingMaskIntoConstraints="NO" id="1MW-k0-ccq">
+                                        <rect key="frame" x="28" y="28" width="57" height="1549"/>
+                                        <subviews>
+                                            <imageView contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Alanine" translatesAutoresizingMaskIntoConstraints="NO" id="3Qw-mm-sIt">
+                                                <rect key="frame" x="1" y="0.0" width="55" height="67"/>
+                                                <gestureRecognizers/>
+                                                <connections>
+                                                    <outletCollection property="gestureRecognizers" destination="pFY-Mz-MUK" appends="YES" id="knE-7D-khe"/>
+                                                </connections>
+                                            </imageView>
+                                            <imageView contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Methionine" translatesAutoresizingMaskIntoConstraints="NO" id="yEB-3b-XeY">
+                                                <rect key="frame" x="1" y="78" width="55" height="67"/>
+                                                <gestureRecognizers/>
+                                                <connections>
+                                                    <outletCollection property="gestureRecognizers" destination="vDA-g0-enh" appends="YES" id="dzf-TQ-5Zt"/>
+                                                </connections>
+                                            </imageView>
+                                            <imageView contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Phenylalanine" translatesAutoresizingMaskIntoConstraints="NO" id="ebf-Lx-RhM">
+                                                <rect key="frame" x="1" y="156" width="55" height="67"/>
+                                                <gestureRecognizers/>
+                                                <connections>
+                                                    <outletCollection property="gestureRecognizers" destination="Bxv-qy-w3h" appends="YES" id="dRK-IJ-1YG"/>
+                                                </connections>
+                                            </imageView>
+                                            <imageView contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Proline" translatesAutoresizingMaskIntoConstraints="NO" id="Izt-iw-Imk">
+                                                <rect key="frame" x="1" y="234" width="55" height="67"/>
+                                                <gestureRecognizers/>
+                                                <connections>
+                                                    <outletCollection property="gestureRecognizers" destination="C1E-uJ-DjK" appends="YES" id="hEc-ik-kyB"/>
+                                                </connections>
+                                            </imageView>
+                                            <imageView contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Tryptophan" translatesAutoresizingMaskIntoConstraints="NO" id="5Wp-gs-G4q">
+                                                <rect key="frame" x="1" y="312" width="55" height="67"/>
+                                                <gestureRecognizers/>
+                                                <connections>
+                                                    <outletCollection property="gestureRecognizers" destination="NUY-h9-BjF" appends="YES" id="ZoX-8W-flT"/>
+                                                </connections>
+                                            </imageView>
+                                            <imageView contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Cystine" translatesAutoresizingMaskIntoConstraints="NO" id="3UB-yh-vGq">
+                                                <rect key="frame" x="1" y="390" width="55" height="67"/>
+                                                <gestureRecognizers/>
+                                                <connections>
+                                                    <outletCollection property="gestureRecognizers" destination="VHO-iI-Kaa" appends="YES" id="JaV-T9-t6t"/>
+                                                </connections>
+                                            </imageView>
+                                            <imageView contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Valine" translatesAutoresizingMaskIntoConstraints="NO" id="8Sq-tP-rgN">
+                                                <rect key="frame" x="1" y="468" width="55" height="67"/>
+                                                <gestureRecognizers/>
+                                                <connections>
+                                                    <outletCollection property="gestureRecognizers" destination="4MZ-F2-jZn" appends="YES" id="W3e-dd-oRK"/>
+                                                </connections>
+                                            </imageView>
+                                            <imageView contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Leucine" translatesAutoresizingMaskIntoConstraints="NO" id="Oa5-O1-5wD">
+                                                <rect key="frame" x="1" y="546" width="55" height="67"/>
+                                                <gestureRecognizers/>
+                                                <connections>
+                                                    <outletCollection property="gestureRecognizers" destination="hbb-aB-51R" appends="YES" id="fJS-qf-jKW"/>
+                                                </connections>
+                                            </imageView>
+                                            <imageView contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Isoleucine" translatesAutoresizingMaskIntoConstraints="NO" id="geG-Eu-1QW">
+                                                <rect key="frame" x="0.0" y="624" width="57" height="67"/>
+                                                <gestureRecognizers/>
+                                                <connections>
+                                                    <outletCollection property="gestureRecognizers" destination="thI-ed-AQa" appends="YES" id="u66-7P-7Ug"/>
+                                                </connections>
+                                            </imageView>
+                                            <imageView contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Glycine" translatesAutoresizingMaskIntoConstraints="NO" id="kxa-Lj-qb5">
+                                                <rect key="frame" x="1" y="702" width="55" height="67"/>
+                                                <gestureRecognizers/>
+                                                <connections>
+                                                    <outletCollection property="gestureRecognizers" destination="0d7-mk-xOi" appends="YES" id="8Bz-hQ-Gbq"/>
+                                                </connections>
+                                            </imageView>
+                                            <imageView contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Arginine" translatesAutoresizingMaskIntoConstraints="NO" id="tpS-JE-9Hv">
+                                                <rect key="frame" x="1" y="780" width="55" height="67"/>
+                                                <gestureRecognizers/>
+                                                <connections>
+                                                    <outletCollection property="gestureRecognizers" destination="5rT-Z5-aqR" appends="YES" id="S2n-OZ-ylG"/>
+                                                </connections>
+                                            </imageView>
+                                            <imageView contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Lysine" translatesAutoresizingMaskIntoConstraints="NO" id="p0h-iH-aLV">
+                                                <rect key="frame" x="1" y="858" width="55" height="67"/>
+                                                <gestureRecognizers/>
+                                                <connections>
+                                                    <outletCollection property="gestureRecognizers" destination="wJC-TV-NE3" appends="YES" id="cO6-1w-Mjo"/>
+                                                </connections>
+                                            </imageView>
+                                            <imageView contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Histidine" translatesAutoresizingMaskIntoConstraints="NO" id="xCW-ha-8Y0">
+                                                <rect key="frame" x="1" y="936" width="55" height="67"/>
+                                                <gestureRecognizers/>
+                                                <connections>
+                                                    <outletCollection property="gestureRecognizers" destination="bnT-Ev-iQu" appends="YES" id="ayC-Tz-XWD"/>
+                                                </connections>
+                                            </imageView>
+                                            <imageView contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Glutamic Acid" translatesAutoresizingMaskIntoConstraints="NO" id="fAp-YG-TrY">
+                                                <rect key="frame" x="1" y="1014" width="55" height="67"/>
+                                                <gestureRecognizers/>
+                                                <connections>
+                                                    <outletCollection property="gestureRecognizers" destination="zob-3G-F0S" appends="YES" id="LZH-Qs-wFJ"/>
+                                                </connections>
+                                            </imageView>
+                                            <imageView contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Aspartic Acid" translatesAutoresizingMaskIntoConstraints="NO" id="jvX-VU-8Bw">
+                                                <rect key="frame" x="1" y="1092" width="55" height="67"/>
+                                                <gestureRecognizers/>
+                                                <connections>
+                                                    <outletCollection property="gestureRecognizers" destination="058-Cq-bx9" appends="YES" id="oga-Le-53n"/>
+                                                </connections>
+                                            </imageView>
+                                            <imageView contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Glutamine" translatesAutoresizingMaskIntoConstraints="NO" id="b75-4Y-t67">
+                                                <rect key="frame" x="1" y="1170" width="55" height="67"/>
+                                                <gestureRecognizers/>
+                                                <connections>
+                                                    <outletCollection property="gestureRecognizers" destination="RMR-0n-GXG" appends="YES" id="40U-9k-smQ"/>
+                                                </connections>
+                                            </imageView>
+                                            <imageView contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Tyrosine" translatesAutoresizingMaskIntoConstraints="NO" id="Ndi-XX-Qfw">
+                                                <rect key="frame" x="1" y="1248" width="55" height="67"/>
+                                                <gestureRecognizers/>
+                                                <connections>
+                                                    <outletCollection property="gestureRecognizers" destination="JSq-Yi-wiT" appends="YES" id="AGB-dF-PTk"/>
+                                                </connections>
+                                            </imageView>
+                                            <imageView contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Theronine" translatesAutoresizingMaskIntoConstraints="NO" id="xpf-KB-1ly">
+                                                <rect key="frame" x="1" y="1326" width="55" height="67"/>
+                                                <gestureRecognizers/>
+                                                <connections>
+                                                    <outletCollection property="gestureRecognizers" destination="inI-0l-CIf" appends="YES" id="QSR-ZS-CDW"/>
+                                                </connections>
+                                            </imageView>
+                                            <imageView contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Serine" translatesAutoresizingMaskIntoConstraints="NO" id="L9M-rL-yEV">
+                                                <rect key="frame" x="1" y="1404" width="55" height="67"/>
+                                                <gestureRecognizers/>
+                                                <connections>
+                                                    <outletCollection property="gestureRecognizers" destination="TST-72-20g" appends="YES" id="qBQ-96-0js"/>
+                                                </connections>
+                                            </imageView>
+                                            <imageView contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Histidine-1" translatesAutoresizingMaskIntoConstraints="NO" id="3VL-fB-ghS">
+                                                <rect key="frame" x="1" y="1482" width="55" height="67"/>
+                                                <gestureRecognizers/>
+                                                <connections>
+                                                    <outletCollection property="gestureRecognizers" destination="ajO-YA-wQz" appends="YES" id="zJM-WW-us5"/>
+                                                </connections>
+                                            </imageView>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="1MW-k0-ccq" secondAttribute="trailing" constant="28" id="DHD-ac-Wmt"/>
+                                    <constraint firstAttribute="bottom" secondItem="1MW-k0-ccq" secondAttribute="bottom" constant="37" id="p9j-LT-BPT"/>
+                                    <constraint firstItem="1MW-k0-ccq" firstAttribute="centerX" secondItem="d5O-y9-HLd" secondAttribute="centerX" id="qB2-MP-ZPY"/>
+                                    <constraint firstItem="1MW-k0-ccq" firstAttribute="top" secondItem="d5O-y9-HLd" secondAttribute="topMargin" id="xrd-Xl-PQF"/>
+                                </constraints>
+                            </scrollView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="d5O-y9-HLd" firstAttribute="top" secondItem="MrJ-jt-GQR" secondAttribute="top" id="7rX-YY-hXq"/>
+                            <constraint firstItem="d5O-y9-HLd" firstAttribute="leading" secondItem="MrJ-jt-GQR" secondAttribute="leading" id="I4P-Z4-5PI"/>
+                            <constraint firstItem="Hfq-sK-UCG" firstAttribute="leading" secondItem="d5O-y9-HLd" secondAttribute="trailing" constant="22" id="VhT-Le-oWU"/>
+                            <constraint firstItem="d5O-y9-HLd" firstAttribute="top" secondItem="MRF-S2-Xcz" secondAttribute="top" id="ah4-6h-yS9"/>
+                            <constraint firstItem="d5O-y9-HLd" firstAttribute="leading" secondItem="MRF-S2-Xcz" secondAttribute="leading" id="bcm-zf-fKR"/>
+                            <constraint firstAttribute="trailing" secondItem="d5O-y9-HLd" secondAttribute="trailing" constant="554" id="cJp-Fs-ZGc"/>
+                            <constraint firstItem="d5O-y9-HLd" firstAttribute="trailing" secondItem="MrJ-jt-GQR" secondAttribute="trailing" id="ej1-2m-0ta"/>
+                            <constraint firstItem="d5O-y9-HLd" firstAttribute="leading" secondItem="hb8-7Z-tYm" secondAttribute="leading" id="hNL-mo-kx4"/>
+                            <constraint firstItem="d5O-y9-HLd" firstAttribute="top" secondItem="Hfq-sK-UCG" secondAttribute="top" id="weh-uy-X4L"/>
+                            <constraint firstItem="d5O-y9-HLd" firstAttribute="top" secondItem="hb8-7Z-tYm" secondAttribute="top" id="xU7-Kt-Dfs"/>
+                            <constraint firstAttribute="bottom" secondItem="d5O-y9-HLd" secondAttribute="bottom" constant="20" symbolic="YES" id="yNV-G9-Xfq"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="YV3-BP-W17"/>
                     </view>
+                    <size key="freeformSize" width="667" height="1400"/>
                     <connections>
+                        <outlet property="alanineImageView" destination="3Qw-mm-sIt" id="kOV-zZ-VtO"/>
+                        <outlet property="arginineImageView" destination="tpS-JE-9Hv" id="fWC-uM-gqt"/>
+                        <outlet property="asparagineImageView" destination="3VL-fB-ghS" id="qBf-6H-WRs"/>
+                        <outlet property="asparticAcidImageView" destination="jvX-VU-8Bw" id="VCM-o9-GAl"/>
+                        <outlet property="cystineImageView" destination="3UB-yh-vGq" id="afn-1b-0B2"/>
+                        <outlet property="glutamicAcidImageView" destination="fAp-YG-TrY" id="Jcv-mc-C3q"/>
+                        <outlet property="glutamineImageView" destination="b75-4Y-t67" id="q4S-3k-Rut"/>
+                        <outlet property="glycineImageView" destination="kxa-Lj-qb5" id="7W6-fZ-t7B"/>
+                        <outlet property="histidineImageView" destination="xCW-ha-8Y0" id="7G5-U4-T6w"/>
+                        <outlet property="isoleucineImageView" destination="geG-Eu-1QW" id="m6i-U5-CGd"/>
+                        <outlet property="leucineImageView" destination="Oa5-O1-5wD" id="rCN-gx-8tw"/>
+                        <outlet property="lysineImageView" destination="p0h-iH-aLV" id="m5b-PU-SwH"/>
+                        <outlet property="methionineImageView" destination="yEB-3b-XeY" id="gJI-eT-LGR"/>
+                        <outlet property="phenylalanineImageView" destination="ebf-Lx-RhM" id="vGg-uH-ZKe"/>
+                        <outlet property="prolineImageView" destination="Izt-iw-Imk" id="rcx-QX-KLj"/>
+                        <outlet property="serineImageView" destination="L9M-rL-yEV" id="qyC-u7-AbY"/>
+                        <outlet property="theronineImageView" destination="xpf-KB-1ly" id="NOs-0I-GZf"/>
+                        <outlet property="tryptophanImageView" destination="5Wp-gs-G4q" id="KrD-DU-rYu"/>
+                        <outlet property="tyrosineImageView" destination="Ndi-XX-Qfw" id="9CY-cv-FMB"/>
+                        <outlet property="valineImageView" destination="8Sq-tP-rgN" id="kvr-mR-azW"/>
                         <segue destination="BYZ-38-t0r" kind="show" identifier="homeSegue" id="zvg-nm-pur"/>
                     </connections>
                 </viewController>
@@ -1829,8 +2018,108 @@ amino acid - a simple compound containing a carboxyl and amino group</string>
                         <action selector="homeTappedTwo:" destination="FEK-DB-CAJ" id="S1w-dd-Djc"/>
                     </connections>
                 </tapGestureRecognizer>
+                <tapGestureRecognizer id="pFY-Mz-MUK" userLabel="alanineTap">
+                    <connections>
+                        <action selector="alanineTapped:" destination="FEK-DB-CAJ" id="flM-h8-GMg"/>
+                    </connections>
+                </tapGestureRecognizer>
+                <tapGestureRecognizer id="vDA-g0-enh" userLabel="methionineTap">
+                    <connections>
+                        <action selector="methinonineTapped:" destination="FEK-DB-CAJ" id="5Ne-vd-8Qi"/>
+                    </connections>
+                </tapGestureRecognizer>
+                <tapGestureRecognizer id="Bxv-qy-w3h" userLabel="phenylalanineTap">
+                    <connections>
+                        <action selector="phenylalanineTapped:" destination="FEK-DB-CAJ" id="sqh-qg-tAS"/>
+                    </connections>
+                </tapGestureRecognizer>
+                <tapGestureRecognizer id="C1E-uJ-DjK" userLabel="prolineTap">
+                    <connections>
+                        <action selector="prolineTapped:" destination="FEK-DB-CAJ" id="0W5-kC-iZr"/>
+                    </connections>
+                </tapGestureRecognizer>
+                <tapGestureRecognizer id="NUY-h9-BjF" userLabel="tryptophanTap">
+                    <connections>
+                        <action selector="tryptophanTapped:" destination="FEK-DB-CAJ" id="aGI-Xm-7vt"/>
+                    </connections>
+                </tapGestureRecognizer>
+                <tapGestureRecognizer id="VHO-iI-Kaa" userLabel="cystineTap">
+                    <connections>
+                        <action selector="cystineTapped:" destination="FEK-DB-CAJ" id="9Es-L2-jNe"/>
+                    </connections>
+                </tapGestureRecognizer>
+                <tapGestureRecognizer id="4MZ-F2-jZn" userLabel="valineTap">
+                    <connections>
+                        <action selector="valineTapped:" destination="FEK-DB-CAJ" id="zRb-NY-TMd"/>
+                    </connections>
+                </tapGestureRecognizer>
+                <tapGestureRecognizer id="hbb-aB-51R" userLabel="leucineTap">
+                    <connections>
+                        <action selector="leucineTapped:" destination="FEK-DB-CAJ" id="7P1-Fc-Sfn"/>
+                    </connections>
+                </tapGestureRecognizer>
+                <tapGestureRecognizer id="thI-ed-AQa" userLabel="isoleucineTap">
+                    <connections>
+                        <action selector="isoleucineTapped:" destination="FEK-DB-CAJ" id="FHd-TD-15F"/>
+                    </connections>
+                </tapGestureRecognizer>
+                <tapGestureRecognizer id="0d7-mk-xOi" userLabel="glycineTap">
+                    <connections>
+                        <action selector="glycineTapped:" destination="FEK-DB-CAJ" id="qY7-KQ-qAt"/>
+                    </connections>
+                </tapGestureRecognizer>
+                <tapGestureRecognizer id="5rT-Z5-aqR" userLabel="arginineTap">
+                    <connections>
+                        <action selector="arginineTapped:" destination="FEK-DB-CAJ" id="bLh-mm-Jjo"/>
+                    </connections>
+                </tapGestureRecognizer>
+                <tapGestureRecognizer id="wJC-TV-NE3" userLabel="lysineTap">
+                    <connections>
+                        <action selector="lysineTapped:" destination="FEK-DB-CAJ" id="VDU-yO-7Ri"/>
+                    </connections>
+                </tapGestureRecognizer>
+                <tapGestureRecognizer id="bnT-Ev-iQu" userLabel="histidineTap">
+                    <connections>
+                        <action selector="histidineTapped:" destination="FEK-DB-CAJ" id="pep-G9-HF1"/>
+                    </connections>
+                </tapGestureRecognizer>
+                <tapGestureRecognizer id="zob-3G-F0S" userLabel="glutamicAcidTap">
+                    <connections>
+                        <action selector="glutamicAcidTapped:" destination="FEK-DB-CAJ" id="WoZ-o5-vpe"/>
+                    </connections>
+                </tapGestureRecognizer>
+                <tapGestureRecognizer id="058-Cq-bx9" userLabel="aspaticAcidTap">
+                    <connections>
+                        <action selector="asparticAcidTapped:" destination="FEK-DB-CAJ" id="itf-aO-jdE"/>
+                    </connections>
+                </tapGestureRecognizer>
+                <tapGestureRecognizer id="RMR-0n-GXG" userLabel="glutamineTap">
+                    <connections>
+                        <action selector="glutamineTapped:" destination="FEK-DB-CAJ" id="ENC-f9-wXG"/>
+                    </connections>
+                </tapGestureRecognizer>
+                <tapGestureRecognizer id="JSq-Yi-wiT" userLabel="tyrosineTap">
+                    <connections>
+                        <action selector="tyrosineTapped:" destination="FEK-DB-CAJ" id="fcX-eW-hDL"/>
+                    </connections>
+                </tapGestureRecognizer>
+                <tapGestureRecognizer id="inI-0l-CIf" userLabel="theronineTap">
+                    <connections>
+                        <action selector="theronineTapped:" destination="FEK-DB-CAJ" id="vCf-Z4-tZr"/>
+                    </connections>
+                </tapGestureRecognizer>
+                <tapGestureRecognizer id="TST-72-20g" userLabel="serineTap">
+                    <connections>
+                        <action selector="serineTapped:" destination="FEK-DB-CAJ" id="McC-9W-yDU"/>
+                    </connections>
+                </tapGestureRecognizer>
+                <tapGestureRecognizer id="ajO-YA-wQz" userLabel="asparagineTap">
+                    <connections>
+                        <action selector="asparagineTapped:" destination="FEK-DB-CAJ" id="TzZ-bk-kQo"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="1497" y="2014"/>
+            <point key="canvasLocation" x="1496.4017991004498" y="2484.8000000000002"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="ixS-RQ-AtI">
@@ -1851,7 +2140,7 @@ amino acid - a simple compound containing a carboxyl and amino group</string>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="QE5-Vm-bV4" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1499" y="3791"/>
+            <point key="canvasLocation" x="1456" y="4972"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="Gdn-zJ-wxg">
@@ -2691,9 +2980,9 @@ amino acid - a simple compound containing a carboxyl and amino group</string>
         <image name="whiteRectangleTop" width="533" height="60"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="bYC-O2-WMv"/>
+        <segue reference="yBK-Rz-UAG"/>
         <segue reference="nZ5-D5-Of1"/>
-        <segue reference="wZE-rt-s5x"/>
-        <segue reference="XlD-YK-iKr"/>
+        <segue reference="I4s-1p-Q1K"/>
+        <segue reference="zvg-nm-pur"/>
     </inferredMetricsTieBreakers>
 </document>

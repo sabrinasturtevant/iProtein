@@ -251,11 +251,11 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         let action = UIAlertAction(title: "add", style: .default) { (_) in
             let Ligandname = alert.textFields!.first!.text!
             
-            let ligands = Ligands(context: PersistenceService.context)
-            ligands.name = Ligandname
+            let ligands2 = Ligands(context: PersistenceService.context)
+            ligands2.name = Ligandname
             
             PersistenceService.saveContext()
-          //  self.ligands.append(ligands)
+            ligands.append(ligands2)
             self.saveLigandTableView.reloadData()
             
 }
@@ -284,7 +284,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
-        var cell = saveLigandTableView.dequeueReusableCell(withIdentifier: "coreData") as! UITableViewCell
+        let cell = saveLigandTableView.dequeueReusableCell(withIdentifier: "coreData") as! UITableViewCell
         
         
         cell.textLabel?.text = ligands[indexPath.row].name
@@ -358,14 +358,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     @IBAction func homeTapped(_ sender: Any) {
         performSegue(withIdentifier: "homeSegue", sender: nil)
     }
-    
-    @IBAction func homeTappedTwo(_ sender: Any) {
-        performSegue(withIdentifier: "homeSegue", sender: nil)
-    }
-    
-    
-    
-    
+
     
     
     
@@ -377,9 +370,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         print("any")
     }
     
-    @IBAction func backButtonProteinSaveScreenTapped(_ sender: Any) {
-        performSegue(withIdentifier: "backProteinSaveScreenSegue", sender: nil)
-    }
+
     
     
     
@@ -1677,8 +1668,8 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
 //-----displaying core data on ligands screen
         let fetchRequest: NSFetchRequest<Ligands> = Ligands.fetchRequest()
         do {
-   let ligands = try PersistenceService.context.fetch(fetchRequest)
-          //  self.ligands = ligands
+   let ligands3 = try PersistenceService.context.fetch(fetchRequest)
+        ligands = ligands3
         } catch {}
         
         
@@ -1689,9 +1680,9 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
 //-----displaying core data on protein screen
         let fetchRequestTwo: NSFetchRequest<Proteins> = Proteins.fetchRequest()
         do {
-            let proteins = try
+            let proteins3 = try
     PersistenceServiceTwo.contextTwo.fetch(fetchRequestTwo)
-         //   self.proteins = proteins
+        proteins = proteins3
         } catch{}
         
         
