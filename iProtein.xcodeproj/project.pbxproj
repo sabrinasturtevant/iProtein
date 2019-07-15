@@ -17,6 +17,7 @@
 		D9392FB122D6785100485559 /* Ligands+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9392FAF22D6785100485559 /* Ligands+CoreDataClass.swift */; };
 		D9392FB222D6785100485559 /* Ligands+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9392FB022D6785100485559 /* Ligands+CoreDataProperties.swift */; };
 		D983DF8022D8EC9A00A7ABE9 /* persistanceServiceTwo.swift in Sources */ = {isa = PBXBuildFile; fileRef = D983DF7F22D8EC9A00A7ABE9 /* persistanceServiceTwo.swift */; };
+		D99934B622DCE4A1000B2752 /* ViewControllerTwo.swift in Sources */ = {isa = PBXBuildFile; fileRef = D99934B522DCE4A1000B2752 /* ViewControllerTwo.swift */; };
 		D9D5407922D8E6D800DA442A /* coreDataProtein.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = D9D5407722D8E6D800DA442A /* coreDataProtein.xcdatamodeld */; };
 		D9D5407C22D8E72F00DA442A /* Proteins+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9D5407A22D8E72F00DA442A /* Proteins+CoreDataClass.swift */; };
 		D9D5407D22D8E72F00DA442A /* Proteins+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9D5407B22D8E72F00DA442A /* Proteins+CoreDataProperties.swift */; };
@@ -35,6 +36,7 @@
 		D9392FAF22D6785100485559 /* Ligands+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Ligands+CoreDataClass.swift"; sourceTree = "<group>"; };
 		D9392FB022D6785100485559 /* Ligands+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Ligands+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		D983DF7F22D8EC9A00A7ABE9 /* persistanceServiceTwo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = persistanceServiceTwo.swift; sourceTree = "<group>"; };
+		D99934B522DCE4A1000B2752 /* ViewControllerTwo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerTwo.swift; sourceTree = "<group>"; };
 		D9D5407822D8E6D800DA442A /* coreDataProtein.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = coreDataProtein.xcdatamodel; sourceTree = "<group>"; };
 		D9D5407A22D8E72F00DA442A /* Proteins+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Proteins+CoreDataClass.swift"; sourceTree = "<group>"; };
 		D9D5407B22D8E72F00DA442A /* Proteins+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Proteins+CoreDataProperties.swift"; sourceTree = "<group>"; };
@@ -76,6 +78,7 @@
 				D9D5407B22D8E72F00DA442A /* Proteins+CoreDataProperties.swift */,
 				D9179A4822C3F9E200CFFF16 /* AppDelegate.swift */,
 				D9179A4A22C3F9E200CFFF16 /* ViewController.swift */,
+				D99934B522DCE4A1000B2752 /* ViewControllerTwo.swift */,
 				D9179A4C22C3F9E200CFFF16 /* Main.storyboard */,
 				D9392FAD22D66DEC00485559 /* persistenceService.swift */,
 				D983DF7F22D8EC9A00A7ABE9 /* persistanceServiceTwo.swift */,
@@ -169,6 +172,7 @@
 				D9392FAC22D66AF800485559 /* coreData.xcdatamodeld in Sources */,
 				D9179A4922C3F9E200CFFF16 /* AppDelegate.swift in Sources */,
 				D9D5407C22D8E72F00DA442A /* Proteins+CoreDataClass.swift in Sources */,
+				D99934B622DCE4A1000B2752 /* ViewControllerTwo.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

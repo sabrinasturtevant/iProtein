@@ -14,97 +14,19 @@ var currentPosition: CGPoint?
 var myIndex = 0
 
 
+//-----variable for core data of ligands and proteins
+var ligands = [Ligands]()
+var proteins = [Proteins]()
+
+
+
 class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
     
     
     
     
-    
-    //-----table view on save ligand screen
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return ligands.count
-    }
-    
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        
-        let cell = saveLigandTableView.dequeueReusableCell(withIdentifier: "coreData", for: indexPath) as UITableViewCell
-        cell.textLabel?.text = ligands[indexPath.row].name
-        return cell
-    }
-    
-    func numberOfSections(in tableView: UITableView) -> Int {
-        return 1
-    }
-    
-    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        myIndex = indexPath.row
-        performSegue(withIdentifier: "segue", sender: self)
-    }
-
-    
-    
-    
-    
-    
-    
-    
-    
-    //-----table view on save Protein screen
-    func tableViewTwo(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return proteins.count
-    }
-    
-    func tableViewTwo(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        
-        let cellTwo = saveProteinsTableView.dequeueReusableCell(withIdentifier: "proteinCell", for: indexPath) as UITableViewCell
-        cellTwo.textLabel?.text = proteins[indexPath.row].name
-        return cellTwo
-    }
-    
-    func numberOfSectionsTwo(in tableView: UITableView) -> Int {
-        return 1
-    }
-    
-    
-    
-    //----outlets and actions for table view on save proteins screen
-    @IBOutlet weak var saveProteinsTableView: UITableView!
-    
-    @IBAction func createNewProteinSaveScreenTapped(_ sender: Any) {
-        let alert = UIAlertController(title: "add protein", message: nil, preferredStyle: .alert)
-        alert.addTextField { (textField) in
-            textField.placeholder = "name"
-        }
-        
-        let action = UIAlertAction(title: "add", style: .default) { (_) in
-            let Proteinname = alert.textFields!.first!.text!
-            
-            let proteins = Proteins(context: PersistenceServiceTwo.contextTwo)
-            proteins.name = Proteinname
-            
-            PersistenceServiceTwo.saveContext()
-            self.proteins.append(proteins)
-            self.saveProteinsTableView.reloadData()
-            
-        }
-        
-        let actionTwo = UIAlertAction(title: "cancel", style: .default)
-        
-        alert.addAction(action)
-        alert.addAction(actionTwo)
-        present(alert, animated: true, completion: nil)
-        
-    }
-    
-    
-    
-    
-    
-    
-    //-----variable for core data of ligands and proteins
-    var ligands = [Ligands]()
-    var proteins = [Proteins]()
+   
     
     
     
@@ -309,6 +231,13 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     
     
     
+
+    
+    
+    
+    
+    
+    
     //-----outlets and actions for table view on save ligand screen
     @IBOutlet weak var saveLigandTableView: UITableView!
     
@@ -326,7 +255,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
             ligands.name = Ligandname
             
             PersistenceService.saveContext()
-            self.ligands.append(ligands)
+          //  self.ligands.append(ligands)
             self.saveLigandTableView.reloadData()
             
 }
@@ -339,6 +268,38 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
             
     }
     
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    //-----table view on save ligand screen
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return ligands.count
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        
+        var cell = saveLigandTableView.dequeueReusableCell(withIdentifier: "coreData") as! UITableViewCell
+        
+        
+        cell.textLabel?.text = ligands[indexPath.row].name
+        return cell
+    }
+    
+    func numberOfSections(in tableView: UITableView) -> Int {
+        return 1
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        myIndex = indexPath.row
+        performSegue(withIdentifier: "segue", sender: self)
+    }
+
     
     
     
@@ -1717,7 +1678,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         let fetchRequest: NSFetchRequest<Ligands> = Ligands.fetchRequest()
         do {
    let ligands = try PersistenceService.context.fetch(fetchRequest)
-            self.ligands = ligands
+          //  self.ligands = ligands
         } catch {}
         
         
@@ -1730,7 +1691,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         do {
             let proteins = try
     PersistenceServiceTwo.contextTwo.fetch(fetchRequestTwo)
-            self.proteins = proteins
+         //   self.proteins = proteins
         } catch{}
         
         

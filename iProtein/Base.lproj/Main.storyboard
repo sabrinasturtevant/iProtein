@@ -1694,10 +1694,10 @@ amino acid - a simple compound containing a carboxyl and amino group</string>
             </objects>
             <point key="canvasLocation" x="462.8185907046477" y="1704.8"/>
         </scene>
-        <!--View Controller-->
+        <!--View Controller Two-->
         <scene sceneID="lUH-A8-ejJ">
             <objects>
-                <viewController id="Zyn-7X-LtW" customClass="ViewController" customModule="iProtein" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="Zyn-7X-LtW" customClass="ViewControllerTwo" customModule="iProtein" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="l2k-Xj-ZpU">
                         <rect key="frame" x="0.0" y="0.0" width="667" height="375"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -1736,7 +1736,7 @@ amino acid - a simple compound containing a carboxyl and amino group</string>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="proteinCell" id="h7q-KI-JKZ">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="coreDataProtein" id="h7q-KI-JKZ">
                                         <rect key="frame" x="0.0" y="28" width="560" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="h7q-KI-JKZ" id="fpD-97-BmZ">
