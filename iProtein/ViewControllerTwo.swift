@@ -578,5 +578,22 @@ class ViewControllerTwo: UIViewController, UITableViewDelegate, UITableViewDataS
     }
     
     
+    @IBOutlet weak var proteinImageViewOne: UIImageView!
+
+    
+    
+    var mySize = CGSize(width: 100, height: 100)
+    var myImage = UIImage(named: "whiteRectangleSide")
+
+    
+    @IBAction func proteinDrawViewTapped(_ sender: Any) {
+        if alanineImageView.alpha == 1.0 {
+            myImage = UIImage(named: "Alanine")!
+            self.myImage!.draw(at: currentPosition!)
+
+        }
+    }
+    
+    
 
 }
