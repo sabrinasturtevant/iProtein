@@ -1804,8 +1804,8 @@ amino acid - a simple compound containing a carboxyl and amino group</string>
                         <rect key="frame" x="0.0" y="0.0" width="667" height="1400"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="backgroundAll" translatesAutoresizingMaskIntoConstraints="NO" id="hb8-7Z-tYm">
-                                <rect key="frame" x="0.0" y="0.0" width="667" height="375"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="backgroundAll" translatesAutoresizingMaskIntoConstraints="NO" id="hb8-7Z-tYm">
+                                <rect key="frame" x="0.0" y="0.0" width="812" height="375"/>
                             </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="whiteRectangleTop" translatesAutoresizingMaskIntoConstraints="NO" id="Hfq-sK-UCG">
                                 <rect key="frame" x="135" y="0.0" width="512" height="83"/>
@@ -1826,7 +1826,7 @@ amino acid - a simple compound containing a carboxyl and amino group</string>
                                 <rect key="frame" x="0.0" y="0.0" width="113" height="375"/>
                             </imageView>
                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Ya0-rg-sle" userLabel="proteinDrawView">
-                                <rect key="frame" x="135" y="91" width="512" height="265"/>
+                                <rect key="frame" x="135" y="91" width="509" height="265"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <subviews>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Mdg-c4-DFP">
@@ -1997,7 +1997,7 @@ amino acid - a simple compound containing a carboxyl and amino group</string>
                                 </constraints>
                             </scrollView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="clear all" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vnr-aT-bTv">
-                                <rect key="frame" x="559" y="31" width="56" height="22"/>
+                                <rect key="frame" x="560" y="31" width="56" height="22"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="16"/>
                                 <nil key="textColor"/>
@@ -2017,11 +2017,74 @@ amino acid - a simple compound containing a carboxyl and amino group</string>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" alpha="0.10000000000000001" contentMode="scaleToFill" directionalLockEnabled="YES" translatesAutoresizingMaskIntoConstraints="NO" id="vGT-2h-kRN">
+                                <rect key="frame" x="531" y="91" width="113" height="1309"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleAspectFit" axis="vertical" distribution="fillEqually" alignment="center" spacing="-36" translatesAutoresizingMaskIntoConstraints="NO" id="AYk-OJ-4Oe">
+                                        <rect key="frame" x="25" y="4" width="63" height="696"/>
+                                        <subviews>
+                                            <imageView contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="peptideBond" translatesAutoresizingMaskIntoConstraints="NO" id="hdM-K9-jP8">
+                                                <rect key="frame" x="30" y="0.0" width="3" height="168"/>
+                                                <gestureRecognizers/>
+                                                <connections>
+                                                    <outletCollection property="gestureRecognizers" destination="ARU-5s-mwe" appends="YES" id="MIh-ac-dgL"/>
+                                                </connections>
+                                            </imageView>
+                                            <imageView contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="hydrogenBond" translatesAutoresizingMaskIntoConstraints="NO" id="qRw-5Z-kEb">
+                                                <rect key="frame" x="2.5" y="132" width="58" height="168"/>
+                                                <gestureRecognizers/>
+                                                <connections>
+                                                    <outletCollection property="gestureRecognizers" destination="VvZ-IB-lzn" appends="YES" id="7cC-Xw-YPd"/>
+                                                </connections>
+                                            </imageView>
+                                            <imageView contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="greenRect" translatesAutoresizingMaskIntoConstraints="NO" id="oLo-te-vUu">
+                                                <rect key="frame" x="0.0" y="264" width="63" height="168"/>
+                                                <gestureRecognizers/>
+                                                <connections>
+                                                    <outletCollection property="gestureRecognizers" destination="1lq-2d-2S5" appends="YES" id="ZEE-7T-v6X"/>
+                                                </connections>
+                                            </imageView>
+                                            <imageView contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="purpleRect" translatesAutoresizingMaskIntoConstraints="NO" id="nD0-pM-wer">
+                                                <rect key="frame" x="0.0" y="396" width="63" height="168"/>
+                                                <gestureRecognizers/>
+                                                <connections>
+                                                    <outletCollection property="gestureRecognizers" destination="AK9-Qi-9CG" appends="YES" id="8og-Ck-Gw3"/>
+                                                </connections>
+                                            </imageView>
+                                            <imageView contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="redRect" translatesAutoresizingMaskIntoConstraints="NO" id="vs2-Fg-sqD">
+                                                <rect key="frame" x="0.0" y="528" width="63" height="168"/>
+                                                <gestureRecognizers/>
+                                                <connections>
+                                                    <outletCollection property="gestureRecognizers" destination="PZR-1P-k2Q" appends="YES" id="Wd3-QS-eHf"/>
+                                                </connections>
+                                            </imageView>
+                                        </subviews>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </stackView>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <gestureRecognizers/>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="AYk-OJ-4Oe" secondAttribute="bottom" constant="609" id="aNg-Pd-sQ8"/>
+                                    <constraint firstItem="AYk-OJ-4Oe" firstAttribute="leading" secondItem="vGT-2h-kRN" secondAttribute="leading" constant="25" id="rM4-5i-dMw"/>
+                                    <constraint firstAttribute="trailing" secondItem="AYk-OJ-4Oe" secondAttribute="trailing" constant="24" id="sbw-es-k2W"/>
+                                    <constraint firstItem="AYk-OJ-4Oe" firstAttribute="top" secondItem="vGT-2h-kRN" secondAttribute="top" constant="4" id="u04-dR-Kq7"/>
+                                    <constraint firstItem="AYk-OJ-4Oe" firstAttribute="centerX" secondItem="vGT-2h-kRN" secondAttribute="centerX" id="uId-Jn-7iK"/>
+                                </constraints>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="BRK-sw-xOQ" appends="YES" id="WaC-w3-kyd"/>
+                                    <outletCollection property="gestureRecognizers" destination="Zbk-ew-4sU" appends="YES" id="2fm-sh-ti0"/>
+                                </connections>
+                            </scrollView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
+                            <constraint firstItem="vGT-2h-kRN" firstAttribute="top" secondItem="MRF-S2-Xcz" secondAttribute="top" constant="91" id="05d-fk-3uz"/>
+                            <constraint firstItem="vGT-2h-kRN" firstAttribute="bottom" secondItem="YV3-BP-W17" secondAttribute="bottom" id="3cz-Jq-DpY"/>
                             <constraint firstItem="d5O-y9-HLd" firstAttribute="top" secondItem="MrJ-jt-GQR" secondAttribute="top" id="7rX-YY-hXq"/>
                             <constraint firstItem="d5O-y9-HLd" firstAttribute="leading" secondItem="MrJ-jt-GQR" secondAttribute="leading" id="I4P-Z4-5PI"/>
+                            <constraint firstItem="YV3-BP-W17" firstAttribute="trailing" secondItem="vGT-2h-kRN" secondAttribute="trailing" constant="23" id="LWU-C0-1gS"/>
+                            <constraint firstItem="vGT-2h-kRN" firstAttribute="leading" secondItem="MRF-S2-Xcz" secondAttribute="leading" constant="531" id="NYw-kB-M35"/>
                             <constraint firstItem="d5O-y9-HLd" firstAttribute="top" secondItem="MRF-S2-Xcz" secondAttribute="top" id="ah4-6h-yS9"/>
                             <constraint firstItem="d5O-y9-HLd" firstAttribute="leading" secondItem="MRF-S2-Xcz" secondAttribute="leading" id="bcm-zf-fKR"/>
                             <constraint firstAttribute="trailing" secondItem="d5O-y9-HLd" secondAttribute="trailing" constant="554" id="cJp-Fs-ZGc"/>
@@ -2042,14 +2105,20 @@ amino acid - a simple compound containing a carboxyl and amino group</string>
                         <outlet property="glutamicAcidImageView" destination="fAp-YG-TrY" id="Jcv-mc-C3q"/>
                         <outlet property="glutamineImageView" destination="b75-4Y-t67" id="q4S-3k-Rut"/>
                         <outlet property="glycineImageView" destination="kxa-Lj-qb5" id="7W6-fZ-t7B"/>
+                        <outlet property="greenRectImageView" destination="oLo-te-vUu" id="DBn-o7-ShE"/>
                         <outlet property="histidineImageView" destination="xCW-ha-8Y0" id="7G5-U4-T6w"/>
+                        <outlet property="hydrogenBondImageView" destination="qRw-5Z-kEb" id="8Qa-Gt-GBP"/>
                         <outlet property="isoleucineImageView" destination="geG-Eu-1QW" id="m6i-U5-CGd"/>
                         <outlet property="leucineImageView" destination="Oa5-O1-5wD" id="rCN-gx-8tw"/>
                         <outlet property="lysineImageView" destination="p0h-iH-aLV" id="m5b-PU-SwH"/>
                         <outlet property="methionineImageView" destination="yEB-3b-XeY" id="gJI-eT-LGR"/>
+                        <outlet property="peptideBondImageView" destination="hdM-K9-jP8" id="6lH-V3-gi3"/>
                         <outlet property="phenylalanineImageView" destination="ebf-Lx-RhM" id="vGg-uH-ZKe"/>
                         <outlet property="prolineImageView" destination="Izt-iw-Imk" id="rcx-QX-KLj"/>
                         <outlet property="proteinImageViewOne" destination="Mdg-c4-DFP" id="fJc-41-2XY"/>
+                        <outlet property="purpleRectImageView" destination="nD0-pM-wer" id="d9N-le-I8z"/>
+                        <outlet property="redRectImageView" destination="vs2-Fg-sqD" id="bEl-aE-2mw"/>
+                        <outlet property="scrollViewProteinBonds" destination="vGT-2h-kRN" id="MaF-6l-mwn"/>
                         <outlet property="serineImageView" destination="L9M-rL-yEV" id="qyC-u7-AbY"/>
                         <outlet property="theronineImageView" destination="xpf-KB-1ly" id="NOs-0I-GZf"/>
                         <outlet property="tryptophanImageView" destination="5Wp-gs-G4q" id="KrD-DU-rYu"/>
@@ -2169,6 +2238,41 @@ amino acid - a simple compound containing a carboxyl and amino group</string>
                         <action selector="proteinDrawViewTapped:" destination="FEK-DB-CAJ" id="PA5-8a-HUe"/>
                     </connections>
                 </tapGestureRecognizer>
+                <swipeGestureRecognizer direction="left" id="BRK-sw-xOQ" userLabel="scrollViewSwiped">
+                    <connections>
+                        <action selector="bondScrollViewSwiped:" destination="FEK-DB-CAJ" id="PKS-dJ-BKp"/>
+                    </connections>
+                </swipeGestureRecognizer>
+                <swipeGestureRecognizer direction="right" id="Zbk-ew-4sU" userLabel="scrollViewRightSwiped">
+                    <connections>
+                        <action selector="bondScrollViewRightSwiped:" destination="FEK-DB-CAJ" id="zIt-7e-hdW"/>
+                    </connections>
+                </swipeGestureRecognizer>
+                <tapGestureRecognizer id="ARU-5s-mwe" userLabel="peptideBondTap">
+                    <connections>
+                        <action selector="peptideBondTapped:" destination="FEK-DB-CAJ" id="vcT-dK-f5o"/>
+                    </connections>
+                </tapGestureRecognizer>
+                <tapGestureRecognizer id="VvZ-IB-lzn" userLabel="hydrogenBondTap">
+                    <connections>
+                        <action selector="hydrogenBondTapped:" destination="FEK-DB-CAJ" id="KDi-78-slT"/>
+                    </connections>
+                </tapGestureRecognizer>
+                <tapGestureRecognizer id="1lq-2d-2S5" userLabel="greenRectTap">
+                    <connections>
+                        <action selector="greenRectTapped:" destination="FEK-DB-CAJ" id="apt-Dz-nzU"/>
+                    </connections>
+                </tapGestureRecognizer>
+                <tapGestureRecognizer id="AK9-Qi-9CG" userLabel="purpleRectTap">
+                    <connections>
+                        <action selector="purpleRectTapped:" destination="FEK-DB-CAJ" id="yoV-ow-1VH"/>
+                    </connections>
+                </tapGestureRecognizer>
+                <tapGestureRecognizer id="PZR-1P-k2Q" userLabel="redRectTap">
+                    <connections>
+                        <action selector="redRectTapped:" destination="FEK-DB-CAJ" id="eKe-kz-nVp"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="1496.4017991004498" y="2484.8000000000002"/>
         </scene>
@@ -2253,6 +2357,21 @@ amino acid - a simple compound containing a carboxyl and amino group</string>
                                     <outletCollection property="gestureRecognizers" destination="AkZ-vk-52r" appends="YES" id="Ll0-gn-pzH"/>
                                 </connections>
                             </imageView>
+                            <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="gradientButton" translatesAutoresizingMaskIntoConstraints="NO" id="MKd-46-qju">
+                                <rect key="frame" x="273" y="327" width="119" height="36"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <gestureRecognizers/>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="TSO-0h-hmx" appends="YES" id="Tac-3p-jnb"/>
+                                </connections>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="combine" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dvX-6I-ZHa">
+                                <rect key="frame" x="302" y="335" width="61" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="15"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="bUt-SK-VxR"/>
@@ -2261,6 +2380,7 @@ amino acid - a simple compound containing a carboxyl and amino group</string>
                         <outlet property="combineLigandTableView" destination="JDq-9b-fxS" id="69p-MW-EWu"/>
                         <outlet property="combineProteinTableView" destination="v0X-TG-RkT" id="SfP-z4-yy7"/>
                         <segue destination="BYZ-38-t0r" kind="show" identifier="backButtonCombineScreenSegue" id="4KY-h5-Mb4"/>
+                        <segue destination="FDF-0j-EMo" kind="show" identifier="combineThemSegue" id="4KI-ZY-243"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="QE5-Vm-bV4" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -2269,8 +2389,34 @@ amino acid - a simple compound containing a carboxyl and amino group</string>
                         <action selector="backButtonCombineScreenTapped:" destination="bX3-Eg-RQL" id="0RQ-wZ-lZA"/>
                     </connections>
                 </tapGestureRecognizer>
+                <tapGestureRecognizer id="TSO-0h-hmx" userLabel="combineTap">
+                    <connections>
+                        <action selector="combineTapped:" destination="bX3-Eg-RQL" id="zew-90-vRx"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="1455.9220389805098" y="4972"/>
+        </scene>
+        <!--View Controller Three-->
+        <scene sceneID="qgl-Pc-wQj">
+            <objects>
+                <viewController id="FDF-0j-EMo" customClass="ViewControllerThree" customModule="iProtein" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="UUQ-Yu-pYU">
+                        <rect key="frame" x="0.0" y="0.0" width="667" height="375"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="backgroundAll" translatesAutoresizingMaskIntoConstraints="NO" id="YQb-0A-Sdv">
+                                <rect key="frame" x="0.0" y="0.0" width="667" height="375"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="hoy-Ad-1g7"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="UXj-0x-e4b" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1447.8260869565217" y="5973.6000000000004"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="Gdn-zJ-wxg">
@@ -3096,10 +3242,15 @@ amino acid - a simple compound containing a carboxyl and amino group</string>
         <image name="eightSided" width="54.5" height="54.5"/>
         <image name="fiveSided" width="48" height="45.5"/>
         <image name="gradientButton" width="207.5" height="207.5"/>
+        <image name="greenRect" width="64" height="64"/>
         <image name="helpButtonV2" width="32" height="36.5"/>
+        <image name="hydrogenBond" width="58" height="168"/>
         <image name="iProteinTitle" width="290" height="84"/>
         <image name="ligandButton" width="99" height="96"/>
         <image name="ligandQuestionMarkButton" width="207.5" height="207.5"/>
+        <image name="peptideBond" width="3" height="53"/>
+        <image name="purpleRect" width="64" height="64"/>
+        <image name="redRect" width="64" height="64"/>
         <image name="sevenSided" width="48" height="48"/>
         <image name="singleBond" width="38" height="1"/>
         <image name="sixSided" width="58" height="59"/>
@@ -3113,6 +3264,6 @@ amino acid - a simple compound containing a carboxyl and amino group</string>
         <segue reference="yBK-Rz-UAG"/>
         <segue reference="nZ5-D5-Of1"/>
         <segue reference="I4s-1p-Q1K"/>
-        <segue reference="zvg-nm-pur"/>
+        <segue reference="4KY-h5-Mb4"/>
     </inferredMetricsTieBreakers>
 </document>

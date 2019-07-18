@@ -67,7 +67,10 @@ class ViewControllerThree: UIViewController, UITableViewDelegate, UITableViewDat
     }
 
 
-
+    @IBAction func combineTapped(_ sender: Any) {
+        performSegue(withIdentifier: "combineThemSegue", sender: nil)
+    }
+    
 
     
    

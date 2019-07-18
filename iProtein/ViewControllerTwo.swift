@@ -595,5 +595,84 @@ class ViewControllerTwo: UIViewController, UITableViewDelegate, UITableViewDataS
     }
     
     
+        @IBOutlet weak var scrollViewProteinBonds: UIScrollView!
+    
+    
+    @IBAction func bondScrollViewSwiped(_ sender: Any) {
+        scrollViewProteinBonds?.contentSize = CGSize(width: 100, height: 700)
+        scrollViewProteinBonds.alpha = 1.0
+        peptideBondImageView.alpha = 1.0
+        hydrogenBondImageView.alpha = 1.0
+        greenRectImageView.alpha = 1.0
+        purpleRectImageView.alpha = 1.0
+        redRectImageView.alpha = 1.0
+        print("swiped left")
+    }
+    
+    @IBAction func bondScrollViewRightSwiped(_ sender: Any) {
+        scrollViewProteinBonds?.contentSize = CGSize(width: 100, height: 700)
+        scrollViewProteinBonds.alpha = 0.1
+        peptideBondImageView.alpha = 0.1
+        hydrogenBondImageView.alpha = 0.1
+        redRectImageView.alpha = 0.1
+        purpleRectImageView.alpha = 0.1
+        greenRectImageView.alpha = 0.1
+        print("swiped right")
+    }
+    
+    @IBOutlet weak var peptideBondImageView: UIImageView!
+    @IBOutlet weak var hydrogenBondImageView: UIImageView!
+    @IBOutlet weak var greenRectImageView: UIImageView!
+    @IBOutlet weak var purpleRectImageView: UIImageView!
+    @IBOutlet weak var redRectImageView: UIImageView!
+    
+    
+    
+    
 
+    @IBAction func peptideBondTapped(_ sender: Any) {
+        peptideBondImageView.alpha = 1.0
+        hydrogenBondImageView.alpha = 0.2
+        greenRectImageView.alpha = 0.2
+        purpleRectImageView.alpha = 0.2
+        redRectImageView.alpha = 0.2
+    }
+    
+    
+    @IBAction func hydrogenBondTapped(_ sender: Any) {
+        peptideBondImageView.alpha = 0.2
+        hydrogenBondImageView.alpha = 1.0
+        greenRectImageView.alpha = 0.2
+        purpleRectImageView.alpha = 0.2
+        redRectImageView.alpha = 0.2
+    }
+    
+    
+    @IBAction func greenRectTapped(_ sender: Any) {
+        peptideBondImageView.alpha = 0.2
+        hydrogenBondImageView.alpha = 0.2
+        greenRectImageView.alpha = 1.0
+        purpleRectImageView.alpha = 0.2
+        redRectImageView.alpha = 0.2
+    }
+    
+    
+    @IBAction func purpleRectTapped(_ sender: Any) {
+        peptideBondImageView.alpha = 0.2
+        hydrogenBondImageView.alpha = 0.2
+        greenRectImageView.alpha = 0.2
+        purpleRectImageView.alpha = 1.0
+        redRectImageView.alpha = 0.2
+    }
+    
+    @IBAction func redRectTapped(_ sender: Any) {
+        peptideBondImageView.alpha = 0.2
+        hydrogenBondImageView.alpha = 0.2
+        greenRectImageView.alpha = 0.2
+        purpleRectImageView.alpha = 0.2
+        redRectImageView.alpha = 1.0
+    }
+    
+    
+    
 }
