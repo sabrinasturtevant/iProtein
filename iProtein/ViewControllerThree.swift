@@ -10,7 +10,11 @@ import Foundation
 import CoreData
 import UIKit
 
-
+var myIndexTwo = 0
+var myIndexThree = 0
+var ligandString = String()
+var cell = UITableViewCell()
+var cellTwo = UITableViewCell()
 
 
 class ViewControllerThree: UIViewController, UITableViewDelegate, UITableViewDataSource {
@@ -28,29 +32,38 @@ class ViewControllerThree: UIViewController, UITableViewDelegate, UITableViewDat
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         if tableView == combineLigandTableView {
-        let cell = combineLigandTableView.dequeueReusableCell(withIdentifier: "combineLigand") as! UITableViewCell
-        
-        
+        cell = combineLigandTableView.dequeueReusableCell(withIdentifier: "combineLigand") as! UITableViewCell
+
         cell.textLabel?.text = ligands[indexPath.row].name
         return cell
     }
     
     else {
-    let cell = combineProteinTableView.dequeueReusableCell(withIdentifier: "combineProtein") as! UITableViewCell
-    
-    
-    cell.textLabel?.text = proteins[indexPath.row].name
-    return cell
+        cellTwo = combineProteinTableView.dequeueReusableCell(withIdentifier: "combineProtein") as! UITableViewCell
+        
+        cellTwo.textLabel?.text = proteins[indexPath.row].name
+        return cellTwo
+            }
     }
     
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        if tableView == combineLigandTableView {
+        myIndexTwo = indexPath.row
+            print(myIndexTwo)
+        } else {myIndexThree = indexPath.row
+            print(myIndexThree)
+        }
     }
     
+
     
     @IBOutlet weak var combineProteinTableView: UITableView!
     
 
     
+    @IBOutlet weak var dynamicProteinNameLabel: UILabel!
     
+    @IBOutlet weak var dynamicLigandNameLabel: UILabel!
     
     
     
@@ -69,7 +82,18 @@ class ViewControllerThree: UIViewController, UITableViewDelegate, UITableViewDat
 
     @IBAction func combineTapped(_ sender: Any) {
         performSegue(withIdentifier: "combineThemSegue", sender: nil)
+        //dynamicLigandNameLabel.text! = String(myIndexTwo)
+        //dynamicProteinNameLabel.text! = String(myIndexThree)
+        ligandString = (cell.textLabel?.text)!
+
+        dynamicLigandNameLabel.text! = ligandString
     }
+    
+    
+    @IBAction func backButtonCombineCombineTapped(_ sender: Any) {
+        performSegue(withIdentifier: "backButtonCombineSegue", sender: nil)
+    }
+    
     
 
     

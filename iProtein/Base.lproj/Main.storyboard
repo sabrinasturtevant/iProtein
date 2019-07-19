@@ -2409,12 +2409,56 @@ amino acid - a simple compound containing a carboxyl and amino group</string>
                                 <rect key="frame" x="0.0" y="0.0" width="667" height="375"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
+                            <imageView contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="backButtonV2" translatesAutoresizingMaskIntoConstraints="NO" id="c7J-Yc-rZN">
+                                <rect key="frame" x="548" y="319" width="77" height="36"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <gestureRecognizers/>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="EgL-Rw-GIu" appends="YES" id="B2O-2c-MNo"/>
+                                </connections>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" alpha="0.5" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Ir4-Qr-Tnr">
+                                <rect key="frame" x="0.0" y="-5" width="667" height="96"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.7418619394" green="0.76613628860000005" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="dynamic ligand name" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CHe-fc-HiY">
+                                <rect key="frame" x="358" y="33" width="217" height="31"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="22"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="+" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="J0O-Uw-2hD">
+                                <rect key="frame" x="330" y="33" width="15" height="31"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="22"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="dynamic protein name" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="p3c-LG-Ud7">
+                                <rect key="frame" x="96" y="33" width="226" height="31"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="22"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="hoy-Ad-1g7"/>
                     </view>
+                    <connections>
+                        <outlet property="dynamicLigandNameLabel" destination="CHe-fc-HiY" id="ibB-Um-vFJ"/>
+                        <outlet property="dynamicProteinNameLabel" destination="p3c-LG-Ud7" id="fvB-7G-hwk"/>
+                        <segue destination="bX3-Eg-RQL" kind="show" identifier="backButtonCombineSegue" id="Z9F-T9-NEC"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="UXj-0x-e4b" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="EgL-Rw-GIu" userLabel="backButtonTap">
+                    <connections>
+                        <action selector="backButtonCombineCombineTapped:" destination="FDF-0j-EMo" id="Ckl-0Q-cam"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="1447.8260869565217" y="5973.6000000000004"/>
         </scene>
@@ -3264,6 +3308,7 @@ amino acid - a simple compound containing a carboxyl and amino group</string>
         <segue reference="yBK-Rz-UAG"/>
         <segue reference="nZ5-D5-Of1"/>
         <segue reference="I4s-1p-Q1K"/>
+        <segue reference="Z9F-T9-NEC"/>
         <segue reference="4KY-h5-Mb4"/>
     </inferredMetricsTieBreakers>
 </document>
