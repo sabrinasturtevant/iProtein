@@ -20,7 +20,22 @@ var cellTwo = UITableViewCell()
 class ViewControllerThree: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
     
-         @IBOutlet weak var combineLigandTableView: UITableView!
+    @IBOutlet weak var combineProteinTableView: UITableView!
+    
+
+    
+    @IBOutlet weak var dynamicProteinNameLabel: UILabel!
+    
+    @IBOutlet weak var dynamicLigandNameLabel: UILabel!
+    
+    @IBOutlet weak var combineLigandTableView: UITableView!
+    
+    
+    
+    
+    
+    
+    
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         if tableView == combineLigandTableView {
@@ -28,6 +43,7 @@ class ViewControllerThree: UIViewController, UITableViewDelegate, UITableViewDat
         } else {
             return proteins.count
         }
+
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -38,32 +54,29 @@ class ViewControllerThree: UIViewController, UITableViewDelegate, UITableViewDat
         return cell
     }
     
-    else {
+    else  {
         cellTwo = combineProteinTableView.dequeueReusableCell(withIdentifier: "combineProtein") as! UITableViewCell
         
         cellTwo.textLabel?.text = proteins[indexPath.row].name
         return cellTwo
             }
-    }
+    
+        }
+    
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         if tableView == combineLigandTableView {
         myIndexTwo = indexPath.row
             print(myIndexTwo)
-        } else {myIndexThree = indexPath.row
+        } else   {myIndexThree = indexPath.row
             print(myIndexThree)
         }
+
     }
-    
 
     
-    @IBOutlet weak var combineProteinTableView: UITableView!
-    
 
-    
-    @IBOutlet weak var dynamicProteinNameLabel: UILabel!
-    
-    @IBOutlet weak var dynamicLigandNameLabel: UILabel!
+
     
     
     
@@ -82,11 +95,6 @@ class ViewControllerThree: UIViewController, UITableViewDelegate, UITableViewDat
 
     @IBAction func combineTapped(_ sender: Any) {
         performSegue(withIdentifier: "combineThemSegue", sender: nil)
-        //dynamicLigandNameLabel.text! = String(myIndexTwo)
-        //dynamicProteinNameLabel.text! = String(myIndexThree)
-        ligandString = (cell.textLabel?.text)!
-
-        dynamicLigandNameLabel.text! = ligandString
     }
     
     
@@ -94,8 +102,5 @@ class ViewControllerThree: UIViewController, UITableViewDelegate, UITableViewDat
         performSegue(withIdentifier: "backButtonCombineSegue", sender: nil)
     }
     
-    
-
-    
-   
 }
+
